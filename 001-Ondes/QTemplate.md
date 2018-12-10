@@ -1,8 +1,0 @@
-## Titre
-
-*Durée: 1m*
-
-### Question
-
-### Réponse
-
