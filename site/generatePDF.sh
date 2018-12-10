@@ -13,3 +13,4 @@ find -s . -name "Q006-*.md" -exec cat {} >> /tmp/Q006.md \;
 printf '[TOC]\n\n'  > Questions.md                             
 find -s /tmp/ -name "Q0??.md" -exec cat {} >> Questions.md \;
 
+find 0* -name assets -exec cp -r {} assets/ \;

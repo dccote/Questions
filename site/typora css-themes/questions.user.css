@@ -1,0 +1,32 @@
+.md-toc-h4 {
+  display: none;
+}
+
+.md-toc-h5 {
+  display: none;
+}
+
+.md-toc-h6 {
+  display: none;
+}
+
+.md-toc-h3 {
+  display: none;
+}
+
+h1  {
+    font-size: 3.0em;
+}
+
+#write h1  {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 3em;
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.2em;
+}

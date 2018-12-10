@@ -82,7 +82,7 @@ $$
 
 
 
-## Fasiceau focalisant
+## Faisceau focalisant
 
 *Durée: 1m*
 
@@ -333,16 +333,6 @@ Non.  Les deux matériaux sont de types Crown et de type Flint. Les verres de ty
 
 
 
-## Titre
-
-*Durée: 1m*
-
-### Question
-
-### Réponse
-
-
-
 ## Objet dans l'eau
 
 *Durée: 1m*
@@ -443,7 +433,7 @@ f \theta \\
 \end{matrix}
 \Biggr]
 $$
-Le rayon sort à une hauteur de $ y = f \theta$ et parallèle à l'axe car $\theta = 0$.
+Le rayon sort à une hauteur de $ y = f \theta$ et parallèle à l'axe car $\theta = 0​$.
 
 
 
