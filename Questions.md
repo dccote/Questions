@@ -2,8 +2,6 @@
 
 # 001-Ondes
 
-# 001-Ondes
-
 ## Rayon et front d'onde
 
 *Durée: 1m*
@@ -26,7 +24,7 @@ Quel(s) terme(s) des équations de Maxwell est ou sont impliqué(s) dans la déf
 
 ### Réponse
 
-La constante diélectrique $\epsilon = \epsilon_r \epsilon_\circ$ est relié à l'indice de réfraction par $n \equiv \sqrt{\epsilon_r}$.
+La constante diélectrique $\epsilon = \epsilon_r \epsilon_\circ$ est relié à l'indice de réfraction par $n \equiv \sqrt{\epsilon_r}$. Cette constante diélectrique dépend de la fréquence de l'onde.
 
 ## Solution équation de Maxwell indépendante du temps
 
