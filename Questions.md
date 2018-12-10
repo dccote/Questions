@@ -80,6 +80,8 @@ $$
 \vec{E}(r,t) = \sum_{\vec{r}_i} \vec{E}(\vec{r}_i)e^{i (k \left| \vec{r}-\vec{r}_i \right| - \omega t)}
 $$
 
+
+
 ## Fasiceau focalisant
 
 *Durée: 1m*
@@ -90,7 +92,9 @@ Quelle est la forme du front d’onde d’un faisceau focalisant?
 
 ### Réponse
 
-Le front d'onde est sphérique.## Focus de caméra
+Le front d'onde est sphérique.
+
+## Focus de caméra
 
 *Durée: 2m*
 
@@ -134,7 +138,9 @@ Quel est l’origine de l’indice de réfraction dans le contexte des équation
 
 ### Réponse
 
-L'indice de réfraction vient de la réponse de la densité de polarisation (i.e. les dipôles par volume) dans le matériel.  On suppose une réponse des dipôles proportionnelle $P=\chi \epsilon_\circ E$, mais $\chi$ est dépendant de la fréquence, et est un nombre complexe (donc une amplitude et une phase). On obtient ensuite que $n^2 = \left( 1 + \chi\right)^2 = \epsilon_r​$.## Longueur d'onde
+L'indice de réfraction vient de la réponse de la densité de polarisation (i.e. les dipôles par volume) dans le matériel.  On suppose une réponse des dipôles proportionnelle $P=\chi \epsilon_\circ E$, mais $\chi$ est dépendant de la fréquence, et est un nombre complexe (donc une amplitude et une phase). On obtient ensuite que $n^2 = \left( 1 + \chi\right)^2 = \epsilon_r​$.
+
+## Longueur d'onde
 
 *Durée: 1m*
 
@@ -144,7 +150,9 @@ Un laser rouge de longeur d'onde 632.8 nm illumine une piscine.  Sachant que la 
 
 ### Réponse
 
-Le laser est toujours rouge car la couleur est donnée par la fréquence d'oscillation de l'onde (qui est une propriété de l'onde indépendante de la propagation et qui détermine son énergie) alors que la longueur d'onde est une propriété découlant de la propagation.## Examples d'indice
+Le laser est toujours rouge car la couleur est donnée par la fréquence d'oscillation de l'onde (qui est une propriété de l'onde indépendante de la propagation et qui détermine son énergie) alors que la longueur d'onde est une propriété découlant de la propagation.
+
+## Examples d'indice
 
 *Durée: 2m*
 
@@ -373,7 +381,10 @@ Est-ce qu’un objectif 40x a une résolution optique spatiale meilleure ou pire
 
 ### Réponse
 
-Impossible à dire.  La résolution optique est donnée par l'ouverture numérique ou par le $f_\#$, et cette information n'est pas donnée.  Le 40x ou 100x ne nous donne que la distance focale de l'objectif: elle est 40x ou 100x plus petite que celle du *tube lens*.## Balayage en $x$ et $\theta$
+Impossible à dire.  La résolution optique est donnée par l'ouverture numérique ou par le $f_\#$, et cette information n'est pas donnée.  Le 40x ou 100x ne nous donne que la distance focale de l'objectif: elle est 40x ou 100x plus petite que celle du *tube lens*.
+
+
+## Balayage en $x$ et $\theta$
 
 *Durée: 5m*
 
@@ -432,7 +443,11 @@ f \theta \\
 \end{matrix}
 \Biggr]
 $$
-Le rayon sort à une hauteur de $ y = f \theta$ et parallèle à l'axe car $\theta = 0​$.# 004-Diffraction
+Le rayon sort à une hauteur de $ y = f \theta$ et parallèle à l'axe car $\theta = 0$.
+
+
+
+# 004-Diffraction
 
 ## Point focal
 
@@ -482,6 +497,10 @@ Prouvez qu’une lentille sphérique plano-convexe aura des aberrations sphériq
 
 ### Réponse
 
+À faire.
+
+
+
 ## Aberration
 
 *Durée: 5m*
@@ -500,7 +519,9 @@ De quel côté doit-on placer une lentille au laboratoire si c'est une lentille 
 La règle: on veut faire travailler les deux côtés de la lentille.
 
 1. Côté courbe d'abord
-2. Côté plan d'abord.# 006-Détection
+2. Côté plan d'abord.
+
+# 006-Détection
 
 ## Tube photomultiplicateur
 
@@ -588,7 +609,9 @@ Pouvez vous regarder un fluorophore infrarouge à 750 nm sans une caméra?
 
 ### Réponse
 
-Non. La réponse de l'oeil est essentiellement nulle à 750 nm.## Efficacité
+Non. La réponse de l'oeil est essentiellement nulle à 750 nm.
+
+## Efficacité
 
 *Durée: 5m*
 
@@ -615,6 +638,8 @@ radiantSensitivity = I / energieParPhoton %% A/W
 %%    0.8056
 ```
 
+
+
 ## Efficacité quantique
 
 *Durée: 5m*
@@ -625,7 +650,11 @@ On dit qu’une photodiode a une efficacité quantique de presque 50-100%.  Pour
 
 ### Réponse
 
-Parce que l'efficacité quantique n'est pas la seule chose à considérer: l'efficacité quantique est la fraction de photon convertie en électron.  Cependant, la réponse (en Volt ou en Ampère) dépend du gain du détecteur. Une réponse élevée (en V) est plus facile à détecter qu'une petite réponse (en mV). Les PMTs ont des gains de 10^6^ , ce qui leur donne un grand signal pour un seul photon.## Paramètres bruit de photons
+Parce que l'efficacité quantique n'est pas la seule chose à considérer: l'efficacité quantique est la fraction de photon convertie en électron.  Cependant, la réponse (en Volt ou en Ampère) dépend du gain du détecteur. Une réponse élevée (en V) est plus facile à détecter qu'une petite réponse (en mV). Les PMTs ont des gains de 10^6^ , ce qui leur donne un grand signal pour un seul photon.
+
+
+
+## Paramètres bruit de photons
 
 *Durée: 60m*
 
