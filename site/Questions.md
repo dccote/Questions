@@ -1,5 +1,3 @@
-[TOC]
-
 # 001-Ondes
 
 ## Rayon et front d'onde
