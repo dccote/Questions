@@ -2,7 +2,7 @@
 
 ## Hypothèse
 
-Partant de l'hypothèse que la rétroaction (*feedback*) aux étudiants est plus importante que les tests, les devoirs, ou même les cours en classe, je rassemble ici l'ensemble des questions que j'ai composées, modifiées ou solutionnées au fil des années dans le cadre de mon enseignement en optique et biophotonique à l'Université Laval. Ces questions ont été utilisées comme devoir, comme questions d'examen et comme question en classe.
+Partant de l'hypothèse que la rétroaction (*feedback*) aux étudiants est plus importante que les tests, les devoirs, ou même les cours en classe, je rassemble ici l'ensemble des questions que j'ai composées, modifiées ou solutionnées au fil des années dans le cadre de mon enseignement en optique et biophotonique à l'Université Laval. Ces questions ont été utilisées en devoir, en examen et en classe.
 
 ## Plan à long terme
 
