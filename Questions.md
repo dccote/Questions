@@ -268,7 +268,9 @@ Les questions de cette section se rapportent à l'optique géomtétrique, où la
 ### Question
 
 Sur la figure suivante:
+
 ![pastedGraphic.pdf](assets/pastedGraphic.pdf)
+
 tracez les rayons cardinaux passant par les points focaux [~] et [~] , nodal [~] et [~] et par les plans principaux [~] et [~] .
 
 ### Réponse
@@ -718,6 +720,48 @@ Référez-vous à la figure de Hecht suivante pour les questions.
    Le plan principal avant est à $d_\mathrm{PP_1} = \frac{1-D}{C} = -f $ devant le système, donc $f$ vers la droite, i.e. sur la lentille mince. Le plan principal de arrière est à d $d_\mathrm{PP_2} = \frac{1-A}{C} = 0$ donc lui aussi sur la lentille mince. Aucune surprise.
    Cependant, le plan principal arrière du système avec lunette a changé: on le voit tout de suite, l'élément  $A$ a changé. Un calcul de la position du plan donne $PP_2$  qu'il est maintenant à $d_\mathrm{PP_2} = \frac{1-A}{C} = -\frac{f^2}{F}$.  Ainsi, le plan focal a été déplacé de $-\frac{f^2}{F}​$ , la distance focale reste la même mais le point focal est avancé, d'où la correction par les lunettes.
 
+## Objectif
+
+### Question
+
+Vous avez l’objectif Olympus suivant, identifié « Olympus UPlanFl 40x ». Vous savez que cet objectif s’utilise normalement dans un système 4f avec une seconde lentille de distance focale f=18 cm pour compléter ledit système 4f. Cependant, vous voulez l’utiliser seul, sans aucune autre lentille, pour tirer profit de ses excellentes propriétés optiques. Vous savez aussi que le point focal F1 est collé sur la première surface de l’objectif et que le point focal F2 est à 2 mm du bout de l’objectif, comme sur la Figure.
+
+![image-20181212143401795](assets/image-20181212143401795-4643241.png)
+
+1. Quelle est la distance focale de cet objectif Olympus 40X ?
+2. Écrivez la matrice ABCD qui permet de transformer un rayon entrant de la première surface de l’objectif au plan focal F2.
+3. Quelles sont les positions des plans principaux ? Donnez les distances en fonction des points focaux F1 et F2.
+4. Vous voulez maintenant utiliser l’objectif (sans aucune autre lentille) pour faire l’image d’un objet qui est à 2.5 mm du bout de l’objectif, donc 0.5 mm après le point focal  . Où placeriez-vous votre camera par rapport à la première surface de l’objectif pour obtenir une image claire de cet objet? 
+
+## Lentilles composées
+
+Durée: 15m
+
+### Question
+
+Vous avez un système de lentilles comme suit:
+![image-20181212143449265](assets/image-20181212143449265-4643289.png)
+pour lequel la matrice de transfert ABCD (en unités métriques) du plan d’entrée au plan de sortie est :
+$$
+M = \Biggl[ 
+   \begin{matrix}
+      -0.1 & 0.11 \\
+      -10 & 1 \\
+   \end{matrix}
+\Biggl]
+$$
+ Si vous placez un objet 0.2 m devant le groupe de lentilles, où sera l’image et quel sera le grossissement?
+
+### Réponse
+
+## Diaphragme
+
+### Question
+
+Vous avez une lentille de diamètre $D=5 \text{cm}$ et de focale $f = 50 \text{cm}$ qui fait l'image du soleil, un disque d'illumination constante pour nos besoins. Le soleil sous-tend un angle de $\theta = 0.5^o$ à la surface de la terre, où son irradiance est de 1000 W/cm^2^.  Quelle est l'irradiance de l'image du soleil qui apparaît sur la caméra?
+
+### Réponse
+
 # Instrumentation
 
 **Objectifs**
@@ -894,7 +938,128 @@ Vous envoyez un faisceau collimé (i.e. provenant de l’infini) de diamètre $d
 
 Le point focal sera de $w = \lambda f_\#\text{eff} = \lambda \frac{f}{d_\text{\circ}} $ car la lentille n'est pas remplie. La distance focale est obtenue de la définition du $\text{NA} = \frac{D}{2f}$, donc $f = 25.4 \text{ mm}$.   Ainsi, $w = 25.4\text{ mm}/1 \text{ mm} \approx 25 \times \lambda​$. 
 
-# Aberrations
+## Conception et construction d’un spectromètre Czerny-Turner
+
+Durée: 180m
+
+### Question
+
+Vous voulez construire un spectromètre de Czerny-Turner dans le visible (permettant des mesures de 400 nm à 700 nm inclusivement). Vous avez seulement des fentes de 50 microns pour travailler et vous voulez une résolution spectrale de 50 pm. Quels miroirs courbes, quel réseau de diffraction de type blasé utilisez-vous et à quelles positions les placez vous ? Expliquez vos choix.
+
+### Réponse
+
+## Diffraction par des billes
+
+Durée: 180m
+
+### Question
+
+Vous voulez caractériser un jet assez dense de particules opaques de diamètres $d$ . Le jet lui-même a un diamètre d’environ 1 cm. Vous avez un laser à 632.8 nm émettant un faisceau gaussien collimé (1 mm de diamètre), une boite de lentilles convergentes de distances focales variées et une caméra avec un capteur CCD ayant 1024 x 768 pixels de 16 µm et produisant 30 images par secondes. Vous ne savez pas la grosseur des particules, mais vous savez qu’elles sont toutes identiques, et qu’elles ont un diamètre d’au moins 1 µm et probablement de moins de 10 µm. Vous faites un montage pour que le laser (que vous pourrez collimer autrement ou non) diffracte sur les particules et vous voulez mesurer le patron de diffraction sur le caméra.
+
+a) Dessinez votre montage de façon conceptuel.
+
+ b) Obtenez (équation à l’appui) le patron que vous verrez sur la caméra. Vous devrez utiliser le principe de Babinet.  **Attention:** bien sûr, le flux de particules est tel que plusieurs particules se retrouveront dans le faisceau, à des distances variables l’une de l’autre.  Restera-t-il un patron de diffraction non nul? Obtenez une expression mathématique décrivant cette situation.
+
+c) Avec les lentilles que vous utiliserez et votre caméra, quelles sont les limites des diamètres que vous pourrez détecter (plus petit et plus grand diamètres de particules)?
+
+d) Lorsque vous avez dérivé b), vous avez fait des hypothèses (implicites ou non) sur la densité de particules.  Donnez un critère sur la grosseur du jet et la densité maximale de particules (particules par surface par seconde) que le jet devrait avoir pour que vos mesures soient possibles. **Des indices**: est-ce qu’un photon diffracté pourrait diffracter à nouveau sur une deuxième particule? Quelle est la probabilité qu’un photon diffracte dans un jet de particule de diamètre $d$ ?
+
+### Réponse
+
+## Tache focale, lentille complètement illuminée
+
+### Question
+
+Une onde plane est incidente sur une lentille de distance focale $f$ et de diamètre $D$.  Quelle est la grosseur de la tache focale?
+
+### Réponse
+
+Ceci est un problème de diffraction par une fente circulaire, car la lentille bloque l’onde plane incidente. On a donc une illumination uniforme sur l’ensemble de la fente.
+
+À partir de la solution de la diffraction d’une fente circulaire de l’exemple 3.1.2 présenté dans les notes 
+$$
+I_{\sigma}(r) \approx \frac{ \left|E_\circ\right|^2 \pi a^2}{f^2} \left[ \frac{2 J_1 \left( \frac{ 2\pi ar}{\lambda f} \right)}{ \frac{2\pi ar}{\lambda f} } \right]^2
+$$
+
+
+on obtient que la largeur, définie comme la distance entre le maximum et le point où la fonction $J_1(x)/x$ est nulle, est donné par $J_1 \left( \frac{ 2\pi a r_\circ}{\lambda f} \right) = 3.82$ donc $2r_\circ = 2 \times 1.22 \lambda \frac{f}{2a} = 2.44 \lambda f_{\#}$ . La tache focale, dans le cas où la lentille est remplie par l’illumination, est environ le double de la longueur d’onde multipliée par le *f-number* de la lentille. ## Tache focale, petit faisceau
+
+### Question
+
+Un petit faisceau en forme de disque de diamètre $d$  est incident sur une lentille de distance focale $f$ et de diamètre $D$.  Quelle est la grosseur de la tache focale?
+
+### Réponse
+
+Nous avons un problème dangereusement similaire au problème précédent. Cependant, l’intensité de l’illumination ne s’étend pas sur l’ensemble de la lentille car le faisceau est plus petit  que celle-ci. Ainsi, en posant le problème de diffraction, l’intégrale sera nulle au-delà du faisceau, ce qui réduira le diamètre de l’intégrale à $d$ au lieu de $D$. On refait donc le problème de la même façon.
+
+À partir de la solution de la diffraction d’une fente circulaire de l’exemple Exemple 3.1.2,, on obtient
+$$
+E_{\sigma}(r) \approx \frac{E_\circ{{e^{i{kf}}}} 2 \pi}{f} \int_0^{d/2} J_0 \left( \frac{kr\prime r}{f} \right) r\prime dr\prime 
+$$
+
+$$
+I_{\sigma}(r) \approx \frac{ \left|E_\circ\right|^2 \pi (d/2)^2}{f^2} \left[ \frac{2 J_1 \left( \frac{ \pi d r}{\lambda f} \right)}{ \frac{\pi d r}{\lambda f} } \right]^2
+$$
+
+on obtient essentiellement la même solution que le problème précédent, sauf que le diamètre effectif de “blocage” est $d$ au lieu de $D$. On obtient donc $2r_\circ = 2 \times 1.22 \lambda \frac{f}{d}$. Dans ce cas, on dit que le faisceau “n’utilise pas” toute la lentille est que le $f_\#$ effectif est augmenté de $f^{\rm{eff}}_\# = \frac{D}{d} \times f_{\#}$ ce qui augmente proportionnellement la grosseur de la tache focale.## Résolution de l'oeil
+
+Durée: 120m
+
+### Question
+
+Les deux phares d’une voitures sont séparés par une distance de $h = 1.5 \text{ m}$.  Quelle est la distance maximale  $d$ à partir de laquelle vous pourrez résoudre les deux phares comme étant distincts si votre pupille a un diamètre de  $D = 5 \text{ mm}$ et que la longueur d’onde principale est de 550 nm ?
+
+### Réponse
+
+#### Stratégie
+
+ L’onde de chaque phare frappe l’ouverture circulaire de l’oeil et diffracte en un disque d’Airy (le champ en fonction de l’angle). Ceci correspond à un ensemble de rayons qui frappent la lentille de l’oeil. On solutionne d’abord en ignorant l’oeil.  Ensuite, on montre que finalement, la réfraction à l’interface de l’oeil ne change rien à la résolution.
+
+
+
+Les phares $E_+$ et $E_-$ émettent des ondes sphériques, et chacune diffracte dans l’ouverture de la pupille.  On obtient les champs diffractés selon $\theta$ tout de suite après la pupille centré sur $\pm\phi$:
+
+![image-20181212150001901](assets/image-20181212150001901-4644801.png)
+
+$$
+E_\pm\left( \theta \right) \propto  E_\circ\frac{2 J_1 \left( \frac{ \pi D \sin( \theta \pm \phi)}{\lambda } \right)}{ \left( \frac{\pi D\sin( \theta \pm \phi)}{\lambda } \right)}
+$$
+
+On utilise le critère de Rayleigh, c’est-à-dire le premier minimum (zéro) du patron de diffraction [~] doit être superposé au maximum du patron de diffraction de l’autre faisceau [~] à [~]. On veut donc:
+
+$$
+E_+(\theta = \phi) = \text{Premier zéro de la fonction }J_1
+$$
+
+Lorsque l’argument de $J_1(x)$ est $,\frac{ \pi D \sin( 2\phi)}{\lambda }  = 3.82$ nous obtenons $\phi  = 1.22  \frac{\lambda}{2D}$. Par considération géométrique, on obtient simplement que $\tan \phi \approx \phi = \frac{h}{2d}$ donc 
+
+#### Est-ce que l’indice de l’oeil ou sa courbure sont importants?
+
+Le rayon au centre de la pupille est réfracté lors de la traverse de l’interface diélectrique. La relation entre l’angle avant l’interface $\theta$ et après l’interface $ \theta'$ est par la loi de Snell:
+$$
+\theta^\prime=\frac{\theta}{n}
+$$
+
+
+ce qui est équivalent à la transformation par une interface courbe avec les matrices ABCD pour un rayon au centre de la pupille. On remplace pour obtenir une expression en fonction des angles $\theta^\prime$ et $ \phi^\prime$ à l’intérieur de l’oeil :
+$$
+E^\prime_\pm\left( \theta^\prime \right) \propto  E_\circ\frac{2 J_1 \left( \frac{ \pi D \sin( n\theta^\prime \pm n\phi^\prime)}{\lambda } \right)}{ \left( \frac{\pi D\sin( n\theta^\prime \pm n\phi^\prime)}{\lambda } \right)}
+$$
+
+
+On refait le même cheminement: en fonction des angles intérieurs le premier minimum (zéro) du patron de diffraction $E^\prime_+(\theta^\prime) $  doit être superposé au maximum du patron de diffraction de l’autre faisceau à $\phi^\prime$.
+
+$$
+E^\prime_+(\theta^\prime = \phi^\prime) = \text{Premier zéro de la fonction }J_1
+$$
+
+On obtient donc: $\phi^\prime  = 1.22  \frac{\lambda}{2nD}$. Donc l’angle minimal pouvant être résolu est en effet plus petit *à l’intérieur de l’oeil*, cependant, un rapide calcul montre bien que l’angle correspondant à l’extérieur, entre les deux phares, est toujours le même car on a:
+$$
+\phi = n\phi^\prime =  1.22  \frac{\lambda}{2D}
+$$
+
+
+Donc l’oeil et son indice de réfraction n’ont pas d’impact sur la résolution.# Aberrations
 
 Des questions imsples sur les aberrations.
 
@@ -1180,4 +1345,16 @@ Le microscope à balayage (recopié ici bas) utilise un tube photomultiplicateur
 ### Réponse
 
 
+
+# Faisceaux gaussiens
+
+Les problèmes de cette section concerne les faisceaux laser gaussiens. Ces fasiceaux ont une grande utilité et le formalisme pour les manipuler est très puissant et très approprié dans une grande majorité des cas qui nous intéressent.
+
+
+
+### Question
+
+Quelle sera la grosseur du point focal d’une onde plane de longueur d’onde 500nm qui frappe une lentille de diamètre D = 2.5 cm et de distance focale f = 10 cm ?
+
+### Réponse
 
