@@ -1,7 +1,8 @@
-
 # Introduction
 
 Ce document, généré automatiquement à partir des questions individuelles, regroupe l'ensemble des questions en optique préparé par Daniel C. Côté. 
+
+Pour corriger les questions, veuillez vous référer [aux versions en ligne des documents](https://github.com/dccote/Questions), disponible sur GitHub.
 
 [TOC]
 
@@ -31,9 +32,14 @@ Les questions de cette section se rapportent aux phénomènes ondulatoires élec
 
 
 
+---
+duration: 1m
+source: dccote
+---
+
 ## Rayon et front d'onde
 
-*Durée: 1m*
+Durée: 1m*
 
 ### Question
 
@@ -42,6 +48,11 @@ Les questions de cette section se rapportent aux phénomènes ondulatoires élec
 ### Réponse
 
 Faux. Pour une onde plane (i.e. un front d'onde plan), tous les rayons sont perpendiculaires au front d'onde et parallèles entre eux.  Au contraire, une onde sphérique (i.e. un front d'onde courbe) a plusieurs rayons différents qui ne sont pas parallèles entre eux, donc plusieurs rayons représentent 
+
+---
+duration: 1m
+source: dccote
+---
 
 ## Origine de l'indice de réfraction
 
@@ -54,6 +65,11 @@ Quel(s) terme(s) des équations de Maxwell est ou sont impliqué(s) dans la déf
 ### Réponse
 
 La constante diélectrique $\epsilon = \epsilon_r \epsilon_\circ$ est relié à l'indice de réfraction par $n \equiv \sqrt{\epsilon_r}$. Cette constante diélectrique dépend de la fréquence de l'onde.
+
+---
+duration: 10m
+source: dccote
+---
 
 ## Solution équation de Maxwell indépendante du temps
 
@@ -68,6 +84,11 @@ $$
 par séparation de variables.
 
 ### Réponse
+
+---
+duration: 1m
+source: dccote
+---
 
 ## Vecteur de Poynting 
 
