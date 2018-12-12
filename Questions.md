@@ -1,8 +1,9 @@
-[TOC]
 
 # Introduction
 
 Ce document, généré automatiquement à partir des questions individuelles, regroupe l'ensemble des questions en optique préparé par Daniel C. Côté. 
+
+[TOC]
 
 # Ondes
 
