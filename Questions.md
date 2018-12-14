@@ -1152,15 +1152,19 @@ Un tube photomultiplicateur (PMT) peut détecter un seul photon.  Quel est taux 
 
 Les impulsions électriques d'une PMT sont typiquement entre 10 ns et 50 ns. Ainsi,pour détecter deux photons séparément, on devrait avoir plus que 2 photons par 10 ou 50 ns, ce qui donne entre 2ev/10ns = 40 pW et 2ev/50ns = 8 pW.
 
-```matlab
-h = 6.62e-34 % m^2 kg/s 
-c = 3e8 % m/s
-lambda = 500e-9 % m
-energieParPhoton = h * c / lambda
+```python
+h = 6.62e-34 # m^2 kg/s 
+c = 3e8 # m/s
+wavelength = 500e-9 # m
+energyPerPhoton = h * c / wavelength # Joules
 
-highMaxPowerInPicoWatt = energieParPhoton/10e-9 /1e-12 % en pW
-lowMaxPowerInPicoWatt = energieParPhoton/50e-9 /1e-12 % en pW
+lowMaxPowerInPicoWatt = energyPerPhoton/50e-9 /1e-12 # en pW
+highMaxPowerInPicoWatt = energyPerPhoton/10e-9 /1e-12 # en pW
 
+print "Une PMT sature entre %.0f pW et %.0f pW" % (lowMaxPowerInPicoWatt, highMaxPowerInPicoWatt)
+
+# Output 
+# Une PMT sature entre 8 pW et 40 pW
 ```
 
 ## Caméra CCD
@@ -1172,6 +1176,23 @@ lowMaxPowerInPicoWatt = energieParPhoton/50e-9 /1e-12 % en pW
 Vous avez une caméra CCD 12-bit avec une profondeur de puits de 100,000e- et une efficacité quantique de 90% sans amplification. Quelle est la plus petite différence de photons qu’elle peut vous rapporter?
 
 ### Réponse
+
+Simplement, la quantité de photon par bit est obtenue par:
+$$
+\frac{100000 \text{ photoelectrons}}{\text{QE photoelectrons/photon} \times 2^{12} \text{bit}} = 27 \text{ photons par bit}
+$$
+
+```python
+maxValue = 1 << 12 # 2^12
+wellDepth = 100000 # photoelectrons
+photonsAcquiredWellFull = wellDepth / 0.90 # 90 photoelectrons means 100 photons hit the detector
+photonsPerBit = photonsAcquiredWellFull/maxValue
+
+print "Deux valeurs numerisees different par %.0f photons" % photonsPerBit
+
+# Output
+# Deux valeurs numerisees different par 27 photons
+```
 
 ## Bruit de photon
 
@@ -1200,7 +1221,7 @@ Quelle est la *radiant sensitivity* de la cathode d’une PMT R3896 en A/W?
 
 ### Réponse
 
-On trouve la [feuille de spécifications](https://www.hamamatsu.com/resources/pdf/etd/R12829_TPMS1083E.pdf) sur le web. On obtient 100 mA/W. Ceci correspond à environ 1 photon sur 5 qui est converti en électron.
+On trouve la [feuille de spécifications](https://www.hamamatsu.com/resources/pdf/etd/R12829_TPMS1083E.pdf) sur le web. On obtient 100 mA/W. Ceci correspond à environ 1 photon sur 5 qui est converti en photoélectron.
 
 ## Sensibilité radiante de l'anode
 
@@ -1224,7 +1245,17 @@ Pouvez vous regarder un fluorophore infrarouge à 750 nm sans une caméra?
 
 ### Réponse
 
-Non. La réponse de l'oeil est essentiellement nulle à 750 nm.
+Non. La réponse de l'oeil est essentiellement nulle à 750 nm:
+
+![Image result for eye response to light](assets/EyeResp1.png)
+
+[Source de l'image](https://www.nde-ed.org/EducationResources/CommunityCollege/PenetrantTest/Introduction/lightresponse.htm)
+
+Au contraire, une camera CCD, fait en silice, possède une réponse beaucoup plus élevée entre 650 et 1050 nm:
+
+![Image result for ccd spectral response](assets/intro-5-small-20171121095136.jpg)
+
+[Source de l'image.](https://andor.oxinst.com/learning/view/article/ccd-spectral-response-(qe))
 
 ## Efficacité
 
@@ -1306,23 +1337,13 @@ Supposez que des photons sont des gaussiennes de 20 ns de largeur (1/e), et supp
 
 ### Réponse
 
-## Résolution caméra CCD
-
-*Durée: 15m*
-
-### Question
-
-Vous avez une caméra CCD 12-bit avec une profondeur de puits de 100,000e- et une efficacité quantique de 90% sans amplification. Quelle est la plus petite différence de photons qu’elle peut vous rapporter?
-
-### Réponse
-
-## Concentration de fluorophores
+## Concentration de fluorophores: microscope grand champ
 
 Durée: 120m
 
 ### Question
 
-Un microscope à grand champ utilise une camera Orca Flash de Hamamatsu et un objectif Olympus 40x pour imager une mince couche de fluorophore (2 µm) fluoresceine de concentration inconnue. L'excitation se fait avec un laser 488 nm avec des filtres bleus. Lorsque vous sauvegardez l'image, vous obtenez des valeurs de 16-bit allant de  950 à 1050, avec une moyenne de 1000 lorsque vous intégrez 100 ms.  Quelle est la concentration de marqueurs fluorescents?
+Un microscope à grand champ utilise une camera Orca Flash de Hamamatsu et un objectif Olympus 40x pour imager une mince couche de fluorophore (2 µm) fluoresceine de concentration inconnue. L'excitation se fait avec un laser 488 nm avec des filtres bleus. Lorsque vous sauvegardez l'image, vous obtenez des valeurs de 16-bit allant de  950 à 1050, avec une moyenne de 1000 lorsque vous intégrez 100 ms.  Quelle est la concentration de marqueurs fluorescents en $\text{fluorophores}/\mu m^3$?
 
 ### Réponse
 
