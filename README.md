@@ -6,7 +6,7 @@ Partant de l'hypothèse que la rétroaction (*feedback*) aux étudiants est plus
 
 ## Plan à long terme
 
-Le plan à long terme est d'obtenir une base de données importantes de problèmes en optique qui sera: 
+Le plan à long terme est d'obtenir une base de données importante de problèmes en optique qui sera: 
 
 1. utilisés par n'importe qui
 2. corrigés par n'importe qui
