@@ -1,0 +1,1 @@
+10 mW de lumière à 800 nm et impulsion de 150 femtosecondes à 80 MHz ?
