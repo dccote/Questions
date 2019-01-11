@@ -34,7 +34,7 @@ Les questions de cette section se rapportent aux phénomènes ondulatoires élec
 
 ---
 duration: 1m
-source: dccote
+author: dccote@cervo.ulaval.ca
 ---
 
 ## Rayon et front d'onde
@@ -47,7 +47,7 @@ Durée: 1m*
 
 ### Réponse
 
-Faux. Pour une onde plane (i.e. un front d'onde plan), tous les rayons sont perpendiculaires au front d'onde et parallèles entre eux.  Au contraire, une onde sphérique (i.e. un front d'onde courbe) a plusieurs rayons différents qui ne sont pas parallèles entre eux, donc plusieurs rayons représentent 
+Faux. Pour une onde plane (i.e. un front d'onde plan), tous les rayons sont perpendiculaires au front d'onde et parallèles entre eux.  Au contraire, une onde sphérique (i.e. un front d'onde courbe) a plusieurs rayons différents qui ne sont pas parallèles entre eux, donc plusieurs rayons représentent les front d'onde courbes.
 
 ---
 duration: 1m
@@ -261,7 +261,9 @@ Les questions de cette section se rapportent à l'optique géomtétrique, où la
 
 1. Notes de cours "Optique" de Daniel C. Côté, Chapitre 2, sections 1 et 2 ([iBook](https://itunes.apple.com/us/book/optique/id949326768?mt=13) ou [iPDF](https://www.dropbox.com/s/ms9onzkg4y4771n/Optique-1.1.9.pdf?dl=0)).
 2. Hecht, Section 5.2 et et 6.1
-3. Saleh & Teich: Sections 1.C## Points cardinaux
+3. Saleh & Teich: Sections 1.C
+
+## Points cardinaux
 
 *Durée: 2m*
 
@@ -1059,7 +1061,11 @@ $$
 $$
 
 
-Donc l’oeil et son indice de réfraction n’ont pas d’impact sur la résolution.# Aberrations
+Donc l’oeil et son indice de réfraction n’ont pas d’impact sur la résolution.
+
+
+
+# Aberrations
 
 Des questions imsples sur les aberrations.
 
@@ -1269,19 +1275,20 @@ La sensibilité (*sensitivity*) d’une photodiode classique est d’environ 1 A
 
 Dans une photodiode de type p-i-n, chaque photon donne lieu à une paire électron-trou, donc un courant de 2 charges pour chaque photon à 500 nm. On obtient donc 2 charges/2eV de lumière, ce qui donne 0.8A/W.   
 
-```matlab
-q = 1.6e-19 % C
-h = 6.62e-34 % m^2 kg/s 
-c = 3e8 % m/s
-I = 2 * q % charge/photon
-lambda = 0.5e-6 % m
-energieParPhoton = h * c / lambda % J/photon
-radiantSensitivity = I / energieParPhoton %% A/W
+```python
+q = 1.6e-19 # C                                                                                                                                                   
+h = 6.62e-34 # m^2 kg/s                                                                                                                                           
+c = 3e8 # m/s                                                                                                                                                     
+I = 2 * q # charge/photon                                                                                                                                         
+wavelength = 0.5e-6 # m                                                                                                                                           
+energieParPhoton = h * c / wavelength # J/photon                                                                                                                  
+radiantSensitivity = I / energieParPhoton # A/W                                                                                                                   
+print "Radiant sensitivity:", radiantSensitivity, " A/W"
 
-%% Output:
-%% radiantSensitivity =
-%%
-%%    0.8056
+# Output:
+# radiantSensitivity =
+#
+#    0.8056
 ```
 
 
@@ -1357,7 +1364,7 @@ Un microscope à grand champ utilise une camera Orca Flash de Hamamatsu et un ob
 
 ### Question
 
-Le microscope à balayage (recopié ici bas) utilise un tube photomultiplicateur R3896 avec un socket C7950 en détection confocale pour imager du FITC. L'objectif 40x est utilisé correctement. Le sténopé (*pinhole*) devant la PMT A a un diamètre de 10 µm.  Quel est la concentration de FITC si vous mesurez ceci à l'oscilloscope en provenance d'un seul pixel en illuminant avec un laser bleu à 488nm:
+Le microscope à balayage (recopié ici bas) utilise un tube photomultiplicateur R3896 avec un socket C7950 en détection confocale pour imager du FITC. L'objectif 40x est utilisé correctement. Le sténopé (*pinhole*) devant la PMT A a un diamètre de 10 µm.  Quel est la concentration de FITC si vous mesurez ceci à l'oscilloscope en provenance d'un seul pixel en illuminant avec un laser bleu à 488nm qui produit 10 mW:
 
 ![image-20181207090956581](assets/image-20181207090956581.png)
 
@@ -1365,9 +1372,220 @@ Le microscope à balayage (recopié ici bas) utilise un tube photomultiplicateur
 
 ### Réponse
 
+#### Stratégie générale
+
+Le problème serait extrêmement simple si on savait déjà le volume excité et qu'on détectait tout. On aurait simplement la puissance totale émise (en photons/s ou en puissance) qui serait obtenue par l'irradiance et la surface totale de fluorophores:
+$$
+\text{P}_\text{Émis} =\text{I}_\text{Exc} N \sigma = \text{I}_\text{Exc} VC \sigma,
+$$
+avec $N$ le nombre de fluorophores excités par l'irradiance $I_\text{exc}$ et $\sigma$ la section efficace du fluorophore. On remarque que les unités sont :
+$$
+\frac{\text{Photons}}{\text{s}} =\frac{\text{Photons}}{\text{s} \cdot \text{m}^2} \cdot \text{Molecules} \cdot \frac{\text{m}^2}{\text{Molecule}} = \frac{\text{Photons}}{\text{s} \cdot \text{m}^2} \cdot \text{m}^3 \cdot \frac{\text{Molecules}}{\text{m}^3} \cdot \frac{\text{m}^2}{\text{Molecule}}
+$$
+et que tout fonctionne.  La complexité vient du fait 1) qu'on ne détecte pas tous les photons et 2) qu'on ne sait pas quel volume est excité et imagé. On doit donc retrouver le volume, l'irradiance et le nombre de photons émis.
+
+On sépare le problème en quatre:
+
+1. **Détection:** Le capteur *détecte* 3 photons par µs ($\text{P}_\text{Dét}$). Cela correspond à combien de photons émis par le volume ($\text{P}_\text{Émis}$)? On cherche la correspondance entre $\text{P}_\text{Dét} = \alpha \text{P}_\text{Émis}$ où $\alpha$ est la fonction de transfert du microscope qui dépend de l'optique, de l'objectif, etc..
+2. **Volume détecté**
+3. **Irradiance d'excitation:** Quelle est l'irradiance $\text{I}_\text{Exc}$ qui atteint le volume d'excitation qui sera imagé et quel est ce volume $V$? 
+4. **Concentration:** Sachant la puissance de l'excitation et de la détection, combien de fluorophores de sections efficaces $\sigma$ sont présents dans le volume pour permettre ce niveau de détection? Nous devrons obtenir de l'information sur le volume excité et le volume imagé ou détecté.
+
+#### Détection
+
+Un tube PMT a [une efficacité de 20% environ](https://www.hamamatsu.com/resources/pdf/etd/R12829_TPMS1083E.pdf) ($\eta$). En supposant que tout l'optique utilisée est essentiellement parfaite et que les filtres ne bloquent pas l'émission de fluorescence, il ne reste que le filtre OD 0.5 qui est utilisé comme réflecteur partiel (30% perdu en transmission, 70% en réflexion), donc de l'arrière de l'objectif à la PMT, on aura une perte de $10^{-0.5} = 30\%$, donc 70% de transmission $T$ de notre signal. L'objectif utilisé a une ouverture numérique de $\text{NA} =  n \sin \theta_\text{NA} = 0.8$ dans l'eau, donc un  angle d'acceptance de $37^{\circ}$. Si on calcule la fraction $F$ d'angle solide que cela represente, on obtient: 
+$$
+F = \frac{2\pi ( 1 - \cos \theta_\text{NA})}{4 \pi} = 0.1
+$$
+
+On peut même somplifier pour les petits angles: 
+$$
+F = \frac{ 1 - \cos \theta_\text{Max}}{2} = \frac{ 1 - (1 - \frac{\theta^2_\text{Max}}{2}+...)}{2} \approx \frac{\theta^2_\text{Max}}{4}
+$$
 
 
-# Faisceaux gaussiens
+Ainsi, on a $\alpha = \eta T F$:
+$$
+\text{P}_\text{Émis} = \frac{\text{P}_\text{Dét}}{\eta T F} = 71.4 \times \text{P}_\text{Dét} = 214\ \text{Photons}/\mu \text{s}
+$$
+
+Donc il y a 214 photons/s émis par le volume détecté. On ne sait pas quel est ce volume qui est imagé.
+
+![image-20190107215922216](assets/image-20190107215922216-6916362.png)
+
+#### Volume détecté
+
+Deux aspects entre en jeu ici: quel volume est excité et quel volume est détecté? L'image du sténopé donne le diamètre de la tache imagée mais la tache d'Airy du faisceau donne le diamètre excité.  Le plus petit des deux doit être considéré. 
+
+* Par optique géométrique on voit une série de télescope de grossissement $f_2/f_1​$ fait l'image du sténopé de $d_s = 10\ \mu m​$ au plan objet. Le sténopé correspond donc à un cercle de diamètre de $d_o​$ à l'objet:
+
+$$
+d_o = \frac{180\ \text{mm}/40}{100\ \text{mm}}\frac{{100\ \text{mm}}}{{75\ \text{mm}}}\frac{{40\ \text{mm}}}{{50\ \text{mm}}} d_s = 0.048 d_s = 0.48 \mu m
+$$
+* Par simple calcul de diffraction, le diamètre de la tache d'Airy de l'excitation est $\frac{1.22\lambda}{ \text{NA}} = 0.76\ \mu\text{m}​$.
+
+Donc le facteur limitant ici est le sténopé, qui est plus petit que le diamètre du disque d'Airy (on voit aussi que la différence entre les deux reste mineure).   Pour voir comment faire un  calcul approximatif de la profondeur de champ, lisez la partie supplémentaire à la fin de ce document intitulé "[Information supplémentaire](#Information%20supplémentaire)". On obtient une profondeur de champ d'environ $h = 1\ \mu \text{m}$, pour un volume de :
+$$
+V = \pi (d_o/2)^2 h = 0.18\ \mu\text{m}^3
+$$
+
+#### Irradiance d'excitation
+
+La totalité de la lumière arrive sur la tache d'Airy, donc l'irradiance est de 10 mW sur $\pi (0.76\ \mu m)^2$ donc 
+$$
+I_o = \frac{P}{A} = \frac{10\ \text{mW}}{1.81\ \mu\text{m}^2} = 5.5\ \text{mW}/\mu\text{m}^2
+$$
+
+#### Concentration
+
+Finalement, on peut obtenir la concentration sachant que $P_\text{Emis} = I_o V C \sigma$, donc:
+$$
+C = \frac{P_\text{Emis}}{I_o V \sigma} = \frac{214\times10^{6}\ \text{Photons/s} \times 3.2 \times 10^{-19} \text{J/Photon}}{0.0055\ \text{W}/\mu\text{m}^2 \times 0.18\ \mu\text{m}^3 \times 3 \times 10^{-8}\ \mu\text{m}^2 } = 2.3\ \text{molécules}/\mu \text{m}^3
+$$
+
+#### Information supplémentaire
+
+Approximation géométrique de la profondeur de champ: On peut obtenir la fonction de transfert d'un plan à une distance $\Delta$ du plan objet: il suffit d'obtenir une expression de la hauteur du rayon a la position du sténopé en fonction de cette distance au plan objet. C'est en fait relativement simple: la matrice ABCD de transfert entre le plan de l'objet et le plan du sténopé est connue: c'est simplement une série de téléscope donc:
+
+$$
+\Biggl[
+\begin{matrix}
+r^\prime \\
+\theta^\prime \\   
+\end{matrix}
+\Biggl]
+=
+\Biggl[
+\begin{matrix}
+M & 0 \\
+0 & 1/M \\   
+\end{matrix}
+\Biggl]
+
+\Biggl[
+\begin{matrix}
+r \\
+\theta \\   
+\end{matrix}
+\Biggl]
+$$
+
+ Pour obtenir la matrice à une distance $\Delta$ du plan focal, on ajoute une propagation dans l'air de $\Delta$:
+
+$$
+\Biggl[
+\begin{matrix}
+r^\prime \\
+\theta^\prime \\   
+\end{matrix}
+\Biggl]
+=
+\Biggl[
+\begin{matrix}
+M & 0 \\
+0 & 1/M \\   
+\end{matrix}
+\Biggl]
+\Biggl[
+\begin{matrix}
+1 & \Delta \\
+0 & 1 \\   
+\end{matrix}
+\Biggl]
+\Biggl[
+\begin{matrix}
+r \\
+\theta \\   
+\end{matrix}
+\Biggl]
+=
+\Biggl[
+\begin{matrix}
+M & \Delta M \\
+0 & 1/M \\   
+\end{matrix}
+\Biggl]
+\Biggl[
+\begin{matrix}
+r \\
+\theta \\   
+\end{matrix}
+\Biggl]
+$$
+
+Le système n'est plus imageant ($B \ne 0$), donc à une distance $\Delta$ devant le plan focal pour une hauteur de rayon $r$, certains rayons seront projetés au-delà du sténopé
+car la hauteur $r^\prime$ est donnée par:
+$$
+M r + \Delta M \theta < r^\prime \label{eq:rayon}.
+$$
+
+Un rayon $(r, \theta)$ originant à une distance $\Delta$ du plan focal sera détecté s'il entre dans le sténopé de rayon $r_o = 5\ \mu m$:
+$$
+M r + \Delta M \theta < r_o \label{eq:rayonDetecte},
+$$
+et ne sera pas détecté si il arrive à l'extérieur du sténopé:
+$$
+M r + \Delta M \theta > r_o \label{eq:rayonBloque}.
+$$
+Donc pour un $(r,\theta)$ donné, l'angle maximale possiblement détecté est:
+$$
+\theta_\text{Max} = \frac{ r_o - M r }{\Delta M} \label{eq:angleMax}.
+$$
+qui doit être inclus entre $[-\theta_\text{NA},\theta_\text{NA}]$
+sachant que l'ouverture numérique permet la détection de $\pm \theta_\text{NA}$. 
+
+Si on regarde au plan focal, ($\Delta=0$), on voit que:
+$$
+r^\prime = M r
+$$
+comme montré plus haut, un rayon à une hauteur $r$ est grossi à $M r$, donc les rayons jusqu'à 0.24 µm seront imagés à l'intérieur du sténopé (10 µm / 2 = 21 x 0.48 µm/2), pour tous les angles de rayons jusqu'à $\theta_\text{NA}$. Pour les rayons avant le plan focal où $\Delta > 0$ , on voit que les rayons seront projetés selon $\ref{eq:rayon}$. En regardant sur l'axe $(r=0)$, on obtient que :
+$$
+r^\prime = \Delta M \theta.
+$$
+On veut savoir a partir de quelle position les rayons à l'intérieur de l'ouverture numérique commenceront à être projeter au delà du sténopé, donc:
+$$
+\theta \lt \frac{r_o}{\Delta M}.
+$$
+
+
+ À partir de $\Delta \gt \frac{r_o}{ M \theta}$, les rayons commenceront à être  bloqués car l'angle maximal qui passera dans le sténopé sera de $\frac{r_o}{\Delta M}$ au lieu de $\theta_\text{NA}$. Pour $\Delta < \frac{n r_o}{M \text{NA}}$  l'angle maximal est $\theta_\text{NA}$.
+
+On obtient l'efficacité de collection relative au plan focal avec $\frac{1}{2} ( 1 - \cos \theta) \approx \frac{\theta^2}{4}$ et donc:
+$$
+{\cal F} = \frac{1}{\theta^2_\text{NA} \Delta^{\prime 2}} \text{  pour } \Delta^\prime > \theta^{-1}_\text{NA}
+$$
+avec $\Delta^\prime = \frac{\Delta}{r_o/M}$, soit la distance $\Delta$ en unité de grosseur de sténopé imagé au plan focal. L'efficacité de collection est tracé a l'aide du script Python suivant.
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+xb = np.linspace(1/0.6, 6, 100)
+xnb = np.linspace(0, 1/0.6, 100)
+plt.plot(xb, 1/(0.6*0.6)/(xb*xb), label='bloque')
+plt.plot(xnb, 1+0*xnb, label='non-bloque')
+plt.xlabel('Distance [multiple de $r_i$]')
+plt.ylabel('Efficacite de collection')
+plt.title("Profondeur de champ")
+plt.legend()
+plt.savefig("graph.pdf", bbox_inches='tight')
+plt.savefig("graph.png", bbox_inches='tight',dpi=600)
+plt.show()
+```
+
+ ![graph](assets/graph.png)
+
+On voit qu'a partir de $\Delta^\prime = 2$, l'efficacité a tombé à moins de 50%, donc on peut dire que la profondeur de champ sera approximativement de $\Delta^\prime = 4 $, soit 4 fois le diamètre du sténopé au plan focal (ici, 2 microns). Le volume imagé sera donc $\pi \left(\frac{r_o}{M}\right)^2 \times 4 \left(\frac{r_o}{M}\right) = \frac{4\pi r_o^3}{M^3} = 1.35\ \mu \text{m}^3$.
+
+```matlab
+% Code MATLAB
+[r,d] = meshgrid([0:0.01:0.25],[0.01:0.01:1]);surf(r,d,max(min((ro - M.*r)./(d*M), 0.6),-0.6).*max(min((ro - M.*r)./(d*M), 0.6),-0.6)/4/(0.6*0.6/4));figure(1)
+zlabel('Efficacite de collection')
+xlabel('Rayon')
+ylabel('Distance \Delta')
+```
+
+![efficacite](assets/efficacite.png)# Faisceaux gaussiens
 
 Les problèmes de cette section concerne les faisceaux laser gaussiens. Ces fasiceaux ont une grande utilité et le formalisme pour les manipuler est très puissant et très approprié dans une grande majorité des cas qui nous intéressent.
 
@@ -1378,4 +1596,177 @@ Les problèmes de cette section concerne les faisceaux laser gaussiens. Ces fasi
 Quelle sera la grosseur du point focal d’une onde plane de longueur d’onde 500nm qui frappe une lentille de diamètre D = 2.5 cm et de distance focale f = 10 cm ?
 
 ### Réponse
+
+# Interactions linéaires
+
+Les problèmes de cette section concerne les interactions linéaires entre la lumière et les particules ou les tissus. Les concepts de section efficace, coefficient de diffusion, d'absorption et d'anisotropie de même que la fluorescence par excitation linéaire sont exposés dans des problèmes.
+
+
+
+## Question
+
+Vous savez que la probabilité qu’un photon soit diffusé dans un élément différentiel d'épaisseur $ds$ est $dP = \mu_s ds$, et que $\mu_s = N \sigma_s$ (voir les notes), où N est la densité de particules de section efficace $\sigma_s$. À grande densité, cette égalité ne tient plus: obtenez la condition sur la densité à partir de laquelle une erreur de 5% sera obtenue. 
+
+## Réponse
+
+## Question
+
+Un tissu a une épaisseur de 1 mm.  Supposez $\mu_a = 0\ \text{cm}^{-1}$, $\mu_s = 200\ \text{cm}^{-1}$ et $g=0.8$.  Quelle est la probabilité qu’un photon sorte sur l’axe d’entrée après une distance d = 1 mm sans avoir été diffusé ? 
+
+## Réponse
+
+## Question
+
+Vous utilisez une cuvette de 1 cm de chemin optique contenant une solution de FITC.  Un laser à 488 nm se propage et 1% de la lumière est absorbée après avoir traversé la cuvette.  Quelle est la concentration de FITC dans la cuvette?  Note: FITC et fluorescein sont des synonymes.
+
+## Réponse
+
+## Question
+
+Si vous choisissez des nombres entre -0.5 et 0.5 de façon uniforme à l’aide de la fonction Random() de votre langage de programmation préféré, vous pouvez obtenir une série de points (x,y) à l’intérieur du carré de côté unitaire centré sur l’origine.
+
+![image-20190109140735783](assets/image-20190109140735783-7060855.png)
+
+
+1. Quelle est la probabilité que le point soit à l’intérieur d’un cercle de rayon $r=0.5​$? Quelle est la probabilité qu’il soit à l’intérieur du carré?
+2. Obtenez la valeur de $\pi$ à l’aide de la méthode Monte Carlo. Note: ma solution prend 14 lignes en Perl, incluant le texte de sortie et prend 5 secondes à calculer.
+
+## Réponse
+
+## Question
+
+Faites un code Monte Carlo pour calculer la propagation dans un milieu homogène (sans interface) de coefficient µs, µa et g arbitraire, pour un source isotrope (attention: réfléchissez a ce que veut dire source isotrope et comment le programmer). Allez http://omlc.org/software/mc/, en particulier: http://omlc.org/classroom/ece532/class4/index.html la section sur Sampling of probability distribution.  Il existe des tonnes de solutions et de programmes sur le Web.  Cependant, c’est un excellent exercice de pouvoir le programmer soi même.
+
+## Réponse
+
+## Question
+
+Vous illuminez votre doigt avec un laser rouge à 630 nm.  
+
+1.  Quelle fraction de la lumière sera absorbée? Indice: vous devez trouver le coefficient d’absorption dû au sang.  Vous devrez surement faire un estimé du volume de sang dans votre doigt. 
+2. Quelle serait la réponse si la longueur d’onde était 488 nm ?
+
+
+## Réponse
+
+## Question
+
+Obtenez le code Monte Carlo Multi Layer (MCML) du site: http://omlc.ogi.edu/software/mc/.  Sentez vous bien libre de vous référer à la documentation http://omlc.ogi.edu/pubs/pdf/man_mcml.pdf. Utilisez une couche seulement de $d=5\ \text{mm}$, $\mu_s=100\ \text{cm}^{-1}$ et $g=0.75.$  On appelle la réflectance diffuse et la transmittance diffuse la quantité totale de lumière réfléchie et transmise. 
+
+1. Obtenez la quantité de lumière **totale** réfléchie et transmise de façon diffuse (i.e deux nombres)
+2. Obtenez la distribution de la fluence (Energie par surface) dans un plan 2D transverse à la surface du tissu centré sur le faisceau dans l’échantillon.  Cette donnée est essentiellement dans le fichier de sortie du programme.
+3. Obtenez la distribution de la fluence dans un plan 2D passant au centre du faisceau dans l’échantillon. Cette donnée est essentiellement dans le fichier de sortie du programme. 
+
+## Réponse
+
+## Question
+
+À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
+
+## Réponse
+
+## Question
+
+Calculez la quantité **moyenne** de photons émis par secondes par un fluorophore FITC (Fluorescein) à concentration $1\ \mu\text{M}$ dans une sphère de diamètre $0.5\ \mu\text{m}$ pour 1 mW de lumière à 488 nm? 
+
+## Réponse
+
+# Impulsions brèves
+
+Les problèmes de cette section concerne les impulsions brèves, la dispersion, la puissance au pic, les taux de répétition, les largeurs de spectre.
+## Question
+
+Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des impulsions de 150 femtosecondes (*transform-limited*) à toutes les 12 nanosecondes. La lumière émise est centrée à 800 nm et il y a 10 mW de puissance moyenne c’est à dire que si on fait la moyenne de la puissance en 150 femtsoecondes de lumière et 12 nanosecondes de “vide”, on obtient 10 mW.
+
+1. Calculez la puissance au pic des impulsion (en kW).
+2. Quelle est la largeur spectrale du faisceau ? (en nanomètres).  Utilisez les notes de cours.
+
+3. Quel est l’irradiance au pic de l’impulsion en $\text{MW/cm}^2$ ?
+
+4. Quel est l’irradiance spectrale en $\text{MW/nm/cm}^2$ ?
+
+5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
+
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+
+7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
+
+
+
+![image-20190109203149671](assets/image-20190109203149671.png)
+
+## Réponse## Question
+
+Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des impulsions de 30 femtosecondes (*transform-limited*) à toutes les 12 nanosecondes. La lumière émise est centrée à 800 nm et il y a 10 mW de puissance moyenne c’est à dire que si on fait la moyenne de la puissance en 150 femtsoecondes de lumière et 12 nanosecondes de “vide”, on obtient 10 mW.
+
+1. Calculez la puissance au pic des impulsion (en kW).
+2. Quelle est la largeur spectrale du faisceau ? (en nanomètres).  Utilisez les notes de cours.
+3. Quel est l’irradiance au pic de l’impulsion en MW/cm2 ?
+4. Quel est l’irradiance spectrale en $\text{MW/nm/cm}^2$ ?
+5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
+
+
+
+![image-20190109203149671](../009-Impulsions%20breves/assets/image-20190109203149671.png)
+
+## Réponse
+
+## Question
+
+En supposant que seule la dispersion du verre de silice compte dans une fibre optique, calculez la dispersion d’impulsions de 150 femtsoecondes à 800 nm dans 10 cm de fibre optique et dans 2 mètres de fibre optique. 
+
+## Réponse
+
+## Question
+
+En supposant que seule la dispersion du verre de silice compte dans une fibre optique:
+
+1. Calculez la dispersion d’impulsions de 150 femtsoecondes à 800 nm dans 10 cm de fibre optique et dans 2 mètres de fibre optique. 
+2. Discutez l’importance pour l’endoscopie multiphoton.
+
+## Réponse
+
+
+
+# Interactions non-linéaires
+
+Les problèmes de cette section concerne les interactions non-linéaires entre les impulsions (habituellement brèves) et la matière.  Par exemple, on y retrouve des problèmes sur l'excitation de fluorescence multi-photonique (i.e. 2-photon), la génération de deuxième harmonique,de troisième harmonique, le Raman cohérent, etc...
+
+## Question
+
+Calculez la quantité **moyenne** de photons émis par seconde par un fluorophore FITC (Fluorescein) à concentration $1\ \mu\text{M}$ dans une sphère de diamètre $0.5\ \mu\text{m}$ pour 10 mW de lumière à 800 nm et impulsions de 150 femtosecondes à 80 MHz?
+
+## Réponse
+
+## Question
+
+Vous voulez mesurer le potentiel électrique à l’aide de la génération de deuxième harmonique. 
+
+1. En supposant que le signal change de 10% pour une variation de potentiel de la cellule de 100 mV, combien de puissance devez-vous générer pour être capable de mesurer une variation de 10 mV (un “mini”)? 
+2. Discutez (un paragraphe) pourquoi avec une section efficace “normale” de $10^{-16}\ \text{cm}^2$, ces mesures sont difficiles, même pour un potentiel d’action de 100 mV? Une membrane est environ 90 nm d’épaisseur. 
+
+## Réponse
+
+## Question
+
+En supposant que vous générez de la lumière par le processus de Raman cohérent (qui émet la lumière majoritairement par l’avant), utilisez le code Monte Carlo MCML (http:// omlc.ogi.edu/software/mc/) pour répondre aux questions suivantes. Supposez que votre source de CARS est directement à la surface de votre échantillon et émet sa lumière directement dans le tissu. 
+
+1. Vous voulez visualiser une vibration Raman de 1600 cm-1. Choisissez deux longueurs d’onde laser pour exciter la vibration par effet CARS sachant ωanti-Stokes= 2ωpompe- ωStokes. 
+2. Quelle est la largeur de la tache de lumière diffuse à la surface de l’échantillon? 
+3. Obtenez le graphique de la fraction de lumière qui revient vers l’objectif si votre objectif un a champ de vision (field of view) infini. Obtenez le graphique en fonction de l’épaisseur de tissu (de 10 micron à 2 mm). 
+
+## Réponse
+
+## Question
+
+Vous voulez détecter la malaria dans le sang par émission de troisième harmonique avec une source à 1300 nm. Vous voulez utiliser un objectif de microscope qui focalisera la lumiere sur un vaisseau, la troisième harmonique est générée vers l’avant seulement. 
+
+1. Quelle est la troisième harmonique de 1300 nm ? 
+2. D’abord estimez la densité de vaisseaux sanguins dans la peau (i.e. quelle fraction du volume de la peau est remplie de sang). 
+3. Ensuite, vous rappelant que l’hémoglobine représente seulement une fraction du sang (combien?), estimez le coefficient d’absorption de la lumière à la longueur d’onde qui sera générée. 
+4. En supposant que les vaisseaux sanguins sont 60 microns sous la surface de la peau, quelle fraction de la lumière générée sera rendra au détecteur? 
+
+## Réponse
 
