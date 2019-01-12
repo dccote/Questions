@@ -1603,25 +1603,25 @@ Les problèmes de cette section concerne les interactions linéaires entre la lu
 
 
 
-## Question
+### Question
 
 Vous savez que la probabilité qu’un photon soit diffusé dans un élément différentiel d'épaisseur $ds$ est $dP = \mu_s ds$, et que $\mu_s = N \sigma_s$ (voir les notes), où N est la densité de particules de section efficace $\sigma_s$. À grande densité, cette égalité ne tient plus: obtenez la condition sur la densité à partir de laquelle une erreur de 5% sera obtenue. 
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 Un tissu a une épaisseur de 1 mm.  Supposez $\mu_a = 0\ \text{cm}^{-1}$, $\mu_s = 200\ \text{cm}^{-1}$ et $g=0.8$.  Quelle est la probabilité qu’un photon sorte sur l’axe d’entrée après une distance d = 1 mm sans avoir été diffusé ? 
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 Vous utilisez une cuvette de 1 cm de chemin optique contenant une solution de FITC.  Un laser à 488 nm se propage et 1% de la lumière est absorbée après avoir traversé la cuvette.  Quelle est la concentration de FITC dans la cuvette?  Note: FITC et fluorescein sont des synonymes.
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 Si vous choisissez des nombres entre -0.5 et 0.5 de façon uniforme à l’aide de la fonction Random() de votre langage de programmation préféré, vous pouvez obtenir une série de points (x,y) à l’intérieur du carré de côté unitaire centré sur l’origine.
 
@@ -1631,15 +1631,15 @@ Si vous choisissez des nombres entre -0.5 et 0.5 de façon uniforme à l’aide 
 1. Quelle est la probabilité que le point soit à l’intérieur d’un cercle de rayon $r=0.5​$? Quelle est la probabilité qu’il soit à l’intérieur du carré?
 2. Obtenez la valeur de $\pi$ à l’aide de la méthode Monte Carlo. Note: ma solution prend 14 lignes en Perl, incluant le texte de sortie et prend 5 secondes à calculer.
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 Faites un code Monte Carlo pour calculer la propagation dans un milieu homogène (sans interface) de coefficient µs, µa et g arbitraire, pour un source isotrope (attention: réfléchissez a ce que veut dire source isotrope et comment le programmer). Allez http://omlc.org/software/mc/, en particulier: http://omlc.org/classroom/ece532/class4/index.html la section sur Sampling of probability distribution.  Il existe des tonnes de solutions et de programmes sur le Web.  Cependant, c’est un excellent exercice de pouvoir le programmer soi même.
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 Vous illuminez votre doigt avec un laser rouge à 630 nm.  
 
@@ -1647,9 +1647,9 @@ Vous illuminez votre doigt avec un laser rouge à 630 nm.
 2. Quelle serait la réponse si la longueur d’onde était 488 nm ?
 
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 Obtenez le code Monte Carlo Multi Layer (MCML) du site: http://omlc.ogi.edu/software/mc/.  Sentez vous bien libre de vous référer à la documentation http://omlc.ogi.edu/pubs/pdf/man_mcml.pdf. Utilisez une couche seulement de $d=5\ \text{mm}$, $\mu_s=100\ \text{cm}^{-1}$ et $g=0.75.$  On appelle la réflectance diffuse et la transmittance diffuse la quantité totale de lumière réfléchie et transmise. 
 
@@ -1657,24 +1657,24 @@ Obtenez le code Monte Carlo Multi Layer (MCML) du site: http://omlc.ogi.edu/soft
 2. Obtenez la distribution de la fluence (Energie par surface) dans un plan 2D transverse à la surface du tissu centré sur le faisceau dans l’échantillon.  Cette donnée est essentiellement dans le fichier de sortie du programme.
 3. Obtenez la distribution de la fluence dans un plan 2D passant au centre du faisceau dans l’échantillon. Cette donnée est essentiellement dans le fichier de sortie du programme. 
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 Calculez la quantité **moyenne** de photons émis par secondes par un fluorophore FITC (Fluorescein) à concentration $1\ \mu\text{M}$ dans une sphère de diamètre $0.5\ \mu\text{m}$ pour 1 mW de lumière à 488 nm? 
 
-## Réponse
+### Réponse
 
 # Impulsions brèves
 
 Les problèmes de cette section concerne les impulsions brèves, la dispersion, la puissance au pic, les taux de répétition, les largeurs de spectre.
-## Question
+### Question
 
 Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des impulsions de 150 femtosecondes (*transform-limited*) à toutes les 12 nanosecondes. La lumière émise est centrée à 800 nm et il y a 10 mW de puissance moyenne c’est à dire que si on fait la moyenne de la puissance en 150 femtsoecondes de lumière et 12 nanosecondes de “vide”, on obtient 10 mW.
 
@@ -1695,7 +1695,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 
 ![image-20190109203149671](assets/image-20190109203149671.png)
 
-## Réponse## Question
+### Réponse## Question
 
 Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des impulsions de 30 femtosecondes (*transform-limited*) à toutes les 12 nanosecondes. La lumière émise est centrée à 800 nm et il y a 10 mW de puissance moyenne c’est à dire que si on fait la moyenne de la puissance en 150 femtsoecondes de lumière et 12 nanosecondes de “vide”, on obtient 10 mW.
 
@@ -1711,22 +1711,22 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 
 ![image-20190109203149671](../009-Impulsions%20breves/assets/image-20190109203149671.png)
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 En supposant que seule la dispersion du verre de silice compte dans une fibre optique, calculez la dispersion d’impulsions de 150 femtsoecondes à 800 nm dans 10 cm de fibre optique et dans 2 mètres de fibre optique. 
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 En supposant que seule la dispersion du verre de silice compte dans une fibre optique:
 
 1. Calculez la dispersion d’impulsions de 150 femtsoecondes à 800 nm dans 10 cm de fibre optique et dans 2 mètres de fibre optique. 
 2. Discutez l’importance pour l’endoscopie multiphoton.
 
-## Réponse
+### Réponse
 
 
 
@@ -1734,22 +1734,22 @@ En supposant que seule la dispersion du verre de silice compte dans une fibre op
 
 Les problèmes de cette section concerne les interactions non-linéaires entre les impulsions (habituellement brèves) et la matière.  Par exemple, on y retrouve des problèmes sur l'excitation de fluorescence multi-photonique (i.e. 2-photon), la génération de deuxième harmonique,de troisième harmonique, le Raman cohérent, etc...
 
-## Question
+### Question
 
 Calculez la quantité **moyenne** de photons émis par seconde par un fluorophore FITC (Fluorescein) à concentration $1\ \mu\text{M}$ dans une sphère de diamètre $0.5\ \mu\text{m}$ pour 10 mW de lumière à 800 nm et impulsions de 150 femtosecondes à 80 MHz?
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 Vous voulez mesurer le potentiel électrique à l’aide de la génération de deuxième harmonique. 
 
 1. En supposant que le signal change de 10% pour une variation de potentiel de la cellule de 100 mV, combien de puissance devez-vous générer pour être capable de mesurer une variation de 10 mV (un “mini”)? 
 2. Discutez (un paragraphe) pourquoi avec une section efficace “normale” de $10^{-16}\ \text{cm}^2$, ces mesures sont difficiles, même pour un potentiel d’action de 100 mV? Une membrane est environ 90 nm d’épaisseur. 
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 En supposant que vous générez de la lumière par le processus de Raman cohérent (qui émet la lumière majoritairement par l’avant), utilisez le code Monte Carlo MCML (http:// omlc.ogi.edu/software/mc/) pour répondre aux questions suivantes. Supposez que votre source de CARS est directement à la surface de votre échantillon et émet sa lumière directement dans le tissu. 
 
@@ -1757,9 +1757,9 @@ En supposant que vous générez de la lumière par le processus de Raman cohe
 2. Quelle est la largeur de la tache de lumière diffuse à la surface de l’échantillon? 
 3. Obtenez le graphique de la fraction de lumière qui revient vers l’objectif si votre objectif un a champ de vision (field of view) infini. Obtenez le graphique en fonction de l’épaisseur de tissu (de 10 micron à 2 mm). 
 
-## Réponse
+### Réponse
 
-## Question
+### Question
 
 Vous voulez détecter la malaria dans le sang par émission de troisième harmonique avec une source à 1300 nm. Vous voulez utiliser un objectif de microscope qui focalisera la lumiere sur un vaisseau, la troisième harmonique est générée vers l’avant seulement. 
 
@@ -1768,5 +1768,5 @@ Vous voulez détecter la malaria dans le sang par émission de troisième har
 3. Ensuite, vous rappelant que l’hémoglobine représente seulement une fraction du sang (combien?), estimez le coefficient d’absorption de la lumière à la longueur d’onde qui sera générée. 
 4. En supposant que les vaisseaux sanguins sont 60 microns sous la surface de la peau, quelle fraction de la lumière générée sera rendra au détecteur? 
 
-## Réponse
+### Réponse
 
