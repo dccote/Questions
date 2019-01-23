@@ -121,13 +121,13 @@ Montrez qu’une onde plane $\mathbf{E}\left( \mathbf{r}, t\right) = \mathbf{E}_
 
 ### Réponse
 
-Faux.  L'ensemble des ondes planes est une base complète qui peut représenter tout onde, c'est-à-dire:
+Faux.  L'ensemble des ondes planes est une base complète qui peut représenter toute onde, c'est-à-dire:
 $$
-\vec{E}(r,t) = \sum_{\vec{k}} \vec{E}(\vec{k})e^{i (\vec{k}\cdot\vec{r} - \omega t)}
+\vec{E}(r,t) = \sum_{\vec{k}} \vec{E}(\vec{k})e^{i (\vec{k}\cdot\vec{r} - \omega t)}.
 $$
 C'est la même chose pour les ondes sphériques:
 $$
-\vec{E}(r,t) = \sum_{\vec{r}_i} \vec{E}(\vec{r}_i)e^{i (k \left| \vec{r}-\vec{r}_i \right| - \omega t)}
+\vec{E}(r,t) = \sum_{\vec{r}_i} \vec{E}(\vec{r}_i)e^{i (k \left| \vec{r}-\vec{r}_i \right| - \omega t)}.
 $$
 
 
@@ -160,7 +160,7 @@ Une caméra peut ajuster le *focus* sans changer le grossissement.  Comment est-
 
 ### Question
 
-1 photon/s donne combien de Watt à $\lambda = 1 \mu m $?
+1 photon/s donne combien de Watt à $\lambda = 1\ \mu m $?
 
 ### Réponse
 
@@ -218,7 +218,7 @@ Donnez des valeurs d’indice de réfraction pour l’eau, le verre, l’huile, 
 
 L'eau $n=1.33$, le verre $n \approx 1.50$ et les semi-conducteurs varient mais sont plutôt élevés $n_\text{Si} = 3.4$ et  $n_\text{Ga} = 3.5$. Vous pouvez trouver une base de données très complète sur le site [refractiveindex.info](https://refractiveindex.info).
 
-Cette valeur dépend évidemment de la longueur d'onde.  Cependant, pour des milieux transparents (comme l'eau, le verre), l'indice varie peut sauf près de l'absorption, à longueur d'onde courte.  Ainsi, on utilise souvent un seul indice mais on doit confirmer lorsque les longueurs d'ondes approchent l'UV dans l'eau et le verre par exemple.
+Cette valeur dépend évidemment de la longueur d'onde.  Cependant, pour des milieux transparents (comme l'eau, le verre), l'indice varie peu sauf près de l'absorption, à longueurs d'ondes courtes.  Ainsi, on utilise souvent un seul indice mais on doit confirmer lorsque les longueurs d'ondes approchent l'UV dans l'eau et le verre par exemple.
 
 ## Paramètres d'illumination
 
@@ -237,7 +237,7 @@ Calculer pour un faisceau à 800 nm ayant une surface de 10 mm^2^ et une puissan
 
 # Optique Géométrique
 
-Les questions de cette section se rapportent à l'optique géomtétrique, où la longueur d'onde est négligeable. On parle de lentilles, formation d'image et de systeme optiques simples. 
+Les questions de cette section se rapportent à l'optique géomtétrique, où la longueur d'onde est négligeable. On parle de lentilles, formation d'image et de systèmes optiques simples. 
 
 **Objectifs**
 
@@ -441,13 +441,14 @@ Pourquoi les lentilles cornéennes avec correction pour l’astigmatisme sont-el
 
 Parce qu'elles doivent s'orienter dans l'oeil car la correction qu'elles produisent est associée à l'axe des $x$ et $y$, elle n'est pas symétrique. Elle ont donc un poids dans le bas qui les fait s'orienter correctement.
 
-# Déterminant matrices ABCD
+## Déterminant matrices ABCD
 
 ### Question 
 
 Montrez que le déterminant des matrices ABCD est en général $n_1/n_2$
 
 ### Réponse
+
 
 ## Grossissement
 
@@ -457,7 +458,8 @@ VRAI FAUX: L’élément A d’une matrice de transfert ABCD représente toujour
 
 ### Réponse
 
-Faux.  Seulement lorsque le système est imageant. On ne parle pas de grossissement quand il n'y a pas d'image.## Matrice de lentille
+Faux.  Seulement lorsque le système est imageant. On ne parle pas de grossissement quand il n'y a pas d'image.
+## Matrice de lentille
 
 *Durée: 1m*
 
@@ -650,7 +652,7 @@ Référez-vous à la figure de Hecht suivante pour les questions.
 
 ### Réponse
 
-1. Les deux côtés de l'oeil ne baignent pas dans le même indice de réfraction.  Les deux distances focales (avant et arrière) d'une interface diélectrique ne sont les même que lorsque l'indice est le même des deux côtés (par exemple, dans l'air).
+1. Les deux côtés de l'oeil ne baignent pas dans le même indice de réfraction.  Les deux distances focales (avant et arrière) d'une interface diélectrique ne sont les mêmes que lorsque l'indice est le même des deux côtés (par exemple, dans l'air).
 
 2. On utilise la loi des diélectriques courbes ou la matrice ABCD diélectrique courbe qui donne simplement $f = -1/C$, donc $f= \frac{1.33 R}{1.33 - 1.00} = 4 R = 46 \text{mm}$, par 
   $$
@@ -720,7 +722,7 @@ Référez-vous à la figure de Hecht suivante pour les questions.
 6. Prenons le cas sans lunettes, avec l'équation (c.1) et la figure suivante:
    ![pastedGraphic.pdf](assets/pastedGraphic-4492234.pdf)
    Le plan principal avant est à $d_\mathrm{PP_1} = \frac{1-D}{C} = -f $ devant le système, donc $f$ vers la droite, i.e. sur la lentille mince. Le plan principal de arrière est à d $d_\mathrm{PP_2} = \frac{1-A}{C} = 0$ donc lui aussi sur la lentille mince. Aucune surprise.
-   Cependant, le plan principal arrière du système avec lunette a changé: on le voit tout de suite, l'élément  $A$ a changé. Un calcul de la position du plan donne $PP_2$  qu'il est maintenant à $d_\mathrm{PP_2} = \frac{1-A}{C} = -\frac{f^2}{F}$.  Ainsi, le plan focal a été déplacé de $-\frac{f^2}{F}​$ , la distance focale reste la même mais le point focal est avancé, d'où la correction par les lunettes.
+   Cependant, le plan principal arrière du système avec lunette a changé: on le voit tout de suite, l'élément  $A$ a changé. Un calcul de la position du plan donne $PP_2$  qu'il est maintenant à $d_\mathrm{PP_2} = \frac{1-A}{C} = -\frac{f^2}{F}$.  Ainsi, le plan focal a été déplacé de $-\frac{f^2}{F}$ , la distance focale reste la même mais le point focal est avancé, d'où la correction par les lunettes.
 
 ## Objectif
 
@@ -760,9 +762,17 @@ $$
 
 ### Question
 
-Vous avez une lentille de diamètre $D=5 \text{cm}$ et de focale $f = 50 \text{cm}$ qui fait l'image du soleil, un disque d'illumination constante pour nos besoins. Le soleil sous-tend un angle de $\theta = 0.5^o$ à la surface de la terre, où son irradiance est de 1000 W/cm^2^.  Quelle est l'irradiance de l'image du soleil qui apparaît sur la caméra?
+Vous avez une lentille de diamètre $D=5\ \text{cm}$ et de focale $f = 50\ \text{cm}$ qui fait l'image du soleil, un disque d'illumination constante pour nos besoins. Le soleil sous-tend un angle de $\theta = 0.5^o$ à la surface de la terre, où son irradiance est de 1000 W/cm^2^.  Quelle est l'irradiance de l'image du soleil qui apparaît sur la caméra?
 
 ### Réponse
+
+## Question
+
+Qu'est-ce qui explique la formation des mirages dans le désert? À partir de quelle température apparaitront-ils?
+
+## Réponse
+
+
 
 # Instrumentation
 
@@ -780,7 +790,8 @@ Vous avez une lentille de diamètre $D=5 \text{cm}$ et de focale $f = 50 \text{c
 
 1. Notes de cours "Optique" de Daniel C. Côté, Chapitre 2, section 3 ([iBook](https://itunes.apple.com/us/book/optique/id949326768?mt=13) ou [iPDF](https://www.dropbox.com/s/ms9onzkg4y4771n/Optique-1.1.9.pdf?dl=0)).
 2. Pedrotti, Chapitre 6
-3. Hecht, Section 5.3## Objectif et résolution
+3. Hecht, Section 5.3
+## Objectif et résolution
 
 *Durée: 1m*
 
@@ -984,7 +995,8 @@ I_{\sigma}(r) \approx \frac{ \left|E_\circ\right|^2 \pi a^2}{f^2} \left[ \frac{2
 $$
 
 
-on obtient que la largeur, définie comme la distance entre le maximum et le point où la fonction $J_1(x)/x$ est nulle, est donné par $J_1 \left( \frac{ 2\pi a r_\circ}{\lambda f} \right) = 3.82$ donc $2r_\circ = 2 \times 1.22 \lambda \frac{f}{2a} = 2.44 \lambda f_{\#}$ . La tache focale, dans le cas où la lentille est remplie par l’illumination, est environ le double de la longueur d’onde multipliée par le *f-number* de la lentille. ## Tache focale, petit faisceau
+on obtient que la largeur, définie comme la distance entre le maximum et le point où la fonction $J_1(x)/x$ est nulle, est donné par $J_1 \left( \frac{ 2\pi a r_\circ}{\lambda f} \right) = 3.82$ donc $2r_\circ = 2 \times 1.22 \lambda \frac{f}{2a} = 2.44 \lambda f_{\#}$ . La tache focale, dans le cas où la lentille est remplie par l’illumination, est environ le double de la longueur d’onde multipliée par le *f-number* de la lentille. 
+## Tache focale, petit faisceau
 
 ### Question
 
@@ -1003,7 +1015,8 @@ $$
 I_{\sigma}(r) \approx \frac{ \left|E_\circ\right|^2 \pi (d/2)^2}{f^2} \left[ \frac{2 J_1 \left( \frac{ \pi d r}{\lambda f} \right)}{ \frac{\pi d r}{\lambda f} } \right]^2
 $$
 
-on obtient essentiellement la même solution que le problème précédent, sauf que le diamètre effectif de “blocage” est $d$ au lieu de $D$. On obtient donc $2r_\circ = 2 \times 1.22 \lambda \frac{f}{d}$. Dans ce cas, on dit que le faisceau “n’utilise pas” toute la lentille est que le $f_\#$ effectif est augmenté de $f^{\rm{eff}}_\# = \frac{D}{d} \times f_{\#}$ ce qui augmente proportionnellement la grosseur de la tache focale.## Résolution de l'oeil
+on obtient essentiellement la même solution que le problème précédent, sauf que le diamètre effectif de “blocage” est $d$ au lieu de $D$. On obtient donc $2r_\circ = 2 \times 1.22 \lambda \frac{f}{d}$. Dans ce cas, on dit que le faisceau “n’utilise pas” toute la lentille est que le $f_\#$ effectif est augmenté de $f^{\rm{eff}}_\# = \frac{D}{d} \times f_{\#}$ ce qui augmente proportionnellement la grosseur de la tache focale.
+## Résolution de l'oeil
 
 Durée: 120m
 
@@ -1144,13 +1157,12 @@ La règle: on veut faire travailler les deux côtés de la lentille.
 
 **Références**
 
-1. [Diapositives](https://www.icloud.com/keynote/0XoMXj0S6kRg8GCmICiKpM3fQ#BPH-7006_Detection) sur la Détection pour le cours gradué "Imagerie Biomédicale".## Tube photomultiplicateur
+1. [Diapositives](https://www.icloud.com/keynote/0XoMXj0S6kRg8GCmICiKpM3fQ#BPH-7006_Detection) sur la Détection pour le cours gradué "Imagerie Biomédicale".
+## Tube photomultiplicateur
 
 *Durée: 5m*
 
 ### Question
-
-
 
 Un tube photomultiplicateur (PMT) peut détecter un seul photon.  Quel est taux de photons maximal qui peut être mesuré à 500 nm?
 
@@ -1183,7 +1195,7 @@ Vous avez une caméra CCD 12-bit avec une profondeur de puits de 100,000e- et un
 
 ### Réponse
 
-Simplement, la quantité de photon par bit est obtenue par:
+Simplement, la quantité de photons par bit est obtenue par:
 $$
 \frac{100000 \text{ photoelectrons}}{\text{QE photoelectrons/photon} \times 2^{12} \text{bit}} = 27 \text{ photons par bit}
 $$
@@ -1336,7 +1348,7 @@ Tracez la courbe du bruit total typique d’une CCD en fonction du temps d’int
 
 ## Histogramme d'amplitudes
 
-*Durée: 1m*
+*Durée: 15m*
 
 ### Question
 
@@ -1346,7 +1358,7 @@ Supposez que des photons sont des gaussiennes de 20 ns de largeur (1/e), et supp
 
 ## Concentration de fluorophores: microscope grand champ
 
-Durée: 120m
+*Durée: 120m*
 
 ### Question
 
@@ -1585,7 +1597,8 @@ xlabel('Rayon')
 ylabel('Distance \Delta')
 ```
 
-![efficacite](assets/efficacite.png)# Faisceaux gaussiens
+![efficacite](assets/efficacite.png)
+# Faisceaux gaussiens
 
 Les problèmes de cette section concerne les faisceaux laser gaussiens. Ces fasiceaux ont une grande utilité et le formalisme pour les manipuler est très puissant et très approprié dans une grande majorité des cas qui nous intéressent.
 
@@ -1661,7 +1674,7 @@ Obtenez le code Monte Carlo Multi Layer (MCML) du site: http://omlc.ogi.edu/soft
 
 ### Question
 
-À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
+À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
 
 ### Réponse
 
@@ -1670,6 +1683,19 @@ Obtenez le code Monte Carlo Multi Layer (MCML) du site: http://omlc.ogi.edu/soft
 Calculez la quantité **moyenne** de photons émis par secondes par un fluorophore FITC (Fluorescein) à concentration $1\ \mu\text{M}$ dans une sphère de diamètre $0.5\ \mu\text{m}$ pour 1 mW de lumière à 488 nm? 
 
 ### Réponse
+
+La littérature scientifique qui discute de l'émission de fluorescence par excitation à 1-photon suit deux courants principaux: l'utilisation du coefficient d'absorption molaire $\epsilon$ et de l'équation de Beer-Lambert ou l'utilisation de la section efficace $\sigma$ (plutôt dans le domaine de la physique et moins répandue).  La loi de Beer-Lambert pour l'absorption à 1-photon avec l'absorption molaire est $I(L) = 10^{-\epsilon C L} I_\circ$. Elle peut aussi s'écrire en terme des puissances $P(L) = 10^{-\epsilon C L} P_\circ$. Elle s'applique car les photons ne sont pas diffusés sur cette petite distance (1 $\mu$m). Nous supposons que la lumière est focalisé entièrement sur la sphère, comme dans un microscope. Puisque nous savons la concentration et le diamètre de la sphère, nous pouvons simplement calculer le coefficient d'absorption avec le coefficient d'absorption molaire $\epsilon$ et obtenir la quantité de photons absorbés dans le volume focal. Ensuite, avec l'efficacité quantique du fluorophore ($\eta$), nous pourrons simplement convertir la puissance absorbée en puissance ré-émise.
+
+Nous trouvons facilement\footnote{http://www.dcclab.ca/fluorophores/ ou http://www.piercenet.com/instructions/2162081.pdf} le coefficient d'absorption molaire de la fluorescein (aussi appelé FITC) avec $\epsilon = 70000\ \rm{cm}^{-1} \rm{M}^{-1}​$ et une efficacité quantique de $\eta = 0.99​$. Il y a deux façons de calculer la puissance absorbée :
+
+* Soustraire la puissance juste avant et juste après le point focal pour obtenir la puissance absorbée dans le volume focal. $P_\circ-  10^{-\epsilon C L} P_\circ  $ avec $L=1 \mu m$.
+* Calculer la différentielle pour obtenir la variation d'intensité en fonction de la distance parcourue, ce qui est essentiellement le calcul précédent de façon plus élégante. $dP = 10^{-\epsilon C L} P_\circ (-\epsilon C \ln 10)  dL​$,
+
+avec $L=0\ \mu m$ et $dL =  1\ \mu m$. Dans les deux cas, on obtient qu'il y a une quantité $\Delta P = 0.000002 P_\circ​$ qui est absorbée. Ensuite, nous savons que 99\% des photons sont ré-émis en fluorescence, donc nous obtenons 2 nW de puissance émise, isotropiquement, dans toutes les directions. Pour l'avoir en nombre de photons par seconde, on fait simplement:
+$$
+F_{\rm{em}}  =   \frac{\eta \Delta P}{ \frac{hc}{\lambda} / \rm{photon} } = 8 \times 10^9\ \rm{photon \cdot s^{-1}}
+$$
+
 
 # Impulsions brèves
 
@@ -1687,7 +1713,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
 
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
@@ -1695,7 +1721,8 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 
 ![image-20190109203149671](assets/image-20190109203149671.png)
 
-### Réponse## Question
+### Réponse
+### Question
 
 Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des impulsions de 30 femtosecondes (*transform-limited*) à toutes les 12 nanosecondes. La lumière émise est centrée à 800 nm et il y a 10 mW de puissance moyenne c’est à dire que si on fait la moyenne de la puissance en 150 femtsoecondes de lumière et 12 nanosecondes de “vide”, on obtient 10 mW.
 
@@ -1704,7 +1731,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 3. Quel est l’irradiance au pic de l’impulsion en MW/cm2 ?
 4. Quel est l’irradiance spectrale en $\text{MW/nm/cm}^2$ ?
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
 
@@ -1732,14 +1759,78 @@ En supposant que seule la dispersion du verre de silice compte dans une fibre op
 
 # Interactions non-linéaires
 
-Les problèmes de cette section concerne les interactions non-linéaires entre les impulsions (habituellement brèves) et la matière.  Par exemple, on y retrouve des problèmes sur l'excitation de fluorescence multi-photonique (i.e. 2-photon), la génération de deuxième harmonique,de troisième harmonique, le Raman cohérent, etc...
+Les problèmes de cette section concerne les interactions non-linéaires entre les impulsions (habituellement brèves) et la matière.  Par exemple, on y retrouve des problèmes sur l'excitation de fluorescence multi-photonique (i.e. 2-photon), la génération de deuxième harmonique, de troisième harmonique, le Raman cohérent, etc...
 
 ### Question
 
-Calculez la quantité **moyenne** de photons émis par seconde par un fluorophore FITC (Fluorescein) à concentration $1\ \mu\text{M}$ dans une sphère de diamètre $0.5\ \mu\text{m}$ pour 10 mW de lumière à 800 nm et impulsions de 150 femtosecondes à 80 MHz?
+Calculez la quantité **moyenne** de photons émis par nanoseconde par un fluorophore FITC (Fluorescein) à concentration $1\ \mu\text{M}$ dans une sphère de diamètre $0.5\ \mu\text{m}$ pour 10 mW de lumière à 800 nm et impulsions de 150 femtosecondes à 80 MHz?
 
 ### Réponse
 
+Il n'y a pas vraiment de loi de Beer-Lambert en 2-photons car l'absorption dépend de l'intensité de la lumière. De plus, la littérature en 2-photon est différente du 1-photon: en effet, on ne donne pas de coefficient molaire d'absorptivité mais bien la section efficace à 2-photon, $\sigma_{(2)}$ en unité GM (ou $10^{-50} \rm{cm}^{4}\cdot  s\cdot  \rm{photon}^{-1}$) qui est valide **pour une seule molécule**.  Ainsi, on obtient: 
+
+$$
+F_{\rm{em-mol}} = \frac{1}{2} \sigma_{(2)} N_{\rm{inc}}^2 \label{twophoton}
+$$
+
+Pour plusieurs molécules, on additione les contributions:
+
+$$
+F_{\rm{em}} = n \cdot F_{\rm{em-mol}} = \frac{n}{2} \sigma_{(2)} N_{\rm{inc}}^2
+$$
+
+où $n$ est le nombre de molécules illuminées, l'illumination incidente $N_{\rm{inc}}$ est donnée en $\rm{photon \cdot s^{-1} \cdot cm^{-2}}$ et $F_{\rm{em}}$ en $\rm{photon \cdot s^{-1}}$ représente la taux de photon émis dans toutes les direction pour l'ensemble des molécules pendant qu'elles sont illuminées.  Donc en trouvant la section efficace 2-photon de FITC (allez à http://www.dcclab.ca/fluorophores ou http://www.drbio.cornell.edu}, on peut calculer la quantité de photons émis en exprimant la puissance incidente en photon par seconde. Le laser de $\tau = 150\ \rm{fs}$ émet 10 mW / 80 MHz = 1.2 nJ par impulsion, ce qui donne pour des photons de $hc/\lambda = 2.5 \times 10^{-19}$ J, une irradiance de photons incidents de:
+
+$$
+\begin{eqnarray}
+N_{\rm{inc}} & = & \frac{1.2\ \rm{nJ} / 2.5 \times 10^{-19} \rm{J \cdot photon^{-1}}}{ \tau \cdot \pi r^2} \\
+& = & \frac{4.8 \times 10^9\ \rm{photons}} {150\ \times 10^{-15} \rm{s}\ \pi ( 0.25 \times 10^{-4}\ \rm{cm})^2 } \\
+& = & 1.6 \times 10^{31} \rm{photons \cdot s^{-1} \cdot cm^{-2}}
+\end{eqnarray}
+$$
+Le volume focal est calculé comme suit:
+
+$$
+\begin{eqnarray}
+V & =  & \frac{4}{3} \pi r^3 \\
+& = & \frac{4}{3} \pi (0.25 \times 10^{-5}\ \rm{dm})^3 \\
+& = & 7 \times 10^{-17} \rm{dm}^3 \\
+& = & 7 \times 10^{-2}\ \rm{femto litre}
+\end{eqnarray}
+$$
+
+La quantité de molécules $n$ dans ce volume $V$ à la concentration $C=1\mu M$ est donc:
+
+$$
+\begin{eqnarray}
+n & = & C V \\
+ &  = & 1 \times 10^{-6} \times 6 \times 10^{23} \rm{molécules}/\rm{dm^3}  \times 7 \times 10^{-17} \rm{dm}^3 \\
+ & = & 39\ \rm{molécules}
+\end{eqnarray}
+$$
+
+
+Donc en remplacant dans l'équation ($\ref{twophoton}$), on obtient:
+
+$$
+\begin{eqnarray}
+F_{\rm{em}} & = & n \cdot  F_{\rm{em-mol}} \\
+ & = & 39 \cdot \frac{1}{2} \cdot \left( 40 \times 10^{-50}\ \rm{cm}^{4}\cdot s \cdot \rm{photon}^{-1} \right) \left( 1.6 \times 10^{31} \rm{photon \cdot s^{-1} \cdot cm^{-2}} \right)^2 \\
+&  = & 2.1 \times 10^{15}\ \rm{photon \cdot s^{-1}}
+\end{eqnarray}
+$$
+
+Ainsi, l'ensemble de molécules, pendant leur illumination par l'impulsion de 150 fs, émettent des photons au taux $F_{\rm{em}}$, et elles sont excitées à 80 MHz (i.e. toutes les $T = 12.5$ ns). Elles émettent donc un *burst* de $ \tau \cdot F_{\rm{em}}$ photons, pour un taux moyen de:
+
+$$
+\begin{eqnarray}
+\bar{F}_{\rm{em}} & = &  \frac{\tau \cdot F_{\rm{em}}}{T}  \\
+& = & \frac{150 \times 10^{-15}\ \rm{s} \cdot 2.1 \times 10^{15}\ \rm{photons \cdot s^{-1}} }{12.5 \times 10^{-9}\ \rm{s}} \\
+& = & 2.5 \times 10^{10}\ \rm{photons \cdot s^{-1}}
+\end{eqnarray}
+$$
+
+ou environ 1 photon par nanoseconde.
 ### Question
 
 Vous voulez mesurer le potentiel électrique à l’aide de la génération de deuxième harmonique. 
