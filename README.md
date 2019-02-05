@@ -6,7 +6,7 @@ Partant de l'hypothèse que la rétroaction (*feedback*) aux étudiants est plus
 
 ## Plan à long terme
 
-Le plan à long terme est d'obtenir une base de données importante de problèmes en optique qui sera: 
+Le plan à long terme est d'obtenir une base de données importante de problèmes en optique qui seront: 
 
 1. utilisés par n'importe qui
 2. corrigés par n'importe qui
@@ -20,10 +20,10 @@ Si vous voyez une erreur, vous devriez la corriger et:
 ## Comment utiliser ces questions
 
 1. Vous pouvez aller directement sur le [Web](https://github.com/dccote/Questions) ou télécharger/clôner le [répertoire](https://github.com/dccote/Questions) GitHub. Si vous allez sur le Web, vous ne verrez pas les équations.
-2. Si vous télécharger ou clôner Télécharger Typora pour bien voir les extensions markdown propres à [Typora](http://typora.io), en particulier $\LaTeX$.
-3. Optionnel, mais préférable: vous devriez copier le stylesheet questions.css du répertoire `site` dans le Theme Folder de Typora (voir les préferences du logiciel).  En sélectionnant, vous aurez un style approprié pour les questions.
-4. Pour voir les questions dans leur ensemble, ouvrez le document [Questions.md](Questions.md)
-5. Bientôt deux documents séparés `Questions.md` et `Réponses.md` vous permettront de lire les questions sans être trop tenté par la réponse qui suit.
+2. Si vous télécharger ou clôner Télécharger Typora pour bien voir les extensions markdown propres à [Typora](http://typora.io), en particulier $\LaTeX​$.
+3. Optionnel, mais préférable: vous devriez copier le stylesheet questions.css du répertoire `site` dans le Theme Folder de Typora (voir les préferences du logiciel).  En sélectionnant, vous aurez un style approprié pour les questions et une table des matières raisonnable.
+4. Pour voir les questions dans leur ensemble, ouvrez le document [Questions.md](Questions.md) ou Questions.pdf.
+5. Bientôt deux documents séparés `Questions.md` et `Réponses.md` vous permettront de lire les questions sans être trop tenté par la réponse qui suit. ***Je n'ai pas terminé.***
 6. Pour voir les questions individuellement, allez dans chaque répertoire comme par exemple [001-Ondes](001-Ondes).
    1. Dans le logiciel Typora, le menu **View →File Tree** vous permettra de voir tous les répertoires et les fichiers dans une barre à gauche.  Très pratique.
 
