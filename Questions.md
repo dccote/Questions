@@ -8,7 +8,7 @@ Pour corriger les questions, veuillez vous référer [aux versions en ligne des 
 
 # Ondes
 
-Les questions de cette section se rapportent aux phénomènes ondulatoires électromagnétiques. Les objectifs importants découlent directement de l'utilisation et de la compréhension des équations de Maxwell. 
+Les questions de cette section se rapportent aux phénomènes ondulatoires électromagnétiques de base. Les objectifs importants découlent directement de l'utilisation et de la compréhension des équations de Maxwell. 
 
 **Objectifs**
 
@@ -32,14 +32,9 @@ Les questions de cette section se rapportent aux phénomènes ondulatoires élec
 
 
 
----
-duration: 1m
-author: dccote@cervo.ulaval.ca
----
-
 ## Rayon et front d'onde
 
-Durée: 1m*
+*Durée: 1m*
 
 ### Question
 
@@ -49,27 +44,17 @@ Durée: 1m*
 
 Faux. Pour une onde plane (i.e. un front d'onde plan), tous les rayons sont perpendiculaires au front d'onde et parallèles entre eux.  Au contraire, une onde sphérique (i.e. un front d'onde courbe) a plusieurs rayons différents qui ne sont pas parallèles entre eux, donc plusieurs rayons représentent les front d'onde courbes.
 
----
-duration: 1m
-source: dccote
----
-
 ## Origine de l'indice de réfraction
 
 *Durée: 1m*
 
-### Questioné
+### Question
 
 Quel(s) terme(s) des équations de Maxwell est ou sont impliqué(s) dans la définition de l’indice de réfraction?
 
 ### Réponse
 
 La constante diélectrique $\epsilon = \epsilon_r \epsilon_\circ$ est relié à l'indice de réfraction par $n \equiv \sqrt{\epsilon_r}$. Cette constante diélectrique dépend de la fréquence de l'onde.
-
----
-duration: 10m
-source: dccote
----
 
 ## Solution équation de Maxwell indépendante du temps
 
@@ -84,11 +69,6 @@ $$
 par séparation de variables.
 
 ### Réponse
-
----
-duration: 1m
-source: dccote
----
 
 ## Vecteur de Poynting 
 
@@ -130,7 +110,7 @@ $$
 \vec{E}(r,t) = \sum_{\vec{r}_i} \vec{E}(\vec{r}_i)e^{i (k \left| \vec{r}-\vec{r}_i \right| - \omega t)}.
 $$
 
-
+La différence est simplement que pour représenter une onde plane par une somme d'ondes sphériques, nous aurons besoin de beaucop de termes dans la somme puisque la géométrie sphérique n'est évidemment pas plane.  
 
 ## Faisceau focalisant
 
@@ -160,11 +140,11 @@ Une caméra peut ajuster le *focus* sans changer le grossissement.  Comment est-
 
 ### Question
 
-1 photon/s donne combien de Watt à $\lambda = 1\ \mu m $?
+1 photon par seconde donne combien de Watts à $\lambda = 1\ \mu m $?
 
 ### Réponse
 
-Un photon à 1 µm a une énergie de 1 eV, donc $ 1 \text{ photon} \left( 1 \text{ eV/photon} \right)  = 1.6 \times 10^{-19} \text{J}​$ ou 0.2 zeptoJoule.
+Un photon à 1 µm a une énergie de 1 eV, donc $ 1 \text{ photon} \left( 1 \text{ eV/photon} \right)  = 1.6 \times 10^{-19} \text{J}$ ou 0.2 zeptoJoule.  En une seconde, un obtient simplement 0.2 zeptoWatt.
 
 ## Puissance et photons
 
@@ -176,7 +156,7 @@ Un photon à 1 µm a une énergie de 1 eV, donc $ 1 \text{ photon} \left( 1 \tex
 
 ### Réponse
 
-Un photon à 500 nm a une énergie de 2 eV, donc $ 1 \text{ pW} / \left( 2 \text{ eV/photon} \right)  = 3 \times 10^{6} \text{photon/s}$ ou 3 photons par 1 µs.
+Un photon à 500 nm a une énergie de 2 eV (ou $1.6 \times 10^{-19}J$), donc $ 1 \text{ pW} / \left( 2 \text{ eV/photon} \right)  = 3 \times 10^{6} \text{photon/s}$ ou 3 photons par 1 µs.
 
 ```
 
@@ -212,11 +192,11 @@ Le laser est toujours rouge car la couleur est donnée par la fréquence d'oscil
 
 ### Question
 
-Donnez des valeurs d’indice de réfraction pour l’eau, le verre, l’huile, les semiconducteurs ?  Est-ce que cette valeur dépend de la longueur d’onde ? Pourquoi ?
+Donnez des valeurs d’indice de réfraction pour l’eau, le verre, l’huile, les semiconducteurs.  Est-ce que cette valeur dépend de la longueur d’onde ? Pourquoi ?
 
 ### Réponse
 
-L'eau $n=1.33$, le verre $n \approx 1.50$ et les semi-conducteurs varient mais sont plutôt élevés $n_\text{Si} = 3.4$ et  $n_\text{Ga} = 3.5$. Vous pouvez trouver une base de données très complète sur le site [refractiveindex.info](https://refractiveindex.info).
+L'eau $n=1.33$, le verre $n \approx 1.50$ et les semi-conducteurs varient mais sont plutôt élevés $n_\text{Si} = 3.4$ et  $n_\text{GaAs} = 3.5$. Vous pouvez trouver une base de données très complète sur le site [refractiveindex.info](https://refractiveindex.info).
 
 Cette valeur dépend évidemment de la longueur d'onde.  Cependant, pour des milieux transparents (comme l'eau, le verre), l'indice varie peu sauf près de l'absorption, à longueurs d'ondes courtes.  Ainsi, on utilise souvent un seul indice mais on doit confirmer lorsque les longueurs d'ondes approchent l'UV dans l'eau et le verre par exemple.
 
@@ -234,6 +214,8 @@ Calculer pour un faisceau à 800 nm ayant une surface de 10 mm^2^ et une puissan
 4. Irradiance spectrale
 
 ### Réponse
+
+
 
 # Optique Géométrique
 
@@ -279,6 +261,8 @@ tracez les rayons cardinaux passant par les points focaux [~] et [~] , nodal [~]
 
 ## Distance focale
 
+*Durée: 1m*
+
 ### Question
 
 **[V ou F]** La distance focale est définie comme la distance entre la surface (physique) d’une lentille et son point focal.
@@ -289,6 +273,8 @@ Faux. C'est la distance entre le plan principal et le point focal.
 
 ## Plans nodaux
 
+*Durée: 1m*
+
 ### Question
 
 **[V ou F]** Les plans nodaux sont des plans de grossissement angulaire unitaire.
@@ -298,6 +284,8 @@ Faux. C'est la distance entre le plan principal et le point focal.
 Vrai.
 ## Plan principaux
 
+*Durée: 1m*
+
 ### Question
 
 **[V ou F]** Les plans principaux sont des plans de grossissement transverse unitaire.
@@ -306,6 +294,8 @@ Vrai.
 
 Vrai.
 ## Plans nodaux et principaux
+
+*Durée: 1m*
 
 ### Question
 
@@ -359,11 +349,17 @@ Vous avez un pointeur laser inoffensif rouge et vous voulez viser un poisson rou
 
 ### Réponse
 
+
+
 ## Inversion
 
 ### Question
 
 Un miroir inverse la gauche et la droite. Pourquoi n’inverse-t-il pas le haut et le bas?
+
+### Réponse
+
+Un miroir n'inverse pas vraiment la gauche et la droite: il inverse le devant et le derrière (i.e. il inverse $\hat{z}$ en $-\hat{z}$).  Ce faisant, le système de coordonnées est maintenant "main gauche" au lieu de "main droite" et en effet, la gauche et la droite sont inversés. Mais en fait, le haut et le bas, si on se tourne la tête de $90^o$ vers la gauche sont aussi inversés, en ce sens que le haut est a ma droite mais a la gauche pour mon image.
 
 ## Image-objet
 
@@ -443,18 +439,21 @@ Parce qu'elles doivent s'orienter dans l'oeil car la correction qu'elles produis
 
 ## Déterminant matrices ABCD
 
+*Durée: 10 m*
+
 ### Question 
 
 Montrez que le déterminant des matrices ABCD est en général $n_1/n_2$
 
 ### Réponse
 
-
 ## Grossissement
+
+*Durée: 1m*
 
 ### Question
 
-VRAI FAUX: L’élément A d’une matrice de transfert ABCD représente toujours le grossissement.
+VRAI ou FAUX: L’élément A d’une matrice de transfert ABCD représente toujours le grossissement.
 
 ### Réponse
 
@@ -488,7 +487,7 @@ Une goutte de pluie de forme sphérique tombe en direction d’une feuille d’a
 
 ### Réponse
 
-On obtient la matrice de transfert d’une surface diélectrique de rayon de courbure $R$ et d’indice (à droite) ,$n$ une propagation de $2R$, suivi d’une autre surface diélectrique de rayon de courbure  et$-R$  d’indice (à gauche) $n$.
+On obtient la matrice de transfert d’une surface diélectrique de rayon de courbure $R$ et d’indice (à droite), $n$ une propagation de $2R$ suivi d’une autre surface diélectrique de rayon de courbure  et $-R$  d’indice (à gauche) $n​$.
 
 $$
 \Biggr[
@@ -554,7 +553,7 @@ $$
 \right]
 $$
 
-...
+
 
 
 
@@ -720,11 +719,15 @@ Référez-vous à la figure de Hecht suivante pour les questions.
 5. Le grossissement depend de l'objet et de l'image.  Les deux systèmes ont la même distance focale, donc le grossissement est identique.  
 
 6. Prenons le cas sans lunettes, avec l'équation (c.1) et la figure suivante:
+
    ![pastedGraphic.pdf](assets/pastedGraphic-4492234.pdf)
+
    Le plan principal avant est à $d_\mathrm{PP_1} = \frac{1-D}{C} = -f $ devant le système, donc $f$ vers la droite, i.e. sur la lentille mince. Le plan principal de arrière est à d $d_\mathrm{PP_2} = \frac{1-A}{C} = 0$ donc lui aussi sur la lentille mince. Aucune surprise.
    Cependant, le plan principal arrière du système avec lunette a changé: on le voit tout de suite, l'élément  $A$ a changé. Un calcul de la position du plan donne $PP_2$  qu'il est maintenant à $d_\mathrm{PP_2} = \frac{1-A}{C} = -\frac{f^2}{F}$.  Ainsi, le plan focal a été déplacé de $-\frac{f^2}{F}$ , la distance focale reste la même mais le point focal est avancé, d'où la correction par les lunettes.
 
 ## Objectif
+
+*Durée: 60 m*
 
 ### Question
 
@@ -737,9 +740,9 @@ Vous avez l’objectif Olympus suivant, identifié « Olympus UPlanFl 40x ». Vo
 3. Quelles sont les positions des plans principaux ? Donnez les distances en fonction des points focaux F1 et F2.
 4. Vous voulez maintenant utiliser l’objectif (sans aucune autre lentille) pour faire l’image d’un objet qui est à 2.5 mm du bout de l’objectif, donc 0.5 mm après le point focal  . Où placeriez-vous votre camera par rapport à la première surface de l’objectif pour obtenir une image claire de cet objet? 
 
-## Lentilles composées
+### Réponse## Lentilles composées
 
-Durée: 15m
+*Durée: 15m*
 
 ### Question
 
@@ -760,17 +763,23 @@ $$
 
 ## Diaphragme
 
+*Durée: 30m*
+
 ### Question
 
-Vous avez une lentille de diamètre $D=5\ \text{cm}$ et de focale $f = 50\ \text{cm}$ qui fait l'image du soleil, un disque d'illumination constante pour nos besoins. Le soleil sous-tend un angle de $\theta = 0.5^o$ à la surface de la terre, où son irradiance est de 1000 W/cm^2^.  Quelle est l'irradiance de l'image du soleil qui apparaît sur la caméra?
+Vous avez une lentille de diamètre $D=5\ \text{cm}$ et de focale $f = 50\ \text{cm}$ qui fait l'image du soleil, un disque d'illumination constante pour nos besoins. Le soleil sous-tend un angle de $\theta = 0.5^o$ à la surface de la terre, où son irradiance est de 1000 W/m^2^.  Quelle est l'irradiance de l'image du soleil qui apparaît sur la caméra?
 
 ### Réponse
 
-## Question
+## Mirages
+
+*Durée: 90m*
+
+### Question
 
 Qu'est-ce qui explique la formation des mirages dans le désert? À partir de quelle température apparaitront-ils?
 
-## Réponse
+### Réponse
 
 
 
@@ -1674,7 +1683,7 @@ Obtenez le code Monte Carlo Multi Layer (MCML) du site: http://omlc.ogi.edu/soft
 
 ### Question
 
-À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
+À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
 
 ### Réponse
 
@@ -1713,7 +1722,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
 
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
@@ -1731,7 +1740,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 3. Quel est l’irradiance au pic de l’impulsion en MW/cm2 ?
 4. Quel est l’irradiance spectrale en $\text{MW/nm/cm}^2$ ?
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
 
