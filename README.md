@@ -12,10 +12,16 @@ Le plan à long terme est d'obtenir une base de données importante de problème
 2. corrigés par n'importe qui
 3. améliorés par n'importe qui
 
-Si vous voyez une erreur, vous devriez la corriger et:
+## Soumission de réponses ou corrections
 
-1. M'envoyer la correction dans le bon fichier corrigé, ou 
-2. Faire une requête Pull request sur GitHub après avoir fait une copie (fork) du répertoire.
+Pour soumettre une nouvelle réponse ou corriger une erreur:
+
+1. Le format est Markdown (.md)
+2. Le logiciel http://Typora.io accepte $\LaTeX$ (sous-ensemble blahtex) et bien d’autres choses donc je le recommande très fortement (gratuit) pour verifier votre texte.
+3. Les soumissions doivent être directement les fichiers originaux modifiés. Par exemple, modifiez directement Q001-014.md et:
+   1. renvoyez-le moi par courriel à dccote@cervo.ulaval.ca,
+   2. faites un *Pull request* à la suite d'un *Fork* que vous auriez fait.
+
 
 ## Comment utiliser ces questions
 
