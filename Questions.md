@@ -800,7 +800,11 @@ Vous avez l’objectif Olympus suivant, identifié « Olympus UPlanFl 40x ». Vo
 3. Quelles sont les positions des plans principaux ? Donnez les distances en fonction des points focaux F1 et F2.
 4. Vous voulez maintenant utiliser l’objectif (sans aucune autre lentille) pour faire l’image d’un objet qui est à 2.5 mm du bout de l’objectif, donc 0.5 mm après le point focal  . Où placeriez-vous votre camera par rapport à la première surface de l’objectif pour obtenir une image claire de cet objet? 
 
-### Réponse## Lentilles composées
+### Réponse
+
+
+
+## Lentilles composées
 
 *Durée: 15m*
 
