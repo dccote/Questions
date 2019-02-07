@@ -1,8 +1,10 @@
-# Introduction
+**Contexte**
 
-Ce document, généré automatiquement à partir des questions individuelles, regroupe l'ensemble des questions en optique préparé par Daniel C. Côté. 
+Ce document, généré automatiquement à partir des questions individuelles, regroupe l'ensemble des questions en optique préparées par Daniel C. Côté. 
 
 Pour corriger les questions, veuillez vous référer [aux versions en ligne des documents](https://github.com/dccote/Questions), disponible sur GitHub.
+
+Pour bien visualiser le document original en Markdown, utilisez Typora.io et le stylesheet questions, [disponible](https://github.com/dccote/Questions/tree/master/site/typora%20css-themes) dans le répertoire `site`. Copiez le repertoire au complet dans le `Theme Folder` de Typora.
 
 [TOC]
 
@@ -48,7 +50,7 @@ Faux. Pour une onde plane (i.e. un front d'onde plan), tous les rayons sont perp
 
 *Durée: 1m*
 
-### Question
+### Questioné
 
 Quel(s) terme(s) des équations de Maxwell est ou sont impliqué(s) dans la définition de l’indice de réfraction?
 
@@ -144,7 +146,7 @@ Une caméra peut ajuster le *focus* sans changer le grossissement.  Comment est-
 
 ### Réponse
 
-Un photon à 1 µm a une énergie de 1 eV, donc $ 1 \text{ photon} \left( 1 \text{ eV/photon} \right)  = 1.6 \times 10^{-19} \text{J}$ ou 0.2 zeptoJoule.  En une seconde, un obtient simplement 0.2 zeptoWatt.
+Un photon à 1 µm a une énergie de 1 eV, donc 1 photon $\left( 1 \text{ eV/photon} \right) = 1.6 \times 10^{-19} \text{J}​$ ou 0.2 zeptoJoule. En une seconde, un obtient simplement 0.2 zeptoWatt.
 
 ## Puissance et photons
 
@@ -206,7 +208,7 @@ Cette valeur dépend évidemment de la longueur d'onde.  Cependant, pour des mil
 
 ### Question
 
-Calculer pour un faisceau à 800 nm ayant une surface de 10 mm^2^ et une puissance moyenne de 1 mW.
+Calculer pour un faisceau à 800 nm de 0.1 nm de largeur spectrale ayant une surface de 10 mm^2^ et une puissance moyenne de 1 mW
 
 1. Fréquence du faisceau
 2. Flux d’énergie pendant 1 seconde
@@ -215,6 +217,50 @@ Calculer pour un faisceau à 800 nm ayant une surface de 10 mm^2^ et une puissan
 
 ### Réponse
 
+1. La fréquence est défini $ f = \frac{c}{\lambda} ​$  où $\lambda​$ est la longueur d'onde et $c​$ la vitesse de la lumière. On a donc: 
+
+   $$   f = \frac{800 \times 10^{-9} \text{m}}{3 \times 10^8 \text{m/s}} =  375\times 10^{12} \text{Hz} = 375 \text{THz}$$
+
+
+2. $ 1 \text{W} = 1 \text{J/s}​$   donc   $1 \text{mW} = 1 \text{mJ/s} ​$
+
+   
+
+3. $ I=\frac{P}{A} = \frac{10 \text{mW}}{ \text{cm}^2}$ 
+
+   
+
+4. $\text{I}$ ~spectrale~ $= \frac{I}{\Delta f} = 100 \frac{\text{mW}}{\text{cm}^2 \cdot \text{nm}}​$
+
+
+   ```python
+# Available at 
+   c = 3e8 # SI units
+   wavelength = 800e-9 
+   surface = 10*(1e-3)*(1e-3) # in m^2
+   power = 1e-3 # in Watts
+   duration = 1 # in seconds
+   spectralWidth = 0.1e-9
+   spectralWidthInNm = spectralWidth*1e9
+   
+   frequency = c/wavelength #in Hertz
+   flux = power * duration
+   irradiance = power/surface #in W/m^2
+   irradianceInMwPerCm2 = irradiance * 1000/(1e2)/(1e2)
+   irradianceInMwPerCm2PerNanoMeter = irradianceInMwPerCm2/(spectralWidthInNm)
+   
+   print("1. Frequency: {0} THz".format(frequency/1e12))
+   print("2. Energy flux in 1 second: {0} mJ".format(flux*1000))
+   print("3. Irradiance: {0} mW/cm^2".format(irradianceInMwPerCm2))
+   print("4. Irradiance spectrale: {0} mW/cm^2/nm".format(irradianceInMwPerCm2PerNanoMeter))
+
+# Output:
+#1. Frequency: 375.0 THz
+#2. Energy flux in 1 second: 1.0 mJ
+#3. Irradiance: 10.0 mW/cm^2
+#4. Irradiance spectrale: 100.0 mW/cm^2/nm
+
+   ```
 
 
 # Optique Géométrique
@@ -253,11 +299,25 @@ Les questions de cette section se rapportent à l'optique géomtétrique, où la
 
 Sur la figure suivante:
 
-![pastedGraphic.pdf](assets/pastedGraphic.pdf)
+![pastedGraphic.pdf](assets/lentilleepaisse.png)
 
-tracez les rayons cardinaux passant par les points focaux [~] et [~] , nodal [~] et [~] et par les plans principaux [~] et [~] .
+tracez les rayons cardinaux passant par les points focaux  [F~1~] et [F~2~] , nodal [PN~1~] et [PN~2~] et par les plans principaux [PP~1~] et [PP~2~ ].
 
 ### Réponse
+
+1. Le rayon au plan principal PP~1~​ apparaît au plan principal PP~2~ à la même hauteur en subissant toute l'action de la lentille.
+
+2. Un cône au plan nodal ressort avec un cône de même grandeur.  Si un rayon croise la plan nodal sur l'axe optique, il continue tout droit (rayon rouge).
+
+3. Un rayon passant par le point focal F~1​~ ressort parallèle (rayon vert)
+
+4. Un rayon parallèle se dirige vers le point focal F~2~ (rayon bleu)
+
+   
+
+![Q002-001](assets/Q002-001.png)
+
+
 
 ## Distance focale
 
