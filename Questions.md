@@ -4,7 +4,7 @@ Ce document, généré automatiquement à partir des questions individuelles, re
 
 Pour corriger les questions, veuillez vous référer [aux versions en ligne des documents](https://github.com/dccote/Questions), disponible sur GitHub.
 
-Pour bien visualiser le document original en Markdown, utilisez Typora.io et le stylesheet questions, [disponible](https://github.com/dccote/Questions/tree/master/site/typora%20css-themes) dans le répertoire `site`. Copiez le repertoire au complet dans le `Theme Folder` de Typora.
+Pour bien visualiser le document original en Markdown, utilisez Typora.io et le stylesheet questions, [disponible](https://github.com/dccote/Questions/tree/master/site/typora%20css-themes) dans le répertoire `site`. Copiez le repertoire au complet dans le `Theme Folder` de Typora.
 
 [TOC]
 
@@ -840,6 +840,107 @@ Vous avez une lentille de diamètre $D=5\ \text{cm}$ et de focale $f = 50\ \text
 Qu'est-ce qui explique la formation des mirages dans le désert? À partir de quelle température apparaitront-ils?
 
 ### Réponse
+
+
+
+## Examen 2016 partie 1
+
+*Durée: 25m*
+
+### Question
+
+Un exemple, en vrac, de question pour la partie 1 de l'examen.
+
+1. [Vrai/Faux] Pour toute onde, un seul rayon pointant dans une direction donnée est suffisant pour décrire le front d’onde en tout point 
+
+2. [Vrai/Faux] On ne peut pas décrire une onde plane par une somme d’ondes sphériques, car son front d’onde est droit.
+3. [Vrai/Faux] On peut avoir une onde qui a un front d’onde plan mais qui n’est pas une onde plane
+4. [Vrai/Faux] Une one plane qui se propage dans l’atmosphère sera perturbée par les variations d’indices de réfraction et ne restera plus une onde plane.
+5. [Vrai/Faux] Le vecteur de Poynting correspond à la direction vers laquelle la puissance se propage
+6. [Vrai/Faux] Le vecteur de Poynting a les unités de puissance par surface.
+7. [Vrai/Faux] La distance focale est définie comme la distance entre la surface (physique) d’une lentille et son point focal.
+8. Où sont les plans nodaux et les plans principaux pour une lentille mince ?
+9. [Vrai/Faux] Les plans principaux sont des plans conjugués
+10. Vous avez un pointeur laser inoffensif et vous voulez viser avec ce faisceau laser un poisson qui se trouve dans un aquarium.  À partir du point A, où devez-vous viser pour atteindre le poisson sous l’eau? Tracez la lumière à partir du point A et expliquez.
+
+ ![img](assets/clip_image003.png)
+
+ 
+
+
+11. [Vrai/Faux] Un miroir sphérique peut avoir des aberrations chromatiques
+12. [Vrai/Faux] Pour trouver la position d’une image dans un système optique, on doit tracer au moins 3 rayons provenant de l’objet.
+13. **GRIN** Pour quelles longueurs non nulles L une lentille GRIN, décrite par la matrice suivante donnera-t-elle une image à un bout de la lentille pour un objet collé à l’autre bout?
+
+ ![img](assets/clip_image005.png)
+
+14.  Avec l’iris devant la lentille qui bloque la lumière, tracez le rayon marginal du point O et le rayon principal du point O’, sachant que ces points ont des images correspondantes aux points I et I’.
+
+ ![img](assets/clip_image006.png)
+
+15.    [Vrai/Faux] Le diamètre du diaphragme d’entrée (*aperture stop*) est la valeur qui définit le f# du système.
+
+16. [Vrai/Faux] La pupille d’entrée définit la quantité de lumière qui entre dans un système
+
+16. [Vrai/Faux] L’élément A d’une matrice représente toujours le grossissement.
+
+
+16. [Vrai/Faux] La matrice suivante représente un ou plusieurs éléments optiques.
+
+    ![img](assets/clip_image008.png)
+
+    1. La focale équivalente est de  0.50 cm
+    2. Il n’y a pas de focale équivalente, car l’élement B n’est pas zéro comme dans une lentille mince
+    3. Si je mets un objet devant ce groupe d’élements optiques, une image virtuelle ou réelle existera
+
+
+17.  [Vrai/Faux] Une goutte d’eau sphérique agit comme une lentille épaisse.
+
+18.  [Vrai/Faux] Les lunettes corrigent la vue en diminuant ou augmentant la distance focale du système complet de l’œil et des lunettes ensemble
+
+19.  [Vrai/Faux] L’étoile Vega, qui sous-tend un angle de 1 milliradians, formera un point sur une camera puisqu’elle est infiniment loin.
+
+### Réponse
+
+
+
+## Examen 2016, partie 2
+
+*Durée: 45m*
+
+### Question
+
+Un exemple, en vrac, de question pour la partie 2 de l'examen.
+
+1. Pour un système optique quelconque ayant une distance focale équivalente f, écrivez la matrice de transfert qui transforme un rayon d’un plan principal à l’autre plan principal.
+
+2. Quelle est la position de l’image si un objet est placé à 2f devant une lentille de distance focale f ?
+
+   1. L’image est-elle virtuelle ou réelle ? 
+3. Vous avez le système imageant suivant (pas à l’échelle) qui consiste en un objet à une distance 4f d’une lentille de distance focale f=5 cm. Le diaphragme d’entrée limitant la quantité de lumière se trouve à une position dA=f/2 après la lentille et a un diamètre de D=1cm.
+
+   ![img](assets/clip_image002.jpg)
+
+     1. Pour un rayon sur l’axe et sur l’objet, quel est l’angle maximal θmax pour lequel un rayon se rendra jusqu’à l’image
+     2. Comment s’appelle ce rayon ?
+
+ 4. Vous avez construit ce splendide objectif téléphoto inverse avec une lentille divergente de fa = -2 cm et une lentille convergente de fb = 6 cm, les deux étant séparées par une distance de 10 cm :
+
+    ![img](assets/clip_image004.jpg)
+
+    La matrice de transfert ABCD, de la première surface de la première lentille divergente à la dernière surface de la deuxième lentille convergente, qui provient de la multiplication des matrices représentant chaque lentille et l’espace entre les deux, est la suivante :
+    ![img](assets/clip_image006.jpg)
+
+    où est le point focal par rapport à la surface de la deuxième lentille ?
+
+**BONI FACULTATIF**
+
+5. En optique infrarouge, on utilise parfois des lentilles de type « sphérique » (ou *ball lens*) comme sur la figure. Il suffit de déposer la sphère sur un échantillon pour focaliser à sa surface.  À partir de quel valeur de l’indice de réfraction le point focal sera-t-il directement sur la sphère?
+
+![img](assets/clip_image008.jpg)
+
+
+
 
 
 
@@ -1743,7 +1844,7 @@ Obtenez le code Monte Carlo Multi Layer (MCML) du site: http://omlc.ogi.edu/soft
 
 ### Question
 
-À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
+À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
 
 ### Réponse
 
@@ -1782,7 +1883,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
 
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
@@ -1800,7 +1901,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 3. Quel est l’irradiance au pic de l’impulsion en MW/cm2 ?
 4. Quel est l’irradiance spectrale en $\text{MW/nm/cm}^2$ ?
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
 
