@@ -1,36 +1,3 @@
-## Paramètres d'illumination
-
-*Durée: 5m*
-
-### Question
-
-Calculer pour un faisceau à 800 nm de 0.1 nm de largeur spectrale ayant une surface de 10 mm^2^ et une puissance moyenne de 1 mW
-
-1. Fréquence du faisceau
-2. Flux d’énergie pendant 1 seconde
-3. Irradiance
-4. Irradiance spectrale
-
-### Réponse
-
-1. La fréquence est défini $ f = \frac{c}{\lambda} ​$  où $\lambda​$ est la longueur d'onde et $c​$ la vitesse de la lumière. On a donc: 
-
-   $$   f = \frac{800 \times 10^{-9} \text{m}}{3 \times 10^8 \text{m/s}} =  375\times 10^{12} \text{Hz} = 375 \text{THz}$$
-
-
-2. $ 1 \text{W} = 1 \text{J/s}​$   donc   $1 \text{mW} = 1 \text{mJ/s} ​$
-
-   
-
-3. $ I=\frac{P}{A} = \frac{10 \text{mW}}{ \text{cm}^2}$ 
-
-   
-
-4. $\text{I}$ ~spectrale~ $= \frac{I}{\Delta f} = 100 \frac{\text{mW}}{\text{cm}^2 \cdot \text{nm}}​$
-
-
-   ```python
-# Available at 
    c = 3e8 # SI units
    wavelength = 800e-9 
    surface = 10*(1e-3)*(1e-3) # in m^2
@@ -55,7 +22,4 @@ Calculer pour un faisceau à 800 nm de 0.1 nm de largeur spectrale ayant une sur
 #2. Energy flux in 1 second: 1.0 mJ
 #3. Irradiance: 10.0 mW/cm^2
 #4. Irradiance spectrale: 100.0 mW/cm^2/nm
-
-   ```
-
 
