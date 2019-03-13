@@ -503,9 +503,61 @@ Parce qu'elles doivent s'orienter dans l'oeil car la correction qu'elles produis
 
 ### Question 
 
-Montrez que le déterminant des matrices ABCD est en général $n_1/n_2$
+Montrez que le déterminant des matrices ABCD est en général $n_i/n_f$, avec $n_i$ l'indice du milieu incident et $n_f$ l'indice du mileu sortant.
 
 ### Réponse
+
+La matrice la plus générale est l'interface diélectrique courbe qui représente n'importe quels deux milieux d'indices $n_1$ et $n_2$ séparés par une quelconque interface de rayon $R​$:
+$$
+M_{1\rightarrow 2} = 
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{n_2-n_1}{n_2 R_1} & \frac{n_1}{n_2}
+\end{matrix}
+\Biggl]
+$$
+Cette matrice a un déterminant de $n_1/n_2$.  De plus, n'importe quelle série d'interfaces arbitraires entre deux milieux peut s'exprimer sous la forme d'un produit de matrices d'interfaces diélectriques de courbure arbitraires:
+$$
+M_{1\rightarrow f} = 
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{n_f-n_{f-1}}{n_f R_{f-1}} & \frac{n_{f-1}}{n_f}
+\end{matrix}
+\Biggl]
+
+...
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{n_3-n_2}{n_3 R_2} & \frac{n_2}{n_3}
+\end{matrix}
+\Biggl]
+
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{n_2-n_1}{n_2 R_1} & \frac{n_1}{n_2}
+\end{matrix}
+\Biggl]
+
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{n_1-n_i}{n_1 R_i} & \frac{n_i}{n_1}
+\end{matrix}
+\Biggl]
+$$
+Sachant que le déterminant d'un produit est le produit de leur déterminant, on obtient:
+$$
+\det{M_{i\rightarrow f}} = \det{M_{f-1\rightarrow f}} ... \det{M_{2\rightarrow 3}}  \det{M_{1\rightarrow 2}}  \det{M_{i\rightarrow 1}}
+$$
+
+$$
+\det{M_{1\rightarrow f}} = \frac{n_{f-1}}{n_{f}} ...\frac{n_2}{n_{3}} \frac{n_1}{n_{2}} \frac{n_i}{n_{1}} = \frac{n_i}{n_{f}}
+$$
+ce qu'il fallait démontrer.
 
 ## Grossissement
 
@@ -615,21 +667,51 @@ $$
 
 
 
+## Interface diélectrique et distances focales
 
-
-## Lentille dans milieux différents
-
-*Durée: 15m*
+*Durée: 20m*
 
 ### Question
 
-Supposez une interface diélectrique courbe de rayon $R$ et d’indice $n$. Montrez que les points focaux de chaque côté de l’interface sont à des distances différentes de chaque côté de l’interface.
+Supposez une interface diélectrique courbe de rayon $R$ et d’indice $n_1$ et $n_2$. Montrez que les points focaux de chaque côté de l’interface sont à des distances différentes de chaque côté de l’interface.
 
 ### Réponse
 
+Nous avons obtenu la distance focale en prenant un rayon parallèle à l'axe dans un système en sachant que ce dernier, par définition croisera l'axe optique au point focal.  Ainsi, en supposant une interface diélectrique:
+$$
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{n_2-n_1}{n_2 R} & \frac{n_1}{n_2}
+\end{matrix}
+\Biggl],
+$$
+on prend un rayon à une hauteur unitaire (r=1) et parallèle à l'axe ($\theta=0$) qui émergera à un angle de $\theta_2 = -\frac{n_2-n_1}{n_2}R$, et croisera donc l'axe à une distance $f_2$ telle que  $\tan \theta_2 \approx \theta_2 = \frac{1}{f_2}$ donc $f_2 = n_2 R/(n_2-n_1) $. Pour la partie avant, en prenant un rayon émergeant du point focal  $F_1$ et en propageant d'une distance $f_1$ avant de traverser l'interface, on obtient:
 
 
+$$
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{n_2-n_1}{n_2 R} & \frac{n_1}{n_2}
+\end{matrix}
+\Biggl]
+\Biggr[
+\begin{matrix}
+1 & f_1 \\
+0 & 1
+\end{matrix}
+\Biggl] = 
+\Biggr[
+\begin{matrix}
+1 & f_1 \\
+-\frac{n_2-n_1}{n_2 R} & -\frac{n_2-n_1}{n_2 R}f_1 + \frac{n_1}{n_2}
+\end{matrix}
+\Biggl].
+$$
+Pour que le rayon ressorte parallèle,  on veut que $-\frac{n_2-n_1}{n_2 R_2}f_1 + \frac{n_1}{n_2} = 0$, ce qui donne $f_1 = n_1 R/(n_2-n_1)​$.
 
+![image-20190313083615746](assets/image-20190313083615746.png)
 
 ## Rayon généralisé
 
@@ -947,6 +1029,57 @@ Un exemple, en vrac, de question pour la partie 2 de l'examen.
 
 
 
+
+## Lentille dans milieux différents
+
+*Durée: 60m*
+
+### Question
+
+Supposez une lentille de rayons $R_1$, $R_2$, et d’indice $n$ immergée dans un milieu $n_1$ à l'entrée et $n_2$ à la sortie. Montrez que les points focaux de chaque côté de l’interface sont à des distances différentes de la lentille..
+
+### Réponse
+
+Nous avons obtenu la distance focale en prenant un rayon parallèle à l'axe dans un système en sachant que ce dernier, par définition croisera l'axe optique au point focal.  La matrice de la lentille mince a été développée en supposant qu'elle était dans l'air.  Ainsi, on ne peut partir de :
+$$
+{\bf L} = 
+\Biggl[ 
+   \begin{matrix}
+      1 & 0 \\
+      -\frac{1}{f} & 1 \\
+   \end{matrix}
+\Biggl]
+$$
+et espérer redériver quelque chose de plus général dans des milieux différents.  On doit plutôt essentiellement réécrire la lentille mince en la décomposant en deux interfaces courbes séparées par une distance négligeable.  Ainsi, en supposant un indice $n_1$ à l'entrée, un indice $n$ dans la lentille et un indice $n_2$ à la sortie, on obtient une lentille mince immergée dans deux milieux différents:
+$$
+{\bf L}^\prime =
+
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{n_2-n}{n_2 R_2} & \frac{n}{n_2}
+\end{matrix}
+\Biggl]
+
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{n-n_1}{n R_1} & \frac{n_1}{n}
+\end{matrix}
+\Biggl]
+
+=
+
+\Biggr[
+\begin{matrix}
+1 & 0 \\
+-\frac{k}{n_2} & \frac{n_1}{n_2}
+\end{matrix}
+\Biggl],
+$$
+avec $k \equiv \left(\frac{n-n_1}{R_1} -\frac{n-n_2}{R_2} \right)$. On note qu'avec une lentille dans l'air ($n_1 = n_2 = 1$), on retrouve l'équation du LensMaker $\frac{1}{f} = (n-1)\left(\frac{1}{R_1}-\frac{1}{R_2}\right)$. Un rayon à une hauteur unitaire (r=1) et parallèle à l'axe ($\theta=0$) émergera à un angle de $\theta_2 = -\frac{k}{n_2}$, et croisera donc l'axe à une distance $f_2$ telle que  $\tan \theta_2 \approx \theta_2 = \frac{1}{f_2}$ donc $f_2 = n_2/k $. En inversant $n_1$ et $n_2$ et $R_1$ et $R_2$, on obtiendrait $f_1 = n_1/k$.
+
+![image-20190312212817985](assets/image-20190312212817985.png)
 
 # Instrumentation
 
