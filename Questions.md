@@ -4,7 +4,7 @@ Ce document, généré automatiquement à partir des questions individuelles, re
 
 Pour corriger les questions, veuillez vous référer [aux versions en ligne des documents](https://github.com/dccote/Questions), disponible sur GitHub.
 
-Pour bien visualiser le document original en Markdown, utilisez Typora.io et le stylesheet questions, [disponible](https://github.com/dccote/Questions/tree/master/site/typora%20css-themes) dans le répertoire `site`. Copiez le repertoire au complet dans le `Theme Folder` de Typora.
+Pour bien visualiser le document original en Markdown, utilisez Typora.io et le stylesheet questions, [disponible](https://github.com/dccote/Questions/tree/master/site/typora%20css-themes) dans le répertoire `site`. Copiez le repertoire au complet dans le `Theme Folder` de Typora.
 
 [TOC]
 
@@ -503,7 +503,7 @@ Parce qu'elles doivent s'orienter dans l'oeil car la correction qu'elles produis
 
 ### Question 
 
-Montrez que le déterminant des matrices ABCD est en général $n_i/n_f$, avec $n_i$ l'indice du milieu incident et $n_f$ l'indice du mileu sortant.
+Montrez que le déterminant des matrices ABCD est en général $n_i/n_f$, avec $n_i$ l'indice du milieu incident et $n_f$ l'indice du mileu sortant.
 
 ### Réponse
 
@@ -686,7 +686,7 @@ $$
 \end{matrix}
 \Biggl],
 $$
-on prend un rayon à une hauteur unitaire (r=1) et parallèle à l'axe ($\theta=0$) qui émergera à un angle de $\theta_2 = -\frac{n_2-n_1}{n_2}R$, et croisera donc l'axe à une distance $f_2$ telle que  $\tan \theta_2 \approx \theta_2 = \frac{1}{f_2}$ donc $f_2 = n_2 R/(n_2-n_1) $. Pour la partie avant, en prenant un rayon émergeant du point focal  $F_1$ et en propageant d'une distance $f_1$ avant de traverser l'interface, on obtient:
+on prend un rayon à une hauteur unitaire (r=1) et parallèle à l'axe ($\theta=0$) qui émergera à un angle de $\theta_2 = -\frac{n_2-n_1}{n_2}R$, et croisera donc l'axe à une distance $f_2$ telle que  $\tan \theta_2 \approx \theta_2 = \frac{1}{f_2}$ donc $f_2 = n_2 R/(n_2-n_1) $. Pour la partie avant, en prenant un rayon émergeant du point focal  $F_1$ et en propageant d'une distance $f_1$ avant de traverser l'interface, on obtient:
 
 
 $$
@@ -1981,7 +1981,7 @@ Obtenez le code Monte Carlo Multi Layer (MCML) du site: http://omlc.ogi.edu/soft
 
 ### Question
 
-À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
+À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
 
 ### Réponse
 
@@ -2020,7 +2020,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
 
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
@@ -2038,7 +2038,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 3. Quel est l’irradiance au pic de l’impulsion en MW/cm2 ?
 4. Quel est l’irradiance spectrale en $\text{MW/nm/cm}^2$ ?
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
 
