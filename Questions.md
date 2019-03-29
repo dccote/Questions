@@ -4,7 +4,7 @@ Ce document, généré automatiquement à partir des questions individuelles, re
 
 Pour corriger les questions, veuillez vous référer [aux versions en ligne des documents](https://github.com/dccote/Questions), disponible sur GitHub.
 
-Pour bien visualiser le document original en Markdown, utilisez Typora.io et le stylesheet questions, [disponible](https://github.com/dccote/Questions/tree/master/site/typora%20css-themes) dans le répertoire `site`. Copiez le repertoire au complet dans le `Theme Folder` de Typora.
+Pour bien visualiser le document original en Markdown, utilisez Typora.io et le stylesheet questions, [disponible](https://github.com/dccote/Questions/tree/master/site/typora%20css-themes) dans le répertoire `site`. Copiez le repertoire au complet dans le `Theme Folder` de Typora.
 
 [TOC]
 
@@ -503,7 +503,7 @@ Parce qu'elles doivent s'orienter dans l'oeil car la correction qu'elles produis
 
 ### Question 
 
-Montrez que le déterminant des matrices ABCD est en général $n_i/n_f$, avec $n_i$ l'indice du milieu incident et $n_f$ l'indice du mileu sortant.
+Montrez que le déterminant des matrices ABCD est en général $n_i/n_f$, avec $n_i$ l'indice du milieu incident et $n_f$ l'indice du mileu sortant.
 
 ### Réponse
 
@@ -686,7 +686,7 @@ $$
 \end{matrix}
 \Biggl],
 $$
-on prend un rayon à une hauteur unitaire (r=1) et parallèle à l'axe ($\theta=0$) qui émergera à un angle de $\theta_2 = -\frac{n_2-n_1}{n_2}R$, et croisera donc l'axe à une distance $f_2$ telle que  $\tan \theta_2 \approx \theta_2 = \frac{1}{f_2}$ donc $f_2 = n_2 R/(n_2-n_1) $. Pour la partie avant, en prenant un rayon émergeant du point focal  $F_1$ et en propageant d'une distance $f_1$ avant de traverser l'interface, on obtient:
+on prend un rayon à une hauteur unitaire (r=1) et parallèle à l'axe ($\theta=0$) qui émergera à un angle de $\theta_2 = -\frac{n_2-n_1}{n_2}R$, et croisera donc l'axe à une distance $f_2$ telle que  $\tan \theta_2 \approx \theta_2 = \frac{1}{f_2}$ donc $f_2 = n_2 R/(n_2-n_1) $. Pour la partie avant, en prenant un rayon émergeant du point focal  $F_1$ et en propageant d'une distance $f_1$ avant de traverser l'interface, on obtient:
 
 
 $$
@@ -1276,13 +1276,11 @@ Durée: 180m
 
 Vous voulez caractériser un jet assez dense de particules opaques de diamètres $d$ . Le jet lui-même a un diamètre d’environ 1 cm. Vous avez un laser à 632.8 nm émettant un faisceau gaussien collimé (1 mm de diamètre), une boite de lentilles convergentes de distances focales variées et une caméra avec un capteur CCD ayant 1024 x 768 pixels de 16 µm et produisant 30 images par secondes. Vous ne savez pas la grosseur des particules, mais vous savez qu’elles sont toutes identiques, et qu’elles ont un diamètre d’au moins 1 µm et probablement de moins de 10 µm. Vous faites un montage pour que le laser (que vous pourrez collimer autrement ou non) diffracte sur les particules et vous voulez mesurer le patron de diffraction sur le caméra.
 
-a) Dessinez votre montage de façon conceptuel.
+1. Dessinez votre montage de façon conceptuel.
 
- b) Obtenez (équation à l’appui) le patron que vous verrez sur la caméra. Vous devrez utiliser le principe de Babinet.  **Attention:** bien sûr, le flux de particules est tel que plusieurs particules se retrouveront dans le faisceau, à des distances variables l’une de l’autre.  Restera-t-il un patron de diffraction non nul? Obtenez une expression mathématique décrivant cette situation.
-
-c) Avec les lentilles que vous utiliserez et votre caméra, quelles sont les limites des diamètres que vous pourrez détecter (plus petit et plus grand diamètres de particules)?
-
-d) Lorsque vous avez dérivé b), vous avez fait des hypothèses (implicites ou non) sur la densité de particules.  Donnez un critère sur la grosseur du jet et la densité maximale de particules (particules par surface par seconde) que le jet devrait avoir pour que vos mesures soient possibles. **Des indices**: est-ce qu’un photon diffracté pourrait diffracter à nouveau sur une deuxième particule? Quelle est la probabilité qu’un photon diffracte dans un jet de particule de diamètre $d$ ?
+2. Obtenez (équation à l’appui) le patron que vous verrez sur la caméra. Vous devrez utiliser le principe de Babinet.  **Attention:** bien sûr, le flux de particules est tel que plusieurs particules se retrouveront dans le faisceau, à des distances variables l’une de l’autre.  Restera-t-il un patron de diffraction non nul? Obtenez une expression mathématique décrivant cette situation.
+3. Avec les lentilles que vous utiliserez et votre caméra, quelles sont les limites des diamètres que vous pourrez détecter (plus petit et plus grand diamètres de particules)?
+4. Lorsque vous avez dérivé 2), vous avez fait des hypothèses (implicites ou non) sur la densité de particules.  Donnez un critère sur la grosseur du jet et la densité maximale de particules (particules par surface par seconde) que le jet devrait avoir pour que vos mesures soient possibles. **Des indices**: est-ce qu’un photon diffracté pourrait diffracter à nouveau sur une deuxième particule? Quelle est la probabilité qu’un photon diffracte dans un jet de particule de diamètre $d$ ?
 
 ### Réponse
 
@@ -1302,7 +1300,7 @@ I_{\sigma}(r) \approx \frac{ \left|E_\circ\right|^2 \pi a^2}{f^2} \left[ \frac{2
 $$
 
 
-on obtient que la largeur, définie comme la distance entre le maximum et le point où la fonction $J_1(x)/x$ est nulle, est donné par $J_1 \left( \frac{ 2\pi a r_\circ}{\lambda f} \right) = 3.82$ donc $2r_\circ = 2 \times 1.22 \lambda \frac{f}{2a} = 2.44 \lambda f_{\#}$ . La tache focale, dans le cas où la lentille est remplie par l’illumination, est environ le double de la longueur d’onde multipliée par le *f-number* de la lentille. 
+on obtient que la largeur, que l'on peut definir de plusieurs façons (distance entre le maximum et le  le point où la fonction $J_1(x)/x$ est nulle, ou entre les deux zéros). Donc avec $J_1 \left( \frac{ 2\pi a r_\circ}{\lambda f} \right) = 3.82$, on obtient pour la distance entre les deux zeros $2r_\circ = 2 \times 1.22 \lambda \frac{f}{2a} = 2.44 \lambda f_{\#}$ . La tache focale, dans le cas où la lentille est remplie par l’illumination, est environ le double de la longueur d’onde multipliée par le *f-number* de la lentille. 
 ## Tache focale, petit faisceau
 
 ### Question
@@ -1384,6 +1382,91 @@ $$
 Donc l’oeil et son indice de réfraction n’ont pas d’impact sur la résolution.
 
 
+
+## Résolution téléscope Kech
+
+*Durée: 20m*
+
+### Question
+
+Trouvez l’angle minimale (critère de Rayleigh) entre deux structures qui peuvent être résolues par le télescope de Keck à Hawaii qui a une diamètre de 10 m et une distance focale de 17.5 m. Expliquez votre choix de longueur d’onde.
+
+### Réponse
+
+## Résolution microscope
+
+*Durée: 20m*
+
+### Question
+
+Trouvez la distance minimale détectable (critère de Rayleigh) entre deux petites molécules qui sont excitées par de la lumière bleue à 488 nm dans un objectif de microscope ayant une ouverture numérique de $\text{NA}=1.2$ et un grossissement de 60X. Supposez que seule la diffraction limite la résolution. Notez: l’ouverture numérique est donnée par le demi-angle maximal d’acceptance d’une lentille (voir p.39 des notes d’étude)
+
+### Réponse
+
+## Tache focale
+
+*Durée: 20m*
+
+### Question
+
+Une lentille de distance focal $f=1$ cm possède un diamètre utile de $D= 1$ cm. Vous l'utilisez pour illuminer des objets qui se trouvent au plan focal de la lentille avec un laser de $\lambda=633$ nm.
+
+1. Quelle est la dimension de la tache au point focal si une onde plane est incidente sur la lentille et que l'on définit la largeur comme:
+   1. la largeur à mi-hauteur en irradiance
+   2. la largeur à mi-hauteur en champ électrique
+   3. la distance entre les positions des deux premiers zéros d'irradiance au plan focal.
+
+2. Si votre faisceau incident n'est pas une onde plane, mais plutôt un disque de 5 mm de diamètre sur la lentille. Quelle sera la dimension de la tache au point focal ? Sera-t-elle plus grande ou plus petite que la tache originale?
+
+### Réponse
+
+## Réseau blazé
+
+*Durée: 1m*
+
+### Question
+
+Un réseau de diffraction blazé de 5.08 cm de largeur (dimension perpendiculaire à la direction des sillons) est utilisé au premier ordre afin de résoudre avec une résolution de 0.1 nm le contenu spectral d’une source émettant autour de 1.5 µm. Calculer l’angle de blaze dans les 2 situations suivantes :
+
+1. en configuration Littrow;
+2. à incidence normale
+
+### Réponse
+
+## Masque sinusoidal
+
+*Durée: 1m*
+
+### Question
+
+Une variation en **amplitude** sinusoïdale de période $\Lambda$ est imprimée sur un transparent $T = 1 + \sin \left( 2 \pi x/\Lambda \right)$. Elle laisse passer entre 0 et 100% du champ électrique incident.  Calculez le champ électrique diffracté si une onde plane est normalement incidente.
+
+### Réponse
+
+## Petit prisme
+
+*Durée: 60m*
+
+### Question
+
+Une onde plane en direction $\hat{z}$ est incidente sur un masque de phase d’indice de réfraction $n$ et de largeur $b$ en forme de prisme rectangulaire d’épaisseur nulle à y=0 et d’épaisseur $d$ à $y=b$ , et bloque la lumière à l’extérieur de la fente. L’onde subit donc un changement de phase $knd(y/b)$ dans le prisme allant de 0 à $knd$ le long de la fente, avec $k \equiv \omega/c$  et $c$ la vitesse dans le vide. Le chemin optique total sur la distance $d$ combinant la propagation dans le prisme et la propagation dans l’air sera donc: 
+$$
+k\left[ n d(y/b) + (d-d(y/b)) \right] = k\left[ (n-1)yd/b + d \right]
+$$
+![pastedGraphic.pdf](assets/pastedGraphic.pdf)
+
+1. Écrivez l’équation de diffraction de Fraunhofer décrivant la diffraction dans le champ lointain de cette situation.
+    
+
+2. Solutionnez en utilisant les propriétés des transformés de Fourier.
+    
+
+3. Obtenez l’angle où l’intensité sera maximum et comparez avec l’optique géométrique et la loi de Snell.
+
+4. Si vous construisez une structure périodique en répétant ce prisme à chaque distance $a$, quelle doit être la séparation entre les répétitions pour que la majorité de la puissance se retrouve dans le premier ordre de diffraction?
+    
+
+### Réponse
 
 # Aberrations
 
@@ -1911,9 +1994,31 @@ Les problèmes de cette section concerne les faisceaux laser gaussiens. Ces fasi
 
 
 
+# Focalisation faisceau gaussien
+
+*durée: 10 m*
+
 ### Question
 
 Quelle sera la grosseur du point focal d’une onde plane de longueur d’onde 500nm qui frappe une lentille de diamètre D = 2.5 cm et de distance focale f = 10 cm ?
+
+### Réponse
+
+# Propagation de faisceau gaussien
+
+*durée: 60 m*
+
+### Question
+
+Vous avez un système de deux lentilles (infiniment larges) composé de deux lentilles de distances focales f1 et f2  (avec f2/f1=3) et séparées par la somme de leurs distances focales. On s’intéresse au faisceau d’un point focal à l’autre, c’est donc un système 4f.  Un faisceau laser de λ=500 nm gaussien ayant un point d’étranglement (waist) wo = 1 mm au plan focal de la première lentille est incident.  
+
+1. Obtenez d’abord la matrice de transfert d’un point focal à l’autre.
+
+2. Obtenez ensuite le nouveau rayon complexe au point focal de la deuxième lentille en fonction du rayon complexe original?
+
+3. Quelle sera la dimension du faisceau transformé en fonction du faisceau original au point focal de la deuxieme lentille apres avoir traversé les deux lentilles? 
+
+4. Où se trouve le point d’étranglement (i.e. le point focal) du faisceau transformé?
 
 ### Réponse
 
@@ -1981,7 +2086,7 @@ Obtenez le code Monte Carlo Multi Layer (MCML) du site: http://omlc.ogi.edu/soft
 
 ### Question
 
-À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
+À l'aide de techniques Monte Carlo en 3D, calculez l’irradiance [en $\text{W/cm}^2$] à 2 mm d’une source ponctuelle isotrope (émission dans toutes les direction) de 1 W pour du tissu infini et homogène diffusant ayant $\mu_s = 10\ \text{cm}^{-1}$, $\mu_a = 0\ \text{cm}^{-1}$ et $g=0$ (donc uniquement de la diffusion istotrope).
 
 ### Réponse
 
@@ -2020,7 +2125,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
 
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
@@ -2038,7 +2143,7 @@ Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des im
 3. Quel est l’irradiance au pic de l’impulsion en MW/cm2 ?
 4. Quel est l’irradiance spectrale en $\text{MW/nm/cm}^2$ ?
 5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
-6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
 7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
 
 
