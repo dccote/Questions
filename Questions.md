@@ -2006,11 +2006,34 @@ Quelle sera la grosseur du point focal d’une onde plane de longueur d’onde 5
 
 # Propagation de faisceau gaussien
 
-*durée: 60 m*
+*durée: 20 m*
 
 ### Question
 
-Vous avez un système de deux lentilles (infiniment larges) composé de deux lentilles de distances focales f1 et f2  (avec f2/f1=3) et séparées par la somme de leurs distances focales. On s’intéresse au faisceau d’un point focal à l’autre, c’est donc un système 4f.  Un faisceau laser de λ=500 nm gaussien ayant un point d’étranglement (waist) wo = 1 mm au plan focal de la première lentille est incident.  
+Les astronautes américains d’Apollo 11,14 et 15 de même que les soviétiques avec le Lunokhod-1 et -2 ont laissé des rétroréflecteurs sur la lune pour permettre de mesurer précisément la distance terre-lune. Ces mesures se font avec un faisceau laser de longueur d’onde 532 nm au profil spatial gaussien qui, une fois à la surface de la lune à 384 467 km de la source, a une dimension de 6.5 km (pleine largeur à mi-hauteur en intensité, ou FWHM en intensité).  
+
+1. Écrivez l’inverse du rayon complexe 1/q du faisceau sur la lune
+2. Quelle est la largeur (FWHM en intensité) du faisceau original sur la terre ?
+
+### Réponse
+
+# Résolution angulaire
+
+*durée: 30 m*
+
+### Question
+
+Les phares d’une automobile sont séparées par un distance de 1.5 m.  Les phares ont un diamètre de 10 cm, et vos pupilles 5mm.  Jusqu’à quelle distance pouvez-vous résoudre les phares la nuit?
+
+### Réponse
+
+# Propagation de faisceau gaussien
+
+*durée: 30 m*
+
+### Question
+
+Vous avez un système de deux lentilles (infiniment larges) composé de deux lentilles de distances focales $f_1$ et $f_2$  (avec $f_2/f_1=3$) et séparées par la somme de leurs distances focales. On s’intéresse au faisceau d’un point focal à l’autre, c’est donc un système 4f.  Un faisceau laser de λ=500 nm gaussien ayant un point d’étranglement (waist) $w_o$ = 1 mm au plan focal de la première lentille est incident.  
 
 1. Obtenez d’abord la matrice de transfert d’un point focal à l’autre.
 
@@ -2019,6 +2042,23 @@ Vous avez un système de deux lentilles (infiniment larges) composé de deux len
 3. Quelle sera la dimension du faisceau transformé en fonction du faisceau original au point focal de la deuxieme lentille apres avoir traversé les deux lentilles? 
 
 4. Où se trouve le point d’étranglement (i.e. le point focal) du faisceau transformé?
+
+### Réponse
+
+# Tailles de faisceaux
+
+*durée: 30 m*
+
+### Question
+
+Pour un faisceau gaussien en champ électrique $E=E_\circ e^{-\frac{x^2}{w^2}}$, obtenez les facteurs de conversion pour passer de la largeur gaussienne à:
+
+1. $W_\text{E-FWHM}​$, la largeur complète à mi-hauteur en champ électrique
+2. $W_\text{E-HWHM}​$, la demi-largeur à mi-hauteur  en champ électrique
+3. $W_\text{E-RMS}$, la largeur root-mean-square en champ électrique
+4. $W_\text{I-FWHM}​$, la largeur complète à mi-hauteur en irradiance
+5. $W_\text{I-HWHM}$, la demi-largeur à mi-hauteur  en irradiance
+6. $W_\text{I-RMS}$, la largeur root-mean-square en irradiance
 
 ### Réponse
 
