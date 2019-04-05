@@ -1994,7 +1994,7 @@ Les problèmes de cette section concerne les faisceaux laser gaussiens. Ces fasi
 
 
 
-# Focalisation faisceau gaussien
+## Focalisation faisceau gaussien
 
 *durée: 10 m*
 
@@ -2004,7 +2004,7 @@ Quelle sera la grosseur du point focal d’une onde plane de longueur d’onde 5
 
 ### Réponse
 
-# Propagation de faisceau gaussien
+## Propagation de faisceau gaussien
 
 *durée: 20 m*
 
@@ -2017,7 +2017,7 @@ Les astronautes américains d’Apollo 11,14 et 15 de même que les soviétiques
 
 ### Réponse
 
-# Résolution angulaire
+## Résolution angulaire
 
 *durée: 30 m*
 
@@ -2027,7 +2027,7 @@ Les phares d’une automobile sont séparées par un distance de 1.5 m.  Les pha
 
 ### Réponse
 
-# Propagation de faisceau gaussien
+## Propagation de faisceau gaussien
 
 *durée: 30 m*
 
@@ -2045,7 +2045,7 @@ Vous avez un système de deux lentilles (infiniment larges) composé de deux len
 
 ### Réponse
 
-# Tailles de faisceaux
+## Tailles de faisceaux
 
 *durée: 30 m*
 
