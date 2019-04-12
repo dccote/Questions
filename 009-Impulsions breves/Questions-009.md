@@ -1,0 +1,60 @@
+# Impulsions brèves
+
+Les problèmes de cette section concerne les impulsions brèves, la dispersion, la puissance au pic, les taux de répétition, les largeurs de spectre.
+### Question
+
+Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des impulsions de 150 femtosecondes (*transform-limited*) à toutes les 12 nanosecondes. La lumière émise est centrée à 800 nm et il y a 10 mW de puissance moyenne c’est à dire que si on fait la moyenne de la puissance en 150 femtsoecondes de lumière et 12 nanosecondes de “vide”, on obtient 10 mW.
+
+1. Calculez la puissance au pic des impulsion (en kW).
+2. Quelle est la largeur spectrale du faisceau ? (en nanomètres).  Utilisez les notes de cours.
+
+3. Quel est l’irradiance au pic de l’impulsion en $\text{MW/cm}^2$ ?
+
+4. Quel est l’irradiance spectrale en $\text{MW/nm/cm}^2$ ?
+
+5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
+
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+
+7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
+
+
+
+![image-20190109203149671](assets/image-20190109203149671.png)
+
+### Réponse
+### Question
+
+Vous avez un laser Ti:Sapphire qui émet un faisceau sur $2\ \text{mm}^2$ des impulsions de 30 femtosecondes (*transform-limited*) à toutes les 12 nanosecondes. La lumière émise est centrée à 800 nm et il y a 10 mW de puissance moyenne c’est à dire que si on fait la moyenne de la puissance en 150 femtsoecondes de lumière et 12 nanosecondes de “vide”, on obtient 10 mW.
+
+1. Calculez la puissance au pic des impulsion (en kW).
+2. Quelle est la largeur spectrale du faisceau ? (en nanomètres).  Utilisez les notes de cours.
+3. Quel est l’irradiance au pic de l’impulsion en MW/cm2 ?
+4. Quel est l’irradiance spectrale en $\text{MW/nm/cm}^2$ ?
+5. Qu’arrivera-t-il à la durée des impulsions si elles voyagent dans 3 cm de verre BK7 ? Trouvez le coefficient de dispersion dans le verre BK7 sur le web. Utilisez le tableau en annexe pour convertir les coefficients, ou pour les calculer.
+6. Calculez le produit  $\Delta t \Delta f$ avant le bloc de verre et après le bloc de verre
+7. Vous utilisez un puissance-mètre pour mesurer la puissance avant et après le verre. Que mesurez-vous? Discutez (brièvement, bien sûr).
+
+
+
+![image-20190109203149671](../009-Impulsions%20breves/assets/image-20190109203149671.png)
+
+### Réponse
+
+### Question
+
+En supposant que seule la dispersion du verre de silice compte dans une fibre optique, calculez la dispersion d’impulsions de 150 femtsoecondes à 800 nm dans 10 cm de fibre optique et dans 2 mètres de fibre optique. 
+
+### Réponse
+
+### Question
+
+En supposant que seule la dispersion du verre de silice compte dans une fibre optique:
+
+1. Calculez la dispersion d’impulsions de 150 femtsoecondes à 800 nm dans 10 cm de fibre optique et dans 2 mètres de fibre optique. 
+2. Discutez l’importance pour l’endoscopie multiphoton.
+
+### Réponse
+
+
+
