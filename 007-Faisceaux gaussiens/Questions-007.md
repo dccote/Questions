@@ -10,10 +10,46 @@ Les problèmes de cette section concerne les faisceaux laser gaussiens. Ces fasi
 
 ### Question
 
-Quelle sera la grosseur du point focal d’une onde plane de longueur d’onde 500nm qui frappe une lentille de diamètre D = 2.5 cm et de distance focale f = 10 cm ?
+Quelle sera la grosseur du point focal d’un faisceau gaussien collimé de longueur d’onde 500 nm et de diamètre $w_o=5 mm$ tout juste avant la lentille qui frappe une lentille de diamètre D = 2.5 cm et de distance focale f = 10 cm ?
 
 ### Réponse
 
+De faisceau générale, un faisceau à l'entrée d'une lentille est transformé jusqu'au plan focal de la lentille avec :
+$$
+q^\prime = \frac{Aq+B}{Cq+D}
+$$
+La matrice de transformation de la lentille $f​$ est simplement 
+$$
+\Biggr[
+\begin{matrix} 1 & f \\
+0 & 1
+\end{matrix}
+\Biggl]
+
+\Biggr[
+\begin{matrix} 1 & 0 \\
+-1/f & 1
+\end{matrix}
+\Biggl]
+=
+\Biggr[
+\begin{matrix} 0 & f \\
+-1/f & 1
+\end{matrix}
+\Biggl]
+$$
+
+
+On a donc:
+$$
+q^\prime = \frac{f}{-q/f + 1}
+$$
+Puisque le faisceau gaussien incident a un rayon complexe $ q = j z_o = j\frac{\pi w_o^2}{\lambda}​$, on a en utilisant $\frac{1}{q^\prime} \equiv \frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}} ​$:
+$$
+\frac{1}{q^\prime} = \frac{f-q}{f^2} = \frac{1}{f} - \frac{q}{f^2}\\
+\frac{\lambda}{\pi w^{\prime 2}}  = \frac{\pi w_o^2}{\lambda f^2}\\
+w^\prime = \frac{\lambda f}{w_o \pi} = \frac{500 \times 10^{-6} \text{mm} \cdot 100 \text{ mm}}{\pi \cdot 5 \text{ mm} } = 6.36 \lambda = 3.18 \mu\text{m}
+$$
 ## Propagation de faisceau gaussien
 
 *durée: 20 m*
@@ -254,7 +290,7 @@ $$
 
 #### La solution stable
 
-On utilise eq. $\ref{eq:sol}​$ et on remplace les valeurs pour notre cavité de l'eq $\ref{eq:cavite}​$ :
+On utilise eq. $\ref{eq:sol}​$ et on remplace les valeurs pour notre cavité de l'eq $\ref{eq:cavite}​$ :
 $$
 q =  \pm \frac{\sqrt{4BC}}{2C} \\
 q =  \pm \frac{\sqrt{4( 2d - \frac{2d^2}{R})(-2/R)}}{2(-2/R)} \\
@@ -263,4 +299,4 @@ q =  \pm \frac{\sqrt{ -16\frac{d}{R}(1-\frac{d}{R})}}{4/R} \\
 q =  \pm j \sqrt{Rd(1-\frac{d}{R})} \\
 q =  \pm j \sqrt{40 \cdot 37.5 (1-\frac{37.5}{40})} \text{ cm} = j 9.68 \text{ cm}
 $$
-Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde courbe.
+Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde courbe.
