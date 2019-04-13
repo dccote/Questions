@@ -60,19 +60,88 @@ La constante diélectrique $\epsilon = \epsilon_r \epsilon_\circ$ est relié à 
 
 ## Solution équation de Maxwell indépendante du temps
 
-*Durée: 10m*
+*Durée: 30m*
 
 ### Question
 
 Trouvez une solution de l’équation d’onde vectorielle tridimensionnelle dépendente du temps:
 $$
-\mathbf{\nabla}^2 \mathbf{E} + \mu_\circ\epsilon \frac{\partial^2 \mathbf{E}}{\partial t^2} = 0
+\mathbf{\nabla}^2 \mathbf{E} - \mu_\circ\epsilon \frac{\partial^2 \mathbf{E}}{\partial t^2} = 0
 $$
 par séparation de variables.
 
 ### Réponse
 
-## Vecteur de Poynting 
+On doit faire plusieurs suppositions pour arriver à une solution particulière.  
+
+1. D'abord, on suppose que $\epsilon$ est une constante (i.e. plutôt qu'un tenseur) donc nous ne solutionnons que pour des milieux à indice homogène (pas de biréfringence) bien que la généralisation à des milieux biréfringents est directe. 
+2. De plus, on suppose que le champ est polarisé linéairement selon un axe (disons $\hat{x}​$), bien que la solution selon les autres axes, *dans un milieu homogène*, est aussi directe car les solutions sont indépendantes (i.e. une polarisation dans un axe n'affecte pas la polarisation dans un autre axe).
+
+#### Séparation de variables
+
+En utilisant la méthode de séparation de variables, on pose une solution de la forme:
+$$
+\textbf{E}= \mathbf{A}(x) T(t) = \left[A(x) \hat{x}\right] T(t)
+$$
+
+On séparant les composantes dépendantes du temps et de la position de chaque côté, on obtient:
+
+$$
+\nabla^{2}{\left[ A\hat{x} \right] T } -  \mu_{0} \varepsilon \frac{\partial^2 A\hat{x} T}{\partial t^2}  = 0,
+$$
+
+$$
+\frac{1}{\mu_{0} \varepsilon}  \frac{d^2{A}}{d x^2}  = \frac{1}{T}\frac{d^2{T}}{d t^2}.
+$$
+
+La différentielle en temps est maintenant une différentielle totale car $T$ ne dépend que de $t​$.
+
+Si les deux fonctions sont égales et ne dépendent pas des mêmes variables ($\bf{r}$ et $t$), elles doivent être égales à une même constante:
+$$
+\frac{1}{\mu_{0} \varepsilon}  \frac{d^2{A}}{d x^2} = \frac{1}{T}\frac{d^2{T}}{d t^2} = K^2
+$$
+
+Donc en prenant la partie spatiale de l'équation, on obtient :
+
+$$
+\frac{d^2{A}}{d x^2} +K^2\mu_{0} \varepsilon A=0
+$$
+
+et en prenant la partie temporelle de l'équation, on obtient :
+$$
+\frac{d^2{T}}{d t^2} + K^2 T = 0
+$$
+
+#### Solution en $T(t)$
+
+On suppose une solution exponentielle. Les solutions en $T​$ sont clairement du type:
+$$
+T(t) = T_+ e^{i K t} + T_- e^{-i K t}
+$$
+donc $K$ représente la fréquence d'oscillation dans le temps, que l'on peut renommer $\omega$:
+$$
+T(t) = T_+ e^{i \omega t} + T_- e^{-i \omega t}
+$$
+
+
+
+#### Solution en $A(x)$
+
+On suppose une solution exponentielle.  Il y a plusieurs types, cependant, on peut vérifier que la solution suivante est valide:
+$$
+A(x) = A_+e^{-i\frac{\omega}{c} x } + A_+e^{i \frac{\omega}{c} x}
+$$
+
+où on a remplacé $c^2 \equiv \frac{1}{\mu \varepsilon}$. De plus, on sait (ou saura) que le vecteur d'onde $k\equiv \frac{\omega}{c}$.
+
+#### Solution complète
+
+La solution complète est donc le produit des deux $A(x)$ et $T(t)$. On obtiendra 4 termes croisés:
+$$
+E(x,t) = A(x) T(t) = \left( A_+e^{-i\frac{\omega}{c} x } + A_+e^{i \frac{\omega}{c} x} \right) \left( T_+ e^{i \omega t} + T_- e^{-i \omega t} \right) \\
+ = E_{1}e^{-i\left( k x - \omega t \right) } + E_{2}e^{i\left( k x - \omega t \right) } + E_{3}e^{-i\left( k x + \omega t \right) } + E_{4}e^{i\left( k x + \omega t \right) }
+$$
+qui correspondent à des ondes planes allant vers la gauche ou vers la droite.  Les conditions initiales détermineront la valeurs de coefficients.## Vecteur de Poynting 
 
 *Durée: 1m*
 
@@ -401,6 +470,7 @@ Lorsqu’on regarde dans l’eau sans lunettes de plongée, on ne voit pas très
 
 ### Réponse
 
+La distance focale du dispositif optique qu'est l'oeil dépend du milieu incident du rayon (habituellement l'air). Lorsque nous sommes dans l'eau, l'image ne se forme plus directement sur la rétine mais plutôt un peu derrière, comme si nous étions myope. Si nous mettons des lunettes de plongée, le milieu du rayon incident est de nouveau de l'air et cela corrige notre vue.
 ## Laser dans l'eau
 
 ### Question
@@ -2040,6 +2110,9 @@ $$
 \frac{\lambda}{\pi w^{\prime 2}}  = \frac{\pi w_o^2}{\lambda f^2}\\
 w^\prime = \frac{\lambda f}{w_o \pi} = \frac{500 \times 10^{-6} \text{mm} \cdot 100 \text{ mm}}{\pi \cdot 5 \text{ mm} } = 6.36 \lambda = 3.18 \mu\text{m}
 $$
+
+
+
 ## Propagation de faisceau gaussien
 
 *durée: 20 m*
@@ -2135,7 +2208,11 @@ $$
    \frac{\lambda}{\pi w^{\prime 2}} = \frac{\lambda}{9 \pi w_o^2} \\
    w^\prime = 3 w_o
    $$
-4. Le point d'étranglement se trouve à l'endroit où le rayon complexe est imaginaire car lorsque le rayon complexe est imaginaire, on voit que $1/R = 0$, donc $R \rightarrow \infty$.  Ainsi, le point d'étranglement du faisceau est au point focal de la lentille.## Tailles de faisceaux
+4. Le point d'étranglement se trouve à l'endroit où le rayon complexe est imaginaire car lorsque le rayon complexe est imaginaire, on voit que $1/R = 0$, donc $R \rightarrow \infty$.  Ainsi, le point d'étranglement du faisceau est au point focal de la lentille.
+
+
+
+## Tailles de faisceaux
 
 *durée: 30 m*
 
@@ -2151,6 +2228,8 @@ Pour un faisceau gaussien en champ électrique $E=E_\circ e^{-\frac{x^2}{w^2}}�
 6. $W_\text{I-RMS}​$, la largeur root-mean-square en irradiance
 
 ### Réponse
+
+
 
 ## Cavité laser
 
@@ -2289,7 +2368,11 @@ q =  \pm \frac{\sqrt{ -16\frac{d}{R}(1-\frac{d}{R})}}{4/R} \\
 q =  \pm j \sqrt{Rd(1-\frac{d}{R})} \\
 q =  \pm j \sqrt{40 \cdot 37.5 (1-\frac{37.5}{40})} \text{ cm} = j 9.68 \text{ cm}
 $$
-Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde courbe.# Interactions linéaires
+Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde courbe.
+
+
+
+# Interactions linéaires
 
 Les problèmes de cette section concerne les interactions linéaires entre la lumière et les particules ou les tissus. Les concepts de section efficace, coefficient de diffusion, d'absorption et d'anisotropie de même que la fluorescence par excitation linéaire sont exposés dans des problèmes.
 

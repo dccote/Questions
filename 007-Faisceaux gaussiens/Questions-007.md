@@ -50,6 +50,9 @@ $$
 \frac{\lambda}{\pi w^{\prime 2}}  = \frac{\pi w_o^2}{\lambda f^2}\\
 w^\prime = \frac{\lambda f}{w_o \pi} = \frac{500 \times 10^{-6} \text{mm} \cdot 100 \text{ mm}}{\pi \cdot 5 \text{ mm} } = 6.36 \lambda = 3.18 \mu\text{m}
 $$
+
+
+
 ## Propagation de faisceau gaussien
 
 *durée: 20 m*
@@ -147,6 +150,8 @@ $$
    $$
 4. Le point d'étranglement se trouve à l'endroit où le rayon complexe est imaginaire car lorsque le rayon complexe est imaginaire, on voit que $1/R = 0$, donc $R \rightarrow \infty$.  Ainsi, le point d'étranglement du faisceau est au point focal de la lentille.
 
+
+
 ## Tailles de faisceaux
 
 *durée: 30 m*
@@ -163,6 +168,8 @@ Pour un faisceau gaussien en champ électrique $E=E_\circ e^{-\frac{x^2}{w^2}}�
 6. $W_\text{I-RMS}​$, la largeur root-mean-square en irradiance
 
 ### Réponse
+
+
 
 ## Cavité laser
 
@@ -292,7 +299,7 @@ $$
 
 #### La solution stable
 
-On utilise eq. $\ref{eq:sol}​$ et on remplace les valeurs pour notre cavité de l'eq $\ref{eq:cavite}​$ :
+On utilise eq. $\ref{eq:sol}​$ et on remplace les valeurs pour notre cavité de l'eq $\ref{eq:cavite}​$ :
 $$
 q =  \pm \frac{\sqrt{4BC}}{2C} \\
 q =  \pm \frac{\sqrt{4( 2d - \frac{2d^2}{R})(-2/R)}}{2(-2/R)} \\
@@ -301,4 +308,7 @@ q =  \pm \frac{\sqrt{ -16\frac{d}{R}(1-\frac{d}{R})}}{4/R} \\
 q =  \pm j \sqrt{Rd(1-\frac{d}{R})} \\
 q =  \pm j \sqrt{40 \cdot 37.5 (1-\frac{37.5}{40})} \text{ cm} = j 9.68 \text{ cm}
 $$
-Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde plan.
+Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde courbe.
+
+
+
