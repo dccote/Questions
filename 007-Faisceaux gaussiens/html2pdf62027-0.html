@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Questions-007</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="faisceaux-gaussiens">Faisceaux gaussiens</h1>
+<p>Les problèmes de cette section concerne les faisceaux laser gaussiens. Ces fasiceaux ont une grande utilité et le formalisme pour les manipuler est très puissant et très approprié dans une grande majorité des cas qui nous intéressent.</p>
+<h2 id="focalisation-faisceau-gaussien">Focalisation faisceau gaussien</h2>
+<p><em>durée: 10 m</em></p>
+<h3 id="question">Question</h3>
+<p>Quelle sera la grosseur du point focal d’un faisceau gaussien collimé de longueur d’onde 500 nm et de diamètre <span class="math inline"><em>w</em><sub><em>o</em></sub> = 5<em>m</em><em>m</em></span> tout juste avant la lentille qui frappe une lentille de diamètre D = 2.5 cm et de distance focale f = 10 cm ?</p>
+<h3 id="réponse">Réponse</h3>
+<p>De faisceau générale, un faisceau à l’entrée d’une lentille est transformé jusqu’au plan focal de la lentille avec : <br /><span class="math display">$$
+q^\prime = \frac{Aq+B}{Cq+D}
+$$</span><br /> La matrice de transformation de la lentille <span class="math inline"><em>f</em>​</span> est simplement $$ </p>
+<p>= $$</p>
+<p>On a donc: <br /><span class="math display">$$
+q^\prime = \frac{f}{-q/f + 1}
+$$</span><br /> Puisque le faisceau gaussien incident a un rayon complexe $ q = j z_o = j​$, on a en utilisant <span class="math inline">$\frac{1}{q^\prime} \equiv \frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}} ​$</span>: <br /><span class="math display">$$
+\frac{1}{q^\prime} = \frac{f-q}{f^2} = \frac{1}{f} - \frac{q}{f^2}\\
+\frac{\lambda}{\pi w^{\prime 2}}  = \frac{\pi w_o^2}{\lambda f^2}\\
+w^\prime = \frac{\lambda f}{w_o \pi} = \frac{500 \times 10^{-6} \text{mm} \cdot 100 \text{ mm}}{\pi \cdot 5 \text{ mm} } = 6.36 \lambda = 3.18 \mu\text{m}
+$$</span><br /> ## Propagation de faisceau gaussien</p>
+<p><em>durée: 20 m</em></p>
+<h3 id="question-1">Question</h3>
+<p>Les astronautes américains d’Apollo 11,14 et 15 de même que les soviétiques avec le Lunokhod-1 et -2 ont laissé des rétroréflecteurs sur la lune pour permettre de mesurer précisément la distance terre-lune. Ces mesures se font avec un faisceau laser de longueur d’onde 532 nm au profil spatial gaussien qui, une fois à la surface de la lune à 384 467 km de la source, a une dimension de 3 km (largeur gaussienne 1/e en champ électrique).</p>
+<ol type="1">
+<li>Écrivez l’inverse du rayon complexe 1/q du faisceau sur la lune</li>
+<li>Quelle est la largeur (largeur gaussienne 1/e en champ électrique) du faisceau original sur la terre ?</li>
+</ol>
+<h3 id="réponse-1">Réponse</h3>
+<h2 id="résolution-angulaire">Résolution angulaire</h2>
+<p><em>durée: 30 m</em></p>
+<h3 id="question-2">Question</h3>
+<p>Les phares d’une automobile sont séparées par un distance de 1.5 m. Les phares ont un diamètre de 10 cm, et vos pupilles 5mm. Jusqu’à quelle distance pouvez-vous résoudre les phares la nuit?</p>
+<h3 id="réponse-2">Réponse</h3>
+<h2 id="propagation-de-faisceau-gaussien">Propagation de faisceau gaussien</h2>
+<p><em>durée: 30 m</em></p>
+<h3 id="question-3">Question</h3>
+<p>Vous avez un système de deux lentilles (infiniment larges) composé de deux lentilles de distances focales <span class="math inline"><em>f</em><sub>1</sub></span> et <span class="math inline"><em>f</em><sub>2</sub></span> (avec <span class="math inline"><em>f</em><sub>2</sub>/<em>f</em><sub>1</sub> = 3</span>) et séparées par la somme de leurs distances focales. On s’intéresse au faisceau d’un point focal à l’autre, c’est donc un système 4f. Un faisceau laser de λ=500 nm gaussien ayant un point d’étranglement (waist) <span class="math inline"><em>w</em><sub><em>o</em></sub></span> = 1 mm au plan focal de la première lentille est incident.</p>
+<ol type="1">
+<li><p>Obtenez d’abord la matrice de transfert d’un point focal à l’autre.</p></li>
+<li><p>Obtenez ensuite le nouveau rayon complexe au point focal de la deuxième lentille en fonction du rayon complexe original?</p></li>
+<li><p>Quelle sera la dimension du faisceau transformé en fonction du faisceau original au point focal de la deuxieme lentille apres avoir traversé les deux lentilles?</p></li>
+<li><p>Où se trouve le point d’étranglement (i.e. le point focal) du faisceau transformé?</p></li>
+</ol>
+<h3 id="réponse-3">Réponse</h3>
+<ol type="1">
+<li>On obtient:</li>
+</ol>
+<p>$$ M = </p>
+<p>=</p>
+<p>$$</p>
+<ol start="2" type="1">
+<li><span class="math inline">$q^\prime = \frac{Aq+B}{Cq+D} = 9q = 9 j \pi w_o^2/\lambda ​$</span></li>
+<li>Pour obtenir la dimension physique et le rayon de courbure, on doit utiliser la définition <span class="math inline">$\frac{1}{q^\prime} \equiv \frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}}$</span>, on obtient donc: <br /><span class="math display">$$
+\frac{1}{q^\prime} = -\frac{\lambda}{9 j \pi w_o^2} \\
+\frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}} = -\frac{\lambda}{9 j \pi w_o^2} \\
+\frac{\lambda}{\pi w^{\prime 2}} = \frac{\lambda}{9 \pi w_o^2} \\
+w^\prime = 3 w_o
+$$</span><br /></li>
+<li>Le point d’étranglement se trouve à l’endroit où le rayon complexe est imaginaire car lorsque le rayon complexe est imaginaire, on voit que <span class="math inline">1/<em>R</em> = 0</span>, donc <span class="math inline"><em>R</em> → ∞</span>. Ainsi, le point d’étranglement du faisceau est au point focal de la lentille.## Tailles de faisceaux</li>
+</ol>
+<p><em>durée: 30 m</em></p>
+<h3 id="question-4">Question</h3>
+<p>Pour un faisceau gaussien en champ électrique <span class="math inline">$E=E_\circ e^{-\frac{x^2}{w^2}}​$</span>, obtenez les facteurs de conversion pour passer de la largeur gaussienne à:</p>
+<ol type="1">
+<li><span class="math inline"><em>W</em><sub>E-FWHM</sub>​</span>, la largeur complète à mi-hauteur en champ électrique</li>
+<li><span class="math inline"><em>W</em><sub>E-HWHM</sub>​</span>, la demi-largeur à mi-hauteur en champ électrique</li>
+<li><span class="math inline"><em>W</em><sub>E-RMS</sub></span>, la largeur root-mean-square en champ électrique</li>
+<li><span class="math inline"><em>W</em><sub>I-FWHM</sub>​</span>, la largeur complète à mi-hauteur en irradiance</li>
+<li><span class="math inline"><em>W</em><sub>I-HWHM</sub></span>, la demi-largeur à mi-hauteur en irradiance</li>
+<li><span class="math inline"><em>W</em><sub>I-RMS</sub>​</span>, la largeur root-mean-square en irradiance</li>
+</ol>
+<h3 id="réponse-4">Réponse</h3>
+<h2 id="cavité-laser">Cavité laser</h2>
+<p><em>durée: 60 m</em></p>
+<h3 id="question-5">Question</h3>
+<p>Une cavité laser est composée d’un miroir courbe concave de rayon de courbure <span class="math inline"><em>R</em> = 40</span> cm et d’un miroir plan, séparés par <span class="math inline"><em>d</em> = 42</span> cm. Au centre, le milieu de gain est un cristal cylindrique de Nd :YAG d’indice de réfraction <span class="math inline"><em>n</em> = 1.8</span> et de longueur <span class="math inline"><em>L</em> = 10</span> cm. Calculez les paramètres du faisceau gaussien qui est stable dans la cavité, c’est à dire le faisceau gaussien qui est identique après un aller-retour dans la cavité.</p>
+<h3 id="réponse-5">Réponse</h3>
+<p>On obtient la matrice de transfert de la cavité, en partant de n’importe où, c’est sans importance. Ensuite, on utilisera simplement la transformation des faisceaux gaussiens et on obtiendra un <span class="math inline"><em>q</em></span> qui répond à: <br /><span class="math display">$$
+q = \frac{Aq+B}{Cq+D},
+$$</span><br /></p>
+<p>ou encore <br /><span class="math display"><em>C</em><em>q</em><sup>2</sup> + (<em>D</em> − <em>A</em>)<em>a</em> − <em>B</em> = 0</span><br /> donc la solution sera: <br /><span class="math display">$$
+\label{eq:sol}
+q = \frac{A-D \pm \sqrt{(D-A)^2+4BC}}{2C}
+$$</span><br /></p>
+<h4 id="la-matrice-dun-aller-retour-de-la-cavité">La matrice d’un aller-retour de la cavité</h4>
+<p>On se propage dans l’air, ensuite on entre dans un cristal (interface dielectrique plane), on se propage, on sort du cristal, on se repropage, on frappe le miroir, en revient dans le cristal jusqu’au miroir plan. Pour rapidement simplifier, faisons la propagation air-dielectrique-air avec <span class="math inline"><em>d</em><sub><em>o</em></sub> = 16​</span> cm (i.e. le cristal est au centre): $$ M_p =</p>
+
+
+
+
+<p>\ M_p =</p>
+
+
+<p><br /><span class="math display">$$
+qu'on simplifie en posant $d\equiv 2 d_o + L/n = 37.5$ cm. Ainsi, la matrice d'un aller-retour est simplement:
+$$</span><br /> M_ =</p>
+
+
+<p> \  M_ =</p>
+<p>$$</p>
+<p><em>Astuce</em>: on vérifie rapidement que le déterminant est 1 pour s’assurer qu’il n’y a pas d’erreur de calcul, ce qui est le cas <span class="math inline">$\left( 1 - \frac{2d}{R} \right)^2 - \left( - \frac{2}{R} \right) \left(2d - \frac{2d^2}{R} \right) = 1$</span> . On remarque que <span class="math inline"><em>A</em> = <em>D</em></span>, donc <span class="math inline"><em>A</em> − <em>D</em> = 0</span></p>
+<h4 id="la-solution-stable">La solution stable</h4>
+<p>On utilise eq. <span class="math inline">$\ref{eq:sol}​$</span> et on remplace les valeurs pour notre cavité de l’eq <span class="math inline">$\ref{eq:cavite}​$</span> : <br /><span class="math display">$$
+q =  \pm \frac{\sqrt{4BC}}{2C} \\
+q =  \pm \frac{\sqrt{4( 2d - \frac{2d^2}{R})(-2/R)}}{2(-2/R)} \\
+q =  \pm \frac{\sqrt{ -16\frac{d}{R}(1-\frac{d}{R})}}{4/R} \\
+q =  \pm \frac{\sqrt{ -16\frac{d}{R}(1-\frac{d}{R})}}{4/R} \\
+q =  \pm j \sqrt{Rd(1-\frac{d}{R})} \\
+q =  \pm j \sqrt{40 \cdot 37.5 (1-\frac{37.5}{40})} \text{ cm} = j 9.68 \text{ cm}
+$$</span><br /> Donc <span class="math inline"><em>z</em><sub><em>o</em></sub> = 9.68 cm</span> pour ce faisceau. En prenant une longueur d’onde de 1.064 <span class="math inline"><em>μ</em><em>m</em></span> (Nd:YAG est un milieu de gain centré sur cette longueur d’onde), le faisceau a donc une largeur minimale de <span class="math inline">$w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$</span> au miroir plan avec un front d’onde courbe.</p>
+</body>
+</html>
