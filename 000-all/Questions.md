@@ -1302,7 +1302,7 @@ Vous voulez le plus petit point focal possible.  Quelle lentille prenez vous et 
 
 ### Réponse
 
-Une lentille avec le plus petit $f_\#$ possible: le plus petit ratio de distance focale sur diamètre.  Je prends un laser avec la plus petite longueur d'onde possible, et je remplis la lentille avec ce laser car la grosseur du point focal est donnée par $w = f_\# \lambda$.
+Une lentille avec le plus petit $f_\#$ possible: le plus petit ratio de distance focale sur diamètre.  Je prends un laser avec la plus petite longueur d'onde possible, et je remplis la lentille avec ce laser car la grosseur du point focal est donnée par $w = 1.22 f_\# \lambda$.
 
 ## Plans de Fourier
 
@@ -1326,7 +1326,7 @@ Vous envoyez un faisceau collimé (i.e. provenant de l’infini) de diamètre $d
 
 ### Réponse
 
-Le point focal sera de $w = \lambda f_\#\text{eff} = \lambda \frac{f}{d_\text{\circ}} $ car la lentille n'est pas remplie. La distance focale est obtenue de la définition du $\text{NA} = \frac{D}{2f}$, donc $f = 25.4 \text{ mm}$.   Ainsi, $w = 25.4\text{ mm}/1 \text{ mm} \approx 25 \times \lambda​$. 
+Le point focal sera de $w = 1.22 f_\#^\text{eff} \lambda  = 1.22 \frac{f}{d_\circ} \lambda $ car la lentille n'est pas remplie (i.e. la diffraction provient de la grosseur finie du faisceau, pas du diamètre de la lentille). La distance focale est obtenue de la définition du $\text{NA} = \frac{D}{2f}$, donc $f = 25.4 \text{ mm}$.   Ainsi, $w = 1.22 \times 25.4\text{ mm}/1 \text{ mm} \approx 30 \times \lambda$. 
 
 ## Conception et construction d’un spectromètre Czerny-Turner
 
@@ -1381,13 +1381,13 @@ Un petit faisceau en forme de disque de diamètre $d$  est incident sur une lent
 
 Nous avons un problème dangereusement similaire au problème précédent. Cependant, l’intensité de l’illumination ne s’étend pas sur l’ensemble de la lentille car le faisceau est plus petit  que celle-ci. Ainsi, en posant le problème de diffraction, l’intégrale sera nulle au-delà du faisceau, ce qui réduira le diamètre de l’intégrale à $d$ au lieu de $D$. On refait donc le problème de la même façon.
 
-À partir de la solution de la diffraction d’une fente circulaire de l’exemple Exemple 3.1.2,, on obtient
+À partir de la solution de la diffraction d’une fente circulaire de l'Exemple 3.1.2 des notes, on obtient
 $$
-E_{\sigma}(r) \approx \frac{E_\circ{{e^{i{kf}}}} 2 \pi}{f} \int_0^{d/2} J_0 \left( \frac{kr\prime r}{f} \right) r\prime dr\prime 
+E_{\sigma}(r) \approx \frac{E_\circ{{e^{i{kf}}}} 2 \pi}{f} \int_0^{d/2} J_0 \left( \frac{kr\prime r}{f} \right) r^\prime dr^\prime
 $$
 
 $$
-I_{\sigma}(r) \approx \frac{ \left|E_\circ\right|^2 \pi (d/2)^2}{f^2} \left[ \frac{2 J_1 \left( \frac{ \pi d r}{\lambda f} \right)}{ \frac{\pi d r}{\lambda f} } \right]^2
+I_{\sigma}(r) \approx \frac{ \left|E_\circ\right|^2 \pi^2 (d/2)^4}{f^2} \left[ \frac{2 J_1 \left( \frac{ \pi d r}{\lambda f} \right)}{ \frac{\pi d r}{\lambda f} } \right]^2
 $$
 
 on obtient essentiellement la même solution que le problème précédent, sauf que le diamètre effectif de “blocage” est $d$ au lieu de $D$. On obtient donc $2r_\circ = 2 \times 1.22 \lambda \frac{f}{d}$. Dans ce cas, on dit que le faisceau “n’utilise pas” toute la lentille est que le $f_\#$ effectif est augmenté de $f^{\rm{eff}}_\# = \frac{D}{d} \times f_{\#}$ ce qui augmente proportionnellement la grosseur de la tache focale.
@@ -1453,17 +1453,35 @@ Donc l’oeil et son indice de réfraction n’ont pas d’impact sur la résolu
 
 
 
-## Résolution téléscope Kech
+## Résolution téléscope Keck
 
 *Durée: 20m*
 
 ### Question
 
-Trouvez l’angle minimale (critère de Rayleigh) entre deux structures qui peuvent être résolues par le télescope de Keck à Hawaii qui a une diamètre de 10 m et une distance focale de 17.5 m. Expliquez votre choix de longueur d’onde.
+Trouvez l’angle minimale (critère de Rayleigh) entre deux structures qui peuvent être résolues par le télescope de Keck à Hawaii qui a un diamètre de 10 m et une distance focale de 17.5 m. Expliquez votre choix de longueur d’onde.
 
 ### Réponse
 
-## Résolution microscope
+Le critère de Rayleigh correspond à la distance qui sépare le pic principal et le premier zéro et est donné par $r = \frac{1.22 f \lambda}{D}$. Le téléscope fonctionne dans le visible et l'infrarouge.  On s'intéresse à la raie de Balmer de l'hydrogène à 656.2 nm mais toute autre ligne spectrale pourrait être utilisée pour les calculs. 
+
+![image_Q004.009](assets/image_Q004.009-6025129.png)
+
+Avec un peu de géométrie et le critère de Rayleigh, on arrive aux équations suivantes : 
+
+$$
+\tan\left( \frac{\Delta\theta }{2} \right) = \frac{r}{2 f }
+$$
+et
+$$
+\frac{r}{2 f}=\frac{1.22 f  \lambda}{ 2 f D}.
+$$
+
+Donc 
+$$
+\frac{\Delta \theta}{2} = \frac{1.22 \lambda }{2 D}.
+$$
+La résolution spatiale à la camera est donc : $\Delta \theta = 1.22 \frac{\lambda}{D} = 0.04\ \text{millirad}$ dans le visible.## Résolution microscope
 
 *Durée: 20m*
 
@@ -1473,7 +1491,12 @@ Trouvez la distance minimale détectable (critère de Rayleigh) entre deux petit
 
 ### Réponse
 
-## Tache focale
+L'entrée arrière d'un objectif est circulaire, on utilise la diffraction d'un obstacle circulaire. Nous savons le NA, pas besoin de savoir la distance focale car $f_\# = \frac{1}{2\text{NA}}$. Selon le critère de Rayleigh, nous aurons:
+$$
+\Delta x = 1.22 \frac{f \lambda}{D} = 1.22 \frac{\lambda}{\text{2NA}} = 0.61 \frac{0.488}{1.2}\ \mu \text{m} = 0.248\ \mu \text{m}.
+$$
+
+## ## Tache focale
 
 *Durée: 20m*
 
@@ -1490,7 +1513,26 @@ Une lentille de distance focal $f=1$ cm possède un diamètre utile de $D= 1$ cm
 
 ### Réponse
 
-## Réseau blazé
+Diffraction par une fente circulaire, donc comme dans les notes:
+$$
+E_{\sigma}(r) \approx \frac{2 E_\circ{{e^{i{kR}}}} \pi a^2}{R}  \frac{J_1 \left( \frac{2\pi a r}{\lambda R} \right)}{ \frac{ 2\pi a r}{\lambda R} } \approx 2 \frac{J_1 \left( \frac{\pi D r}{\lambda f} \right)}{ \frac{ \pi D r}{\lambda f} }
+$$
+Sachant que $D=f$, on a:
+$$
+E_{\sigma}(r) \approx 2 \frac{J_1 \left( \frac{\pi r}{\lambda} \right)}{ \frac{ \pi r}{\lambda} } \\
+I_{\sigma}(r) \approx 4 \left( \frac{J_1 \left( \frac{\pi r}{\lambda} \right)}{ \frac{ \pi r}{\lambda} } \right)^2
+$$
+![image-20190424004028390](assets/image-20190424004028390.png)
+
+
+
+1.1)  $\left( \frac{J_1 \left( \frac{\pi r}{\lambda} \right)}{ \frac{ \pi r}{\lambda} } \right)^2 = 0.5$ à $r = 0.327$ µm, donc 0.654 µm
+
+1.2) $2 \frac{J_1 \left( \frac{\pi r}{\lambda} \right)}{ \frac{ \pi r}{\lambda} } = 0.5$ à $r=0.446$ µm, donc 0.892 µm
+
+1.3) $\left( \frac{J_1 \left( \frac{\pi r}{\lambda} \right)}{ \frac{ \pi r}{\lambda} } \right)^2 = 0$ à $\pi r/\lambda = 3.82$ donc 1.54 µm
+
+2) Le diamètre d'entrée est deux fois plus petit, donc la tache focale sera deux fois plus grosse pour chaque définition.## Réseau blazé
 
 *Durée: 1m*
 
@@ -1513,6 +1555,20 @@ Une variation en **amplitude** sinusoïdale de période $\Lambda$ est imprimée 
 
 ### Réponse
 
+L'équation de Fraunhofer est toujours:
+$$
+E_{\sigma}(\sin\theta_y ) \approx \frac{{{e^{i{kR}}}}}{R}\int  {E_\Sigma(y) {e^{ - ik y \sin \theta}} dy}.
+$$
+Puisque $ E_\Sigma (y) = E_\circ \frac{1}{2}(\cos \left( \frac{2 \pi y}{\Lambda} \right) +1 ) = E_\circ \frac{1}{2}(\cos k_\circ y +1 ) $, on a:
+$$
+E_{\sigma}(\sin\theta ) \approx \frac{1}{2} \frac{{{e^{i{kR}}}}}{R}\int  \left[ \cos k_\circ y +1 \right] {e^{ - ik y \sin \theta}} dy.
+$$
+avec $k_\circ \equiv \frac{2 \pi}{\Lambda}$. On peut obtenir la solution en remplacant $\cos k_\circ y$ par $(e^{ik_\circ y} + e^{-i k_\circ y})/2$, ce qui resulte en :
+$$
+E_{\sigma}(\sin\theta ) \approx \frac{1}{2} \frac{{{e^{i{kR}}}}}{R} \left[ \delta(k\sin\theta-k_\circ) + \delta(k\sin\theta+k_\circ) + \delta(k\sin\theta) \right] dy.
+$$
+Donc trois pics de diffraction égaux au centre ($\theta=0$), à gauche, à droite aux angles $\theta \approx \pm \frac{k_\circ}{k}$.
+
 ## Petit prisme
 
 *Durée: 60m*
@@ -1526,19 +1582,50 @@ $$
 ![pastedGraphic.pdf](assets/pastedGraphic.pdf)
 
 1. Écrivez l’équation de diffraction de Fraunhofer décrivant la diffraction dans le champ lointain de cette situation.
-    
-
+  
 2. Solutionnez en utilisant les propriétés des transformés de Fourier.
-    
-
+  
 3. Obtenez l’angle où l’intensité sera maximum et comparez avec l’optique géométrique et la loi de Snell.
 
 4. Si vous construisez une structure périodique en répétant ce prisme à chaque distance $a$, quelle doit être la séparation entre les répétitions pour que la majorité de la puissance se retrouve dans le premier ordre de diffraction?
-    
+  
 
 ### Réponse
 
-# Aberrations
+1. Equation de Fraunhofer est toujours:
+
+  $$
+  E_{\sigma}(\sin\theta_y ) \approx \frac{{{e^{i{kR}}}}}{R}\int_0^b {E_\Sigma(y) {e^{ - ik y \sin \theta}} dy}.
+  $$
+
+  Puisque $ E_\Sigma (y) = E_\circ {e^{i k ((n-1)yd/b + d)}}$, on a:
+  $$
+  E_{\sigma}(\sin\theta ) \approx \frac{{{e^{i{kR}}}}}{R}\int_0^b {E_\circ {e^{ik ((n-1)yd/b + d)}} {e^{ - ik y \sin \theta}} dy}.
+  $$
+
+2. On connait la solution $S_{\sigma}(\sin\theta ) $ pour une fente sans phase:
+  $$
+  S_{\sigma}(\sin\theta ) = \frac{E_\circ {{e^{i{kR}}}}}{R}\int_0^b {{e^{ - ik y \sin \theta}} dy} = \frac{E_\circ b {{e^{i{kR}}}}}{R} {\rm sinc} \left( \frac{k b \sin\theta}{2} \right).
+  $$
+  On peut ré-écrire l'équation sous la forme suivante:
+  $$
+  E_{\sigma}(\sin\theta ) \approx \frac{E_\circ {{e^{i{kR}}}}}{R}\int_0^b {{e^{i k \phi_\circ y + i k d}} {e^{ - ik y \sin \theta}} dy},
+  $$
+  avec $\phi_o \equiv (n-1)d/b$. On peut facilement réécrire:
+  $$
+  E_{\sigma}(\sin\theta ) \approx e^{i\beta d} \times \left[ \frac{E_\circ {{e^{i{kR}} }}}{R}\int_0^b  {e^{ - ik(\sin \theta-\phi_\circ) y }} dy \right].
+  $$
+  Il s'agit donc de la même forme que sans masque de phase, avec $\sin \theta \rightarrow \sin \theta - \phi_\circ$, donc:
+  $$
+  P_{\sigma}(\sin\theta ) = \frac{E_\circ b {{e^{i{kR}}}}}{R} {\rm sinc} \left( \frac{k b (\sin\theta - \phi_\circ)}{2} \right) = S_{\sigma}(\sin\theta - \phi_\circ ) 
+  $$
+  Ceci est essentiellement la même courbe de diffraction que $S_\sigma$, mais déplacée de $\phi_\circ$.
+
+3. L'angle est $\phi_o \equiv (n-1)d/b$.  Sachant que l'angle d'incidence sur la partie oblique du prisme est de $\theta_1 = d/b$, et que l'angle de refraction (par rapport a la normale) est de $\theta_2 = n \theta_1$, on voit que l'angle de deviation est $\theta_2-\theta_1 = (n-1) d/b$, ce qui correspond simplement à la réfraction sur le prisme.
+
+  ![img](../../../Dropbox%20(Personal)/Documents/Universite/Enseignement/PHY-2004/dev/assets/image.png)
+
+4. D'après les notes, on a des ordres de diffraction a chaque fois que $a\sin \theta = {m \lambda}$  On veut donc que $\sin \theta = \lambda /a = (n-1) d/b$. On obtient $a = \frac{b \lambda}{d (n-1)}$.# Aberrations
 
 Des questions imsples sur les aberrations.
 
@@ -2263,7 +2350,7 @@ $$
 
 #### La matrice d'un aller-retour de la cavité
 
-On se propage dans l'air, ensuite on entre dans un cristal (interface dielectrique plane), on se propage, on sort du cristal, on se repropage, on frappe le miroir, en revient dans le cristal jusqu'au miroir plan. Pour rapidement simplifier, faisons la propagation air-dielectrique-air avec $d_o=16​$ cm (i.e. le cristal est au centre):
+On se propage dans l'air, ensuite on entre dans un cristal (interface dielectrique plane), on se propage, on sort du cristal, on se repropage, on frappe le miroir, en revient dans le cristal jusqu'au miroir plan. Pour rapidement simplifier, faisons la propagation air-dielectrique-air avec $d_o=16$ cm (i.e. le cristal est au centre):
 $$
 M_p = 
 
@@ -2344,7 +2431,6 @@ M_\text{ar} =
 \end{matrix}
 \Biggl]
  \\
- \label{eq:cavite}
 M_\text{ar} =
 
 \Biggr[
@@ -2359,7 +2445,7 @@ $$
 
 #### La solution stable
 
-On utilise eq. $\ref{eq:sol}​$ et on remplace les valeurs pour notre cavité de l'eq $\ref{eq:cavite}​$ :
+On utilise eq. $\ref{eq:sol}$ et on remplace les valeurs pour notre cavité dans l'eq $\ref{eq:cavite}$ :
 $$
 q =  \pm \frac{\sqrt{4BC}}{2C} \\
 q =  \pm \frac{\sqrt{4( 2d - \frac{2d^2}{R})(-2/R)}}{2(-2/R)} \\
@@ -2368,7 +2454,7 @@ q =  \pm \frac{\sqrt{ -16\frac{d}{R}(1-\frac{d}{R})}}{4/R} \\
 q =  \pm j \sqrt{Rd(1-\frac{d}{R})} \\
 q =  \pm j \sqrt{40 \cdot 37.5 (1-\frac{37.5}{40})} \text{ cm} = j 9.68 \text{ cm}
 $$
-Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde courbe.
+Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde courbe.
 
 
 
