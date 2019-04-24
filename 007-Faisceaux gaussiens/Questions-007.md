@@ -18,7 +18,7 @@ De faisceau générale, un faisceau à l'entrée d'une lentille est transformé 
 $$
 q^\prime = \frac{Aq+B}{Cq+D}
 $$
-La matrice de transformation de la lentille $f​$ est simplement 
+La matrice de transformation de la lentille $f$ est simplement 
 $$
 \Biggr[
 \begin{matrix} 1 & f \\
@@ -44,7 +44,7 @@ On a donc:
 $$
 q^\prime = \frac{f}{-q/f + 1}
 $$
-Puisque le faisceau gaussien incident a un rayon complexe $ q = j z_o = j\frac{\pi w_o^2}{\lambda}​$, on a en utilisant $\frac{1}{q^\prime} \equiv \frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}} ​$:
+Puisque le faisceau gaussien incident a un rayon complexe $ q = j z_o = j\frac{\pi w_o^2}{\lambda}$, on a en utilisant $\frac{1}{q^\prime} \equiv \frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}} $:
 $$
 \frac{1}{q^\prime} = \frac{f-q}{f^2} = \frac{1}{f} - \frac{q}{f^2}\\
 \frac{\lambda}{\pi w^{\prime 2}}  = \frac{\pi w_o^2}{\lambda f^2}\\
@@ -140,7 +140,7 @@ M =
 \Biggl]
 $$
 
-2. $q^\prime = \frac{Aq+B}{Cq+D} = 9q = 9 j \pi w_o^2/\lambda ​$
+2. $q^\prime = \frac{Aq+B}{Cq+D} = 9q = 9 j \pi w_o^2/\lambda $
 3. Pour obtenir la dimension physique et le rayon de courbure, on doit utiliser la définition $\frac{1}{q^\prime} \equiv \frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}}$, on obtient donc: 
    $$
    \frac{1}{q^\prime} = -\frac{\lambda}{9 j \pi w_o^2} \\
@@ -158,14 +158,14 @@ $$
 
 ### Question
 
-Pour un faisceau gaussien en champ électrique $E=E_\circ e^{-\frac{x^2}{w^2}}​$, obtenez les facteurs de conversion pour passer de la largeur gaussienne à:
+Pour un faisceau gaussien en champ électrique $E=E_\circ e^{-\frac{x^2}{w^2}}$, obtenez les facteurs de conversion pour passer de la largeur gaussienne à:
 
-1. $W_\text{E-FWHM}​$, la largeur complète à mi-hauteur en champ électrique
-2. $W_\text{E-HWHM}​$, la demi-largeur à mi-hauteur  en champ électrique
+1. $W_\text{E-FWHM}$, la largeur complète à mi-hauteur en champ électrique
+2. $W_\text{E-HWHM}$, la demi-largeur à mi-hauteur  en champ électrique
 3. $W_\text{E-RMS}$, la largeur root-mean-square en champ électrique
-4. $W_\text{I-FWHM}​$, la largeur complète à mi-hauteur en irradiance
+4. $W_\text{I-FWHM}$, la largeur complète à mi-hauteur en irradiance
 5. $W_\text{I-HWHM}$, la demi-largeur à mi-hauteur  en irradiance
-6. $W_\text{I-RMS}​$, la largeur root-mean-square en irradiance
+6. $W_\text{I-RMS}$, la largeur root-mean-square en irradiance
 
 ### Réponse
 
@@ -203,7 +203,7 @@ $$
 
 #### La matrice d'un aller-retour de la cavité
 
-On se propage dans l'air, ensuite on entre dans un cristal (interface dielectrique plane), on se propage, on sort du cristal, on se repropage, on frappe le miroir, en revient dans le cristal jusqu'au miroir plan. Pour rapidement simplifier, faisons la propagation air-dielectrique-air avec $d_o=16​$ cm (i.e. le cristal est au centre):
+On se propage dans l'air, ensuite on entre dans un cristal (interface dielectrique plane), on se propage, on sort du cristal, on se repropage, on frappe le miroir, en revient dans le cristal jusqu'au miroir plan. Pour rapidement simplifier, faisons la propagation air-dielectrique-air avec $d_o=16$ cm (i.e. le cristal est au centre):
 $$
 M_p = 
 
@@ -299,7 +299,7 @@ $$
 
 #### La solution stable
 
-On utilise eq. $\ref{eq:sol}​$ et on remplace les valeurs pour notre cavité de l'eq $\ref{eq:cavite}​$ :
+On utilise eq. $\ref{eq:sol}$ et on remplace les valeurs pour notre cavité de l'eq $\ref{eq:cavite}$ :
 $$
 q =  \pm \frac{\sqrt{4BC}}{2C} \\
 q =  \pm \frac{\sqrt{4( 2d - \frac{2d^2}{R})(-2/R)}}{2(-2/R)} \\
@@ -308,7 +308,7 @@ q =  \pm \frac{\sqrt{ -16\frac{d}{R}(1-\frac{d}{R})}}{4/R} \\
 q =  \pm j \sqrt{Rd(1-\frac{d}{R})} \\
 q =  \pm j \sqrt{40 \cdot 37.5 (1-\frac{37.5}{40})} \text{ cm} = j 9.68 \text{ cm}
 $$
-Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde courbe.
+Donc $z_o = 9.68\text{ cm}$ pour ce faisceau.  En prenant une longueur d'onde de 1.064 $\mu m$ (Nd:YAG est un milieu de gain centré sur cette longueur d'onde), le faisceau a donc une largeur minimale de $w_o = \sqrt{\frac{z_o \lambda}{\pi}} = 180~\mu\text{m}$ au miroir plan avec un front d'onde courbe.
 
 
 

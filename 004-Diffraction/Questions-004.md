@@ -55,7 +55,7 @@ Vous envoyez un faisceau collimé (i.e. provenant de l’infini) de diamètre $d
 
 ### Réponse
 
-Le point focal sera de $w = \lambda f_\#\text{eff} = \lambda \frac{f}{d_\text{\circ}} $ car la lentille n'est pas remplie. La distance focale est obtenue de la définition du $\text{NA} = \frac{D}{2f}$, donc $f = 25.4 \text{ mm}$.   Ainsi, $w = 25.4\text{ mm}/1 \text{ mm} \approx 25 \times \lambda​$. 
+Le point focal sera de $w = \lambda f_\#\text{eff} = \lambda \frac{f}{d_\text{\circ}} $ car la lentille n'est pas remplie. La distance focale est obtenue de la définition du $\text{NA} = \frac{D}{2f}$, donc $f = 25.4 \text{ mm}$.   Ainsi, $w = 25.4\text{ mm}/1 \text{ mm} \approx 25 \times \lambda$. 
 
 ## Conception et construction d’un spectromètre Czerny-Turner
 
@@ -255,15 +255,13 @@ $$
 ![pastedGraphic.pdf](assets/pastedGraphic.pdf)
 
 1. Écrivez l’équation de diffraction de Fraunhofer décrivant la diffraction dans le champ lointain de cette situation.
-    
-
+  
 2. Solutionnez en utilisant les propriétés des transformés de Fourier.
-    
-
+  
 3. Obtenez l’angle où l’intensité sera maximum et comparez avec l’optique géométrique et la loi de Snell.
 
 4. Si vous construisez une structure périodique en répétant ce prisme à chaque distance $a$, quelle doit être la séparation entre les répétitions pour que la majorité de la puissance se retrouve dans le premier ordre de diffraction?
-    
+  
 
 ### Réponse
 
