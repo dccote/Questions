@@ -18,7 +18,7 @@ De faisceau générale, un faisceau à l'entrée d'une lentille est transformé 
 $$
 q^\prime = \frac{Aq+B}{Cq+D}
 $$
-La matrice de transformation de la lentille $f​$ est simplement 
+La matrice de transformation de la lentille $f$ est simplement 
 $$
 \Biggr[
 \begin{matrix} 1 & f \\
@@ -44,7 +44,7 @@ On a donc:
 $$
 q^\prime = \frac{f}{-q/f + 1}
 $$
-Puisque le faisceau gaussien incident a un rayon complexe $ q = j z_o = j\frac{\pi w_o^2}{\lambda}​$, on a en utilisant $\frac{1}{q^\prime} \equiv \frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}} ​$:
+Puisque le faisceau gaussien incident a un rayon complexe $ q = j z_o = j\frac{\pi w_o^2}{\lambda}$, on a en utilisant $\frac{1}{q^\prime} \equiv \frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}} $:
 $$
 \frac{1}{q^\prime} = \frac{f-q}{f^2} = \frac{1}{f} - \frac{q}{f^2}\\
 \frac{\lambda}{\pi w^{\prime 2}}  = \frac{\pi w_o^2}{\lambda f^2}\\
@@ -52,6 +52,46 @@ w^\prime = \frac{\lambda f}{w_o \pi} = \frac{500 \times 10^{-6} \text{mm} \cdot 
 $$
 
 
+
+On peut être surpris que le rayon de courbure soit $R=f$ à une distance de $f$ après la lentille.  Cependant, le rayon incident n'est pas un faisceau colligé: c'est un faisceau qui a son étranglement sur la lentille.  Si on regarde le comportement du rayon autour du point focal de la lentille, on remarque que l'étranglement dans ce cas est tout juste avant.  Le rayon a une dépendence non-linéaire dans une petite région de $\pm z_\circ$ autour de l'étranglement.
+
+![image-20190424100430862](assets/image-20190424100430862.png)
+
+Le code suivant qui utilise le module Raytracing de python permet d'obtenir les données (vous devez les mettre dans un logiciel de graphique séparé):
+
+```python
+from raytracing import *
+
+inputBeam = GaussianBeam(w=5)
+beamAfterLens = Lens(f=100)*inputBeam
+zo = beamAfterLens.zo
+delta = zo / 100
+path = LaserPath()
+path.append(Lens(f=100))
+path.append(Space(d=100-delta))
+N = 1000
+for i in range(2*N):
+	path.append(Space(d=delta/N))
+
+trace = path.trace(inputRay=inputBeam)
+
+fig, axes = plt.subplots(figsize=(10, 7))
+axes.set(xlabel='Distance', ylabel='Radius')
+axes.set_xlim(100-delta,100+delta)
+
+x = []
+y = []
+for q in trace:
+    x.append(q.z)
+    y.append(q.R)
+axes.plot(x, y, 'r', linewidth=1)
+plt.show()
+
+# for beam in trace:
+# 	print(beam.z, beam.R)
+
+#path.display()
+```
 
 ## Propagation de faisceau gaussien
 
