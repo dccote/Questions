@@ -55,7 +55,7 @@ Vous envoyez un faisceau collimé (i.e. provenant de l’infini) de diamètre $d
 
 ### Réponse
 
-Le point focal sera de $w = 1.22 f_\#^\text{eff} \lambda  = 1.22 \frac{f}{d_\circ} \lambda $ car la lentille n'est pas remplie (i.e. la diffraction provient de la grosseur finie du faisceau, pas du diamètre de la lentille). La distance focale est obtenue de la définition du $\text{NA} = \frac{D}{2f}$, donc $f = 25.4 \text{ mm}$.   Ainsi, $w = 1.22 \times 25.4\text{ mm}/1 \text{ mm} \approx 30 \times \lambda$. 
+Le point focal sera de $w = 1.22 f_\#^\text{eff} \lambda  = 1.22 \frac{f}{d_\circ} \lambda $ car la lentille n'est pas remplie (i.e. la diffraction provient de la grosseur finie du faisceau, pas du diamètre de la lentille). La distance focale est obtenue de la définition du $\text{NA} = \frac{D}{2f}$, donc $f = 25.4 \text{ mm}$.   Ainsi, $w = 1.22 \times 25.4\text{ mm}/1 \text{ mm} \approx 30 \times \lambda$. 
 
 ## Conception et construction d’un spectromètre Czerny-Turner
 
@@ -134,23 +134,24 @@ Les deux phares d’une voitures sont séparés par une distance de $h = 1.5 \te
 
  L’onde de chaque phare frappe l’ouverture circulaire de l’oeil et diffracte en un disque d’Airy (le champ en fonction de l’angle). Ceci correspond à un ensemble de rayons qui frappent la lentille de l’oeil. On solutionne d’abord en ignorant l’oeil.  Ensuite, on montre que finalement, la réfraction à l’interface de l’oeil ne change rien à la résolution.
 
-
-
 Les phares $E_+$ et $E_-$ émettent des ondes sphériques, et chacune diffracte dans l’ouverture de la pupille.  On obtient les champs diffractés selon $\theta$ tout de suite après la pupille centré sur $\pm\phi$:
 
-![image-20181212150001901](assets/image-20181212150001901-4644801.png)
+![image-20190425055606393](assets/image-20190425055606393.png)
+
+**Figure**: Les phares $E_+$ et $E_+$ émettent des ondes sphériques, mais la pupille lointaine reçoit une onde plane dans la direction $\pm \theta$. Indépendamment, chaque faisceau diffractera à travers la pupille de rayon $D$.  Chaque source produira un patron de diffraction $E_\pm(\theta)$.
+
 
 $$
 E_\pm\left( \theta \right) \propto  E_\circ\frac{2 J_1 \left( \frac{ \pi D \sin( \theta \pm \phi)}{\lambda } \right)}{ \left( \frac{\pi D\sin( \theta \pm \phi)}{\lambda } \right)}
 $$
 
-On utilise le critère de Rayleigh, c’est-à-dire le premier minimum (zéro) du patron de diffraction [~] doit être superposé au maximum du patron de diffraction de l’autre faisceau [~] à [~]. On veut donc:
+On utilise le critère de Rayleigh, c’est-à-dire le premier minimum (zéro) du patron de diffraction $E_+(\theta)$ doit être superposé au maximum du patron de diffraction de l’autre faisceau $E_+(\theta)$ à $\phi$. On veut donc:
 
 $$
 E_+(\theta = \phi) = \text{Premier zéro de la fonction }J_1
 $$
 
-Lorsque l’argument de $J_1(x)$ est $,\frac{ \pi D \sin( 2\phi)}{\lambda }  = 3.82$ nous obtenons $\phi  = 1.22  \frac{\lambda}{2D}$. Par considération géométrique, on obtient simplement que $\tan \phi \approx \phi = \frac{h}{2d}$ donc 
+Lorsque l’argument de $J_1(x)$ est $\frac{ \pi D \sin( 2\phi)}{\lambda } = 3.82$, nous obtenons $\phi = 1.22 \frac{\lambda}{2D}$. Par considération géométrique, on obtient simplement que $\tan \phi \approx \phi = \frac{h}{2d}$ donc $d = \frac{h D}{1.22 \lambda} = \frac{ 1.5 \text{ m} \times 5 \times 10 ^{-3} \text{ m} }{1.22 \times 550 \times 10^{-9}\text{ m}}$ = 11 km.
 
 #### Est-ce que l’indice de l’oeil ou sa courbure sont importants?
 
@@ -169,12 +170,12 @@ $$
 On refait le même cheminement: en fonction des angles intérieurs le premier minimum (zéro) du patron de diffraction $E^\prime_+(\theta^\prime) $  doit être superposé au maximum du patron de diffraction de l’autre faisceau à $\phi^\prime$.
 
 $$
-E^\prime_+(\theta^\prime = \phi^\prime) = \text{Premier zéro de la fonction }J_1
+E^\prime_+(\theta^\prime = \phi^\prime) = \text{Premier zéro de la fonction }J_1.
 $$
 
 On obtient donc: $\phi^\prime  = 1.22  \frac{\lambda}{2nD}$. Donc l’angle minimal pouvant être résolu est en effet plus petit *à l’intérieur de l’oeil*, cependant, un rapide calcul montre bien que l’angle correspondant à l’extérieur, entre les deux phares, est toujours le même car on a:
 $$
-\phi = n\phi^\prime =  1.22  \frac{\lambda}{2D}
+\phi = n\phi^\prime =  1.22  \frac{\lambda}{2D}.
 $$
 
 
@@ -261,7 +262,9 @@ $$
 
 1.3) $\left( \frac{J_1 \left( \frac{\pi r}{\lambda} \right)}{ \frac{ \pi r}{\lambda} } \right)^2 = 0$ à $\pi r/\lambda = 3.82$ donc 1.54 µm
 
-2) Le diamètre d'entrée est deux fois plus petit, donc la tache focale sera deux fois plus grosse pour chaque définition.## Réseau blazé
+2) Le diamètre d'entrée est deux fois plus petit, donc la tache focale sera deux fois plus grosse pour chaque définition.
+
+## Réseau blazé
 
 *Durée: 1m*
 
@@ -273,6 +276,53 @@ Un réseau de diffraction blazé de 5.08 cm de largeur (dimension perpendiculair
 2. à incidence normale
 
 ### Réponse
+
+Dans les deux cas, on utilise l'équation générale des réseaux:
+$$
+d\sin\alpha+d\sin\beta=m\lambda
+$$
+
+
+1. Configuration Littrow
+
+  La configuration de Littrow correspond à la situation où:
+  $$
+  \alpha=\beta=\theta_B,
+$$
+  
+  donc en utilisant l'équation générale du réseau, on obtient:
+$$
+  2d\sin\theta_B=m\lambda.
+$$
+  Il ne manque que $d$ à trouver avec la définition du pouvoir de résolution
+$$
+  \text{PR}=\frac{\lambda}{\Delta\lambda}=\frac{Wm}{d}\Rightarrow d=\frac{Wm\Delta\lambda}{\lambda}\approx3.34~\mu \text{m}.
+$$
+  Donc, 
+$$
+  \theta_B=\arcsin\left(\frac{\lambda}{2d} \right)\approx12.80^{\circ}.
+$$
+2. Incidence normale
+
+  En général, on a: 
+$$
+  \theta_B=\frac{\alpha+\beta}{2},
+$$
+  et comme la configuration à incidence normale correspond à:
+$$
+  \alpha=0,
+$$
+  alors nous avons:
+$$
+  \beta=2\theta_B.
+$$
+  En utilisant l'équation générale du réseau :
+$$
+  d\sin\beta=\lambda\\
+  d\sin(2\theta_B)=\lambda\\
+  \theta_B=\frac{1}{2}\arcsin\left(\frac{\lambda}{d}\right)\approx13.25^{\circ}
+$$
+
 
 ## Masque sinusoidal
 
@@ -322,30 +372,27 @@ $$
 ### Réponse
 
 1. Equation de Fraunhofer est toujours:
-
-  $$
+$$
   E_{\sigma}(\sin\theta_y ) \approx \frac{{{e^{i{kR}}}}}{R}\int_0^b {E_\Sigma(y) {e^{ - ik y \sin \theta}} dy}.
-  $$
-
+$$
   Puisque $ E_\Sigma (y) = E_\circ {e^{i k ((n-1)yd/b + d)}}$, on a:
-  $$
+$$
   E_{\sigma}(\sin\theta ) \approx \frac{{{e^{i{kR}}}}}{R}\int_0^b {E_\circ {e^{ik ((n-1)yd/b + d)}} {e^{ - ik y \sin \theta}} dy}.
-  $$
-
+$$
 2. On connait la solution $S_{\sigma}(\sin\theta ) $ pour une fente sans phase:
-  $$
+$$
   S_{\sigma}(\sin\theta ) = \frac{E_\circ {{e^{i{kR}}}}}{R}\int_0^b {{e^{ - ik y \sin \theta}} dy} = \frac{E_\circ b {{e^{i{kR}}}}}{R} {\rm sinc} \left( \frac{k b \sin\theta}{2} \right).
-  $$
+$$
   On peut ré-écrire l'équation sous la forme suivante:
-  $$
+$$
   E_{\sigma}(\sin\theta ) \approx \frac{E_\circ {{e^{i{kR}}}}}{R}\int_0^b {{e^{i k \phi_\circ y + i k d}} {e^{ - ik y \sin \theta}} dy},
-  $$
+$$
   avec $\phi_o \equiv (n-1)d/b$. On peut facilement réécrire:
-  $$
+$$
   E_{\sigma}(\sin\theta ) \approx e^{i\beta d} \times \left[ \frac{E_\circ {{e^{i{kR}} }}}{R}\int_0^b  {e^{ - ik(\sin \theta-\phi_\circ) y }} dy \right].
-  $$
+$$
   Il s'agit donc de la même forme que sans masque de phase, avec $\sin \theta \rightarrow \sin \theta - \phi_\circ$, donc:
-  $$
+$$
   P_{\sigma}(\sin\theta ) = \frac{E_\circ b {{e^{i{kR}}}}}{R} {\rm sinc} \left( \frac{k b (\sin\theta - \phi_\circ)}{2} \right) = S_{\sigma}(\sin\theta - \phi_\circ ) 
   $$
   Ceci est essentiellement la même courbe de diffraction que $S_\sigma$, mais déplacée de $\phi_\circ$.
