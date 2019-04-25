@@ -286,10 +286,10 @@ $$
 1. Configuration Littrow
 
   La configuration de Littrow correspond à la situation où:
-  $$
-  \alpha=\beta=\theta_B,
 $$
-  
+\alpha=\beta=\theta_B,
+$$
+
   donc en utilisant l'équation générale du réseau, on obtient:
 $$
   2d\sin\theta_B=m\lambda.
@@ -322,6 +322,7 @@ $$
   d\sin(2\theta_B)=\lambda\\
   \theta_B=\frac{1}{2}\arcsin\left(\frac{\lambda}{d}\right)\approx13.25^{\circ}
 $$
+
 
 
 ## Masque sinusoidal
@@ -372,27 +373,30 @@ $$
 ### Réponse
 
 1. Equation de Fraunhofer est toujours:
-$$
+
+  $$
   E_{\sigma}(\sin\theta_y ) \approx \frac{{{e^{i{kR}}}}}{R}\int_0^b {E_\Sigma(y) {e^{ - ik y \sin \theta}} dy}.
-$$
+  $$
+
   Puisque $ E_\Sigma (y) = E_\circ {e^{i k ((n-1)yd/b + d)}}$, on a:
-$$
+  $$
   E_{\sigma}(\sin\theta ) \approx \frac{{{e^{i{kR}}}}}{R}\int_0^b {E_\circ {e^{ik ((n-1)yd/b + d)}} {e^{ - ik y \sin \theta}} dy}.
-$$
+  $$
+
 2. On connait la solution $S_{\sigma}(\sin\theta ) $ pour une fente sans phase:
-$$
+  $$
   S_{\sigma}(\sin\theta ) = \frac{E_\circ {{e^{i{kR}}}}}{R}\int_0^b {{e^{ - ik y \sin \theta}} dy} = \frac{E_\circ b {{e^{i{kR}}}}}{R} {\rm sinc} \left( \frac{k b \sin\theta}{2} \right).
-$$
+  $$
   On peut ré-écrire l'équation sous la forme suivante:
-$$
+  $$
   E_{\sigma}(\sin\theta ) \approx \frac{E_\circ {{e^{i{kR}}}}}{R}\int_0^b {{e^{i k \phi_\circ y + i k d}} {e^{ - ik y \sin \theta}} dy},
-$$
+  $$
   avec $\phi_o \equiv (n-1)d/b$. On peut facilement réécrire:
-$$
+  $$
   E_{\sigma}(\sin\theta ) \approx e^{i\beta d} \times \left[ \frac{E_\circ {{e^{i{kR}} }}}{R}\int_0^b  {e^{ - ik(\sin \theta-\phi_\circ) y }} dy \right].
-$$
+  $$
   Il s'agit donc de la même forme que sans masque de phase, avec $\sin \theta \rightarrow \sin \theta - \phi_\circ$, donc:
-$$
+  $$
   P_{\sigma}(\sin\theta ) = \frac{E_\circ b {{e^{i{kR}}}}}{R} {\rm sinc} \left( \frac{k b (\sin\theta - \phi_\circ)}{2} \right) = S_{\sigma}(\sin\theta - \phi_\circ ) 
   $$
   Ceci est essentiellement la même courbe de diffraction que $S_\sigma$, mais déplacée de $\phi_\circ$.
