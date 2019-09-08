@@ -2,7 +2,7 @@
 
 ## Hypothèse
 
-Partant de l'hypothèse que la rétroaction (*feedback*) aux étudiants est plus importante que les tests, les devoirs, ou même les cours en classe, je rassemble ici l'ensemble des questions que j'ai composées, modifiées ou solutionnées au fil des années dans le cadre de mon enseignement en optique et biophotonique à l'Université Laval. Ces questions ont été utilisées en devoir, en examen et en classe.
+Partant de l'hypothèse que la rétroaction (*feedback*) aux étudiants est plus importante que les tests, les devoirs, ou même les cours en classe, je rassemble ici l'ensemble des questions que j'ai composées, modifiées ou solutionnées au fil des années dans le cadre de mon enseignement en optique, mathématiques et biophotonique à l'Université Laval. Ces questions ont été utilisées en devoir, en examen et en classe.
 
 ## Plan à long terme
 
@@ -26,7 +26,7 @@ Pour soumettre une nouvelle réponse ou corriger une erreur:
 ## Comment utiliser ces questions
 
 1. Vous pouvez aller directement sur le [Web](https://github.com/dccote/Questions) ou télécharger/clôner le [répertoire](https://github.com/dccote/Questions) GitHub. Si vous allez sur le Web, vous ne verrez pas les équations.
-2. Si vous télécharger ou clôner Télécharger Typora pour bien voir les extensions markdown propres à [Typora](http://typora.io), en particulier $\LaTeX​$.
+2. Si vous télécharger ou clôner Télécharger Typora pour bien voir les extensions markdown propres à [Typora](http://typora.io), en particulier $\LaTeX$.
 3. Optionnel, mais préférable: vous devriez copier le stylesheet questions.css du répertoire `site` dans le Theme Folder de Typora (voir les préferences du logiciel).  En sélectionnant, vous aurez un style approprié pour les questions et une table des matières raisonnable.
 4. Pour voir les questions dans leur ensemble, ouvrez le document [Questions.md](Questions.md) ou Questions.pdf.
 5. Bientôt deux documents séparés `Questions.md` et `Réponses.md` vous permettront de lire les questions sans être trop tenté par la réponse qui suit. ***Je n'ai pas terminé.***
