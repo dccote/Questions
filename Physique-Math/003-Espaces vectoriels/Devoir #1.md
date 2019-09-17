@@ -1,14 +1,10 @@
-# Devoir 
-
-À remettre mercredi le 11 septembre 2019 à 8h35 sur le site web: en format PDF (utilisez LaTex, Markdown-typora, Word ou une photo de votre texte à la main dans un seul PDF). Si vous êtes completement mal pris, amenez une copie papier mercredi et donnez-la moi en main propre.  Puisque que j'ai donné le devoir dimanche, les retards jusqu'à vendredi 8h35 ne seront pas pénalisés, mais vous recevrez un autre devoir tout de suite ce **mercredi**.
-
-La durée après la question est l'estimé du professeur.
-
-Daniel Côté, 8 septembre 2019
+# Devoir #1
 
 ## Système d'équations linéaires
 
 *Durée: 60m*
+
+### Question
 
 Soit le système d'équations linéaires suivant:
 $$
@@ -18,11 +14,11 @@ x + y + z & = & 1 \\
 -3x + \alpha y + \beta z & = & 10
 \end{matrix}
 $$
-Obtenez par la méthode de Gauss la matrice équivalente par échelon. Pour quelles valeurs des paramètre $\alpha$ et $\beta$ y'a-t-il:
+Obtenez par la méthode de Gauss la matrice équivalente par échelon. Pour quelles valeurs des paramètres $\alpha$ et $\beta$ y'a-t-il:
 
-1. Une seule solution?
+1. Une seule solution à aucun, un ou deux paramètres?
 2. Aucune solution?
-3. Une infinité de solutions à un ou deux paramètres?
+3. Une infinité de solutions à aucun, un ou deux paramètres?
 
 ### Réponse
 
@@ -189,25 +185,13 @@ $$
 
 4. **La matrice a une rangée nulle mais la matrice augmentée n'a pas une rangée nulle**. Il n'y a pas de solutions en Eq($\ref{eq:sol1}$) et Eq($\ref{eq:sol4}$).
 
-      
-
-## Dépendance linéaire et orientation
-
-*Durée: 30m*
-
-À partir du vecteur ${\bf u} = 2\hat{i} + 5\hat{j} -3 \hat{k}$, transformez le vecteur ${\bf v} = \hat{i} + \alpha \hat{j} + \beta \hat{k}$ pour obtenir les valeurs   $\alpha$ et $\beta$ qui donnent :
-
-1. un vecteur  ${\bf v}_\perp$ perpendiculaire à ${\bf u}$ ?
-2. un vecteur  ${\bf v}_\parallel$ parallèle à ${\bf u}$ ?
-3. un troisième vecteur unitaire perpendiculaire à ${\bf u}$ et  ${\bf v}_\perp$.
-
-### Réponse
-
-À venir
+  ​    
 
 ## Équation d'un plan
 
 *Durée: 30m*
+
+### Question
 
 Trouvez l'équation du plan qui passe par le point $(1,2,3)$ et qui est parallèle au vecteur ${\bf u} = (-2,4,5)$ et à l'axe des $x$.
 
