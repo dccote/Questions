@@ -1,4 +1,4 @@
-# Problèmes solutionnés en optique
+# Problèmes solutionnés en physique optique et mathématique
 
 ## Hypothèse
 
