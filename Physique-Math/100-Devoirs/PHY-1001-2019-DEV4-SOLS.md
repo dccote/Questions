@@ -109,7 +109,7 @@ Obtenez les vecteurs propres de la matrice de rotation
 
 Ce tableau est visible au département:
 
-<img src="Dev 4.assets/IMG_0039.jpeg" alt="IMG_0039" style="zoom: 10%;" />
+<img src="PHY-1001-2019-DEV4.assets/IMG_0039.jpeg" alt="IMG_0039" style="zoom: 10%;" />
 
 En remplaçant chaque couleur de carré par un nombre (par exemple vous pourriez remplacer la première rangée par ()), vous obtiendrez une matrice ${\bf M}$ de $10\times10$. Calculez le produit entre votre matrice et le vecteur :
 
