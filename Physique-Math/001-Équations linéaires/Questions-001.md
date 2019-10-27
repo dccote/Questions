@@ -8,7 +8,9 @@ Les questions de cette section se rapportent aux systèmes d'équations linéair
 
 **Références**
 
-Greenberg Chapitre 8.## Système d'équations linéaires
+Greenberg Chapitre 8.
+
+## Système d'équations linéaires
 
 *Durée: 60m*
 

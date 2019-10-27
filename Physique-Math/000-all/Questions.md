@@ -8,6 +8,8 @@ Pour bien visualiser le document original en Markdown, utilisez Typora.io et le 
 
 [TOC]
 
+
+
 # Systèmes d'équations linéaires
 
 Les questions de cette section se rapportent aux systèmes d'équations linéaires et à leur solution en utilisant la méthodes de Gauss et la réduction de Gauss-Jordan.
@@ -18,7 +20,9 @@ Les questions de cette section se rapportent aux systèmes d'équations linéair
 
 **Références**
 
-Greenberg Chapitre 8.## Système d'équations linéaires
+Greenberg Chapitre 8.
+
+## Système d'équations linéaires
 
 *Durée: 60m*
 
