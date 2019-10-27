@@ -1,4 +1,14 @@
-## Système d'équations linéaires
+# Systèmes d'équations linéaires
+
+Les questions de cette section se rapportent aux systèmes d'équations linéaires et à leur solution en utilisant la méthodes de Gauss et la réduction de Gauss-Jordan.
+
+**Objectifs**
+
+1. solutionner des systèmes d'équations linéaires en appliquant la méthode de l'élimination de Gauss et la réduction de Gauss-Jordan;
+
+**Références**
+
+Greenberg Chapitre 8.## Système d'équations linéaires
 
 *Durée: 60m*
 

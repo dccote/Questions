@@ -1,3 +1,4 @@
 
 *.mdbk
 .DS_Store
+site/.zshrc

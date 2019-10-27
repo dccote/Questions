@@ -55,7 +55,7 @@ Vous envoyez un faisceau collimé (i.e. provenant de l’infini) de diamètre $d
 
 ### Réponse
 
-Le point focal sera de $w = 1.22 f_\#^\text{eff} \lambda  = 1.22 \frac{f}{d_\circ} \lambda $ car la lentille n'est pas remplie (i.e. la diffraction provient de la grosseur finie du faisceau, pas du diamètre de la lentille). La distance focale est obtenue de la définition du $\text{NA} = \frac{D}{2f}$, donc $f = 25.4 \text{ mm}$.   Ainsi, $w = 1.22 \times 25.4\text{ mm}/1 \text{ mm} \approx 30 \times \lambda$. 
+Le point focal sera de $w = 1.22 f_\#^\text{eff} \lambda  = 1.22 \frac{f}{d_\circ} \lambda $ car la lentille n'est pas remplie (i.e. la diffraction provient de la grosseur finie du faisceau, pas du diamètre de la lentille). La distance focale est obtenue de la définition du $\text{NA} = \frac{D}{2f}$, donc $f = 25.4 \text{ mm}$.   Ainsi, $w = 1.22 \times 25.4\text{ mm}/1 \text{ mm} \approx 30 \times \lambda$. 
 
 ## Conception et construction d’un spectromètre Czerny-Turner
 
