@@ -8,9 +8,9 @@ Partant de l'hypothèse que la rétroaction (*feedback*) aux étudiants est plus
 
 Le plan à long terme est d'obtenir une base de données importante de problèmes qui seront: 
 
-1. utilisés par n'importe qui
-2. corrigés par n'importe qui
-3. améliorés par n'importe qui
+1. utilisés par n'importe qui,
+2. corrigés par n'importe qui,
+3. améliorés par n'importe qui.
 
 ## Soumission de réponses ou corrections
 
