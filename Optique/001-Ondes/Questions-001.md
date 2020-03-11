@@ -65,7 +65,7 @@ par séparation de variables.
 On doit faire plusieurs suppositions pour arriver à une solution particulière.  
 
 1. D'abord, on suppose que $\epsilon$ est une constante (i.e. plutôt qu'un tenseur) donc nous ne solutionnons que pour des milieux à indice homogène (pas de biréfringence) bien que la généralisation à des milieux biréfringents est directe. 
-2. De plus, on suppose que le champ est polarisé linéairement selon un axe (disons $\hat{x}​$), bien que la solution selon les autres axes, *dans un milieu homogène*, est aussi directe car les solutions sont indépendantes (i.e. une polarisation dans un axe n'affecte pas la polarisation dans un autre axe).
+2. De plus, on suppose que le champ est polarisé linéairement selon un axe (disons $\hat{x}$), bien que la solution selon les autres axes, *dans un milieu homogène*, est aussi directe car les solutions sont indépendantes (i.e. une polarisation dans un axe n'affecte pas la polarisation dans un autre axe).
 
 #### Séparation de variables
 
@@ -84,7 +84,7 @@ $$
 \frac{1}{\mu_{0} \varepsilon}  \frac{d^2{A}}{d x^2}  = \frac{1}{T}\frac{d^2{T}}{d t^2}.
 $$
 
-La différentielle en temps est maintenant une différentielle totale car $T$ ne dépend que de $t​$.
+La différentielle en temps est maintenant une différentielle totale car $T$ ne dépend que de $t$.
 
 Si les deux fonctions sont égales et ne dépendent pas des mêmes variables ($\bf{r}$ et $t$), elles doivent être égales à une même constante:
 $$
@@ -104,7 +104,7 @@ $$
 
 #### Solution en $T(t)$
 
-On suppose une solution exponentielle. Les solutions en $T​$ sont clairement du type:
+On suppose une solution exponentielle. Les solutions en $T$ sont clairement du type:
 $$
 T(t) = T_+ e^{i K t} + T_- e^{-i K t}
 $$
@@ -131,7 +131,9 @@ $$
 E(x,t) = A(x) T(t) = \left( A_+e^{-i\frac{\omega}{c} x } + A_+e^{i \frac{\omega}{c} x} \right) \left( T_+ e^{i \omega t} + T_- e^{-i \omega t} \right) \\
  = E_{1}e^{-i\left( k x - \omega t \right) } + E_{2}e^{i\left( k x - \omega t \right) } + E_{3}e^{-i\left( k x + \omega t \right) } + E_{4}e^{i\left( k x + \omega t \right) }
 $$
-qui correspondent à des ondes planes allant vers la gauche ou vers la droite.  Les conditions initiales détermineront la valeurs de coefficients.## Vecteur de Poynting 
+qui correspondent à des ondes planes allant vers la gauche ou vers la droite.  Les conditions initiales détermineront la valeurs de coefficients.
+
+## Vecteur de Poynting 
 
 *Durée: 1m*
 
@@ -218,11 +220,6 @@ Un photon à 1 µm a une énergie de 1 eV, donc 1 photon $\left( 1 \text{ eV/pho
 ### Réponse
 
 Un photon à 500 nm a une énergie de 2 eV (ou $1.6 \times 10^{-19}J$), donc $ 1 \text{ pW} / \left( 2 \text{ eV/photon} \right)  = 3 \times 10^{6} \text{photon/s}$ ou 3 photons par 1 µs.
-
-```
-
-```
-
 ## Indice de réfraction
 
 *Durée: 2m*
@@ -261,7 +258,53 @@ L'eau $n=1.33$, le verre $n \approx 1.50$ et les semi-conducteurs varient mais s
 
 Cette valeur dépend évidemment de la longueur d'onde.  Cependant, pour des milieux transparents (comme l'eau, le verre), l'indice varie peu sauf près de l'absorption, à longueurs d'ondes courtes.  Ainsi, on utilise souvent un seul indice mais on doit confirmer lorsque les longueurs d'ondes approchent l'UV dans l'eau et le verre par exemple.
 
-## Paramètres d'illumination
+## Indice de réfraction
+
+*Durée: 30 m*
+
+### Question
+
+a. Partez des équations de Maxwell pour obtenir l'équation d'onde d'un champ électrique polarisé linéairement dans un milieu avec une densité de polarisation uniforme $\mathbf{P}(\mathbf{r})$. En 1D, vérifiez que $\Re \left\{ E_\circ e^{i (kx - \omega t )} \right\}$ est une solution.
+
+b. Montrez que l'indice de réfraction vu par cette onde est $n \equiv \sqrt{\epsilon_r}$, ou $\epsilon = \epsilon_r \epsilon_\circ$.
+
+c. En modélisant la polarisation comme une somme de dipôles, et chaque dipôle comme un électron attiré par une charge positive (immobile) avec une constante de rappel $K$, un coefficient d'amortissement $\gamma$, et une masse $m$, montrez que:
+$$
+\mathbf{P} = \frac{Ne^2/m}{\omega_\circ^2 - \omega^2 - i \omega \gamma} \mathbf{E}_\circ,
+$$
+où $N$ est la densité de dipôles par volume et $\omega^2_\circ \equiv \frac{K}{m}$. *Notez: un dipôle d'une charge positive et négative est la charge multipliée par la distance entre les deux charges, $\mathbf{p} = e \mathbf{d}$.*
+
+
+
+### Réponse
+
+
+
+c. On utilise ici un modèle classique d’un électron lié qui subit la force de rappel d’un noyau positif. La densité de polarisation (dipôles) $\mathbf{P}$ est définie comme:
+$$
+\mathbf{P}\equiv  \sum_i q_i \mathbf{d}_i,
+$$
+
+
+et réagit au champ appliqué en s’opposant à celui-ci. La densité de polarisation $\mathbf{P}$ pour une petite région localisée de l’espace est donc donnée par:
+$$
+\mathbf{P} = - N e \mathbf{d},
+$$
+
+
+avec $\mathbf{d}$ le déplacement moyen de $N$ électrons de charge $e$. À l’aide d’un modèle simple d’un électron sous l’effet d’un champ électrique $\mathbf{E}_\circ e^{-i\omega t}$ oscillant à une fréquence $\omega$, avec une force de rappel $-K \mathbf{d}$ et avec une force de friction $-K \mathbf{d}$ ,on peut écrire:
+$$
+m \frac{d^2 \mathbf{d} }{dt^2} + m \gamma \frac{d \mathbf{d} }{dt} + K \mathbf{d} = -e \mathbf{E}_\circ e^{-i \omega t}
+$$
+
+
+qui est un électron qui subit l’action d’un champ électrique uniforme. En posant une dilution pour ainsi obtenir $\mathbf{d}$ et la polarisation $\mathbf{d}$ par l’équation :
+$$
+\mathbf{P}_\circ = \frac{Ne^2/m}{\omega_\circ^2 - \omega^2 - i \omega \gamma} \mathbf{E}_\circ
+$$
+
+
+avec $\omega_\circ \equiv \sqrt{K/m}$ et $\mathbf{P} = \mathbf{P}_\circ e^{-i \omega t}$. D’autres modèles, plus ou moins complexes, permettent d’obtenir des relations plus complètes. ## Paramètres d'illumination
 
 *Durée: 5m*
 
@@ -312,6 +355,67 @@ Calculer pour un faisceau à 800 nm de 0.1 nm de largeur spectrale ayant une sur
    print("2. Energy flux in 1 second: {0} mJ".format(flux*1000))
    print("3. Irradiance: {0} mW/cm^2".format(irradianceInMwPerCm2))
    print("4. Irradiance spectrale: {0} mW/cm^2/nm".format(irradianceInMwPerCm2PerNanoMeter))
+
+# Output:
+#1. Frequency: 375.0 THz
+#2. Energy flux in 1 second: 1.0 mJ
+#3. Irradiance: 10.0 mW/cm^2
+#4. Irradiance spectrale: 100.0 mW/cm^2/nm
+
+   ```
+
+
+## Photons et énergie
+
+*Durée: 15m*
+
+### Question
+
+a. Quelle est la puissance en Watt pour un flux moyen de 1 photon verts par nanoseconde?
+
+b. Si un détecteur semiconducteur génère une charge positive et une charge négative pour 90% des photons incidents à la même longueur d'onde qu'en a), quel est le courant généré en Ampère pour 1 µW de puissance incidente ?
+
+### Réponse
+
+a. Un photon vert (environ $\lambda=532$ nm) a une énergie d'environ 2eV (car on se rappelle que 1 micron donne 1 eV). Donc on a:
+$$
+E_v = \frac{h c}{ \lambda} =
+$$
+
+
+
+
+
+
+  La fréquence est défini $ f = \frac{c}{\lambda} $  où $\lambda$ est la longueur d'onde et $c$ la vitesse de la lumière. On a donc: 
+
+$$   f = \frac{800 \times 10^{-9} \text{m}}{3 \times 10^8 \text{m/s}} =  375\times 10^{12} \text{Hz} = 375 \text{THz}$$
+
+
+2. $ 1 \text{W} = 1 \text{J/s}$   donc   $1 \text{mW} = 1 \text{mJ/s} $
+
+   
+
+3. $ I=\frac{P}{A} = \frac{10 \text{mW}}{ \text{cm}^2}$ 
+
+   
+
+4. $\text{I}$ ~spectrale~ $= \frac{I}{\Delta f} = 100 \frac{\text{mW}}{\text{cm}^2 \cdot \text{nm}}$
+
+
+   ```python
+c = 3e8 # SI units
+wavelength = 532e-9 
+pulseToPulseDelay = 1e-9 # in seconds
+h = 6.63e-34 # J.s
+frequency = c/wavelength #in Hertz
+energyPerPhoton = h * c / wavelength
+power = energyPerPhoton/pulseToPulseDelay
+
+print("1. Power: {0} W".format(power))
+print("2. Energy flux in 1 second: {0} mJ".format(flux*1000))
+print("3. Irradiance: {0} mW/cm^2".format(irradianceInMwPerCm2))
+print("4. Irradiance spectrale: {0} mW/cm^2/nm".format(irradianceInMwPerCm2PerNanoMeter))
 
 # Output:
 #1. Frequency: 375.0 THz
