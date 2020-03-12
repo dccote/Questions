@@ -403,6 +403,4 @@ $$
 
 3. L'angle est $\phi_o \equiv (n-1)d/b$.  Sachant que l'angle d'incidence sur la partie oblique du prisme est de $\theta_1 = d/b$, et que l'angle de refraction (par rapport a la normale) est de $\theta_2 = n \theta_1$, on voit que l'angle de deviation est $\theta_2-\theta_1 = (n-1) d/b$, ce qui correspond simplement à la réfraction sur le prisme.
 
-  ![img](../../../Dropbox%20(Personal)/Documents/Universite/Enseignement/PHY-2004/dev/assets/image.png)
-
 4. D'après les notes, on a des ordres de diffraction a chaque fois que $a\sin \theta = {m \lambda}$  On veut donc que $\sin \theta = \lambda /a = (n-1) d/b$. On obtient $a = \frac{b \lambda}{d (n-1)}$.

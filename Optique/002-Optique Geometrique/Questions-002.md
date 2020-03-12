@@ -243,7 +243,7 @@ Montrez que le déterminant des matrices ABCD est en général $n_i/n_f$, avec $
 
 ### Réponse
 
-La matrice la plus générale est l'interface diélectrique courbe qui représente n'importe quels deux milieux d'indices $n_1$ et $n_2$ séparés par une quelconque interface de rayon $R​$:
+La matrice la plus générale est l'interface diélectrique courbe qui représente n'importe quels deux milieux d'indices $n_1$ et $n_2$ séparés par une quelconque interface de rayon $R$:
 $$
 M_{1\rightarrow 2} = 
 \Biggr[
@@ -254,6 +254,7 @@ M_{1\rightarrow 2} =
 \Biggl]
 $$
 Cette matrice a un déterminant de $n_1/n_2$.  De plus, n'importe quelle série d'interfaces arbitraires entre deux milieux peut s'exprimer sous la forme d'un produit de matrices d'interfaces diélectriques de courbure arbitraires:
+
 $$
 M_{1\rightarrow f} = 
 \Biggr[
@@ -262,7 +263,6 @@ M_{1\rightarrow f} =
 -\frac{n_f-n_{f-1}}{n_f R_{f-1}} & \frac{n_{f-1}}{n_f}
 \end{matrix}
 \Biggl]
-
 ...
 \Biggr[
 \begin{matrix}
@@ -270,14 +270,12 @@ M_{1\rightarrow f} =
 -\frac{n_3-n_2}{n_3 R_2} & \frac{n_2}{n_3}
 \end{matrix}
 \Biggl]
-
 \Biggr[
 \begin{matrix}
 1 & 0 \\
 -\frac{n_2-n_1}{n_2 R_1} & \frac{n_1}{n_2}
 \end{matrix}
 \Biggl]
-
 \Biggr[
 \begin{matrix}
 1 & 0 \\
@@ -285,6 +283,7 @@ M_{1\rightarrow f} =
 \end{matrix}
 \Biggl]
 $$
+
 Sachant que le déterminant d'un produit est le produit de leur déterminant, on obtient:
 $$
 \det{M_{i\rightarrow f}} = \det{M_{f-1\rightarrow f}} ... \det{M_{2\rightarrow 3}}  \det{M_{1\rightarrow 2}}  \det{M_{i\rightarrow 1}}
@@ -318,13 +317,14 @@ Pour un système optique quelconque ayant une distance focale équivalente $f$, 
 
 Par définition, l'effet totale d'une lentille est appliquée entre ses plans principaux:
 
-$ \Biggl[ 
-   \begin{matrix}
-​      1 & 0 \\
-​      -\frac{1}{f} & 1 \\
-   \end{matrix}
-\Biggl]​$
-
+$$
+\Biggl[ 
+\begin{matrix}
+1 & 0 \\
+-\frac{1}{f} & 1 \\
+\end{matrix}
+\Biggl]
+$$
 ## Goutte d'eau
 
 *Durée: 15m*
@@ -479,20 +479,20 @@ Pour que le rayon ressorte parallèle,  on veut que $-\frac{n_2-n_1}{n_2 R_2}f_1
          A & B \\
          C & D \\
       \end{matrix}
-   \Biggl]
+   \Biggr]
    \Biggl[ 
       \begin{matrix}
          r \\
          \theta \\
       \end{matrix}
-   \Biggl]
+   \Biggr]
    =
    \Biggl[ 
       \begin{matrix}
          Ar + B \theta \\
          Cr + D \theta \\
       \end{matrix}
-   \Biggl]
+   \Biggr]
    $$
 
    on obtient simplement en divisant $r^\prime$ par $\theta^\prime$, et ensuite en mettant $\theta$ en évidence:

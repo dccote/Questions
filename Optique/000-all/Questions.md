@@ -50,7 +50,7 @@ Faux. Pour une onde plane (i.e. un front d'onde plan), tous les rayons sont perp
 
 *Durée: 10m*
 
-### Questioné
+### Question
 
 Quel(s) terme(s) des équations de Maxwell est ou sont impliqué(s) dans la définition de l’indice de réfraction?
 
@@ -64,9 +64,9 @@ $$
 $$
 La densité de polarisation $\mathbf{P}$ (ou densité de dipôles), c’est-à-dire la réponse du milieu lors de l’action d’un champ électrique, dépend de l’orientation du champ électrique, de sa fréquence d’oscillation, et des propriétés du matériau. Que se passe-t-il sur les dipôles lorsque nous appliquons un champ électrique? On sait que le dipôle se déplacera mais une force de rappel agira pour le ramener à son point d'équilibre.  Le lien entre  $\mathbf{P}$ et le champ électrique appliqué $\mathbf{E}$ est donné *en général* par la relation suivante:
 $$
-\mathbf{P} = {\epsilon_o}\chi \cdot \mathbf{E} + {\epsilon_o}\chi^2 : \mathbf{E} \mathbf{E}+... \label{eq:lingen}
+\mathbf{P} = {\epsilon_o}\chi \cdot \mathbf{E} + {\epsilon_o}\chi^2 : \mathbf{E} \mathbf{E}+... \label{lingen}
 $$
-où  $\chi$ et  $\chi^2$ sont les susceptibilités linéaire et non-linéaire de deuxième ordre respectivement et dépendent de la ou des fréquences du champ électrique. Dans cette formulation de l’équation $(\ref{eq:lingen})$, la susceptibilité est un tenseur et les opérateurs $\cdot$ et  $:$ sont les produits scalaires des tenseurs avec les vecteurs de champs électriques.  *Il s'agit de la relation la plus générale qu'on peut écrire entre deux fonctions*: aussi bien dire qu'on ne sait pas grand chose et c'est pourquoi on fera des hypothèse pour simplifier à quelque chose que l'on pourra manipuler.  Dans le cadre qui nous intéresse (l’optique linéaire) et dans le cas des milieux homogènes (identiques en tous points) et isotropes (non biréfringents, c’est-à-dire identiques dans toutes les directions), nous nous intéressons seulement aux champs électriques faibles et considérons  $\chi$  comme un scalaire, ce qui fait que nous pouvons écrire:
+où  $\chi$ et  $\chi^2$ sont les susceptibilités linéaire et non-linéaire de deuxième ordre respectivement et dépendent de la ou des fréquences du champ électrique. Dans cette formulation de l’équation ($\ref{lingen}$), la susceptibilité est un tenseur et les opérateurs $\cdot$ et  $:$ sont les produits scalaires des tenseurs avec les vecteurs de champs électriques.  *Il s'agit de la relation la plus générale qu'on peut écrire entre deux fonctions*: aussi bien dire qu'on ne sait pas grand chose et c'est pourquoi on fera des hypothèse pour simplifier à quelque chose que l'on pourra manipuler.  Dans le cadre qui nous intéresse (l’optique linéaire) et dans le cas des milieux homogènes (identiques en tous points) et isotropes (non biréfringents, c’est-à-dire identiques dans toutes les directions), nous nous intéressons seulement aux champs électriques faibles et considérons  $\chi$  comme un scalaire, ce qui fait que nous pouvons écrire:
 $$
 \mathbf{P} = {\epsilon_o}\chi \mathbf{E}
 $$
@@ -161,7 +161,7 @@ E(x,t) = A(x) T(t) = \left( A_+e^{-i\frac{\omega}{c} x } + A_+e^{i \frac{\omega}
 $$
 qui correspondent à des ondes planes allant vers la gauche ou vers la droite.  Les conditions initiales détermineront la valeurs de coefficients.
 
-## Vecteur de Poynting 
+## Vecteur de Poynting
 
 *Durée: 1m*
 
@@ -187,7 +187,7 @@ $$
 
 ### Réponse
 
-La question peut sembler très simple, ou très compliquée: en effet, le vecteur $\mathbf{E}$ peut avoir trois composantes, et il peut lui-même dépendre de l'espace, aussi en trois dimensions, $\mathbf{E}\left( \mathbf{r}, t\right)$. Donc, la solution générale est quand même assez complexe. Cependant, on nous demande de **vérifier** qu'une onde plane est une solution, pas de trouver toutes les solutions possibles. Notre onde plane, ici, a une direction donnée par $\hat{k}$, et une grandeur donnée par $\left| \mathbf{k} \right| = \frac{\omega}{c}$. Pour simplifier, on peut dire que la propagation est dans la direction de $\hat{k}\equiv\hat{z}$ car nous pouvons toujours définir le système de coordonnées comme bon nous semble. On ne considèrera que la dépendance en $z$ dans le laplacien $\nabla^2$. Finalement, on peut tout de suite supposer que l'onde plane a une polarisation linéaire selon $\hat{y}$, car tout polarisation sera une somme d'onde plane. Ainsi, on ré-écrira la solution à vérifier comme: $\mathbf{E}\left( \mathbf{r}, t\right) = E\left( z, t\right)\hat{z} = e^{i \left(k z - \omega t\right) }\hat{y} $, et on se retrouvera avec l'équation beaucoup plus simple:
+La question peut sembler très simple, ou très compliquée: en effet, le vecteur $\mathbf{E}$ peut avoir trois composantes, et il peut lui-même dépendre de l'espace, aussi en trois dimensions, $\mathbf{E}\left( \mathbf{r}, t\right)$. Donc, la solution générale est quand même assez complexe. Cependant, on nous demande de **vérifier** qu'une onde plane est une solution, pas de trouver toutes les solutions possibles. Notre onde plane, ici, a une direction donnée par $\hat{k}$, et une grandeur donnée par $\left| \mathbf{k} \right| = \frac{\omega}{c}$. Pour simplifier, on peut dire que la propagation est dans la direction de $\hat{k}\equiv\hat{z}$ car nous pouvons toujours définir le système de coordonnées comme bon nous semble. On ne considèrera que la dépendance en $z$ dans le laplacien $\nabla^2$. Finalement, on peut tout de suite supposer que l'onde plane a une polarisation linéaire selon $\hat{y}$, car tout polarisation sera une somme d'onde plane. Ainsi, on ré-écrira la solution à vérifier comme: $\mathbf{E}\left( \mathbf{r}, t\right) = E\left( z, t\right)\hat{z} = e^{i \left(k z - \omega t\right) }\hat{y}$, et on se retrouvera avec l'équation beaucoup plus simple:
 $$
 \frac{\partial^2 {E(z,t)}}{\partial z^2} - \mu_\circ\epsilon \frac{\partial^2 {E(z,t)}}{\partial t^2} = 0
 $$
@@ -249,17 +249,19 @@ Une caméra peut ajuster le *focus* sans changer le grossissement.  Comment est-
 
 ### Réponse
 
+Proposez votre solution à dccote@cervo.ulaval.ca
+
 ## Conversion photon et puissance
 
 *Durée: 5m*
 
 ### Question
 
-1 photon par seconde donne combien de Watts à $\lambda = 1\ \mu m $?
+1 photon par seconde donne combien de Watts à $\lambda = 1\ \mu m$?
 
 ### Réponse
 
-Un photon à 1 µm a une énergie de 1 eV, donc 1 photon $\left( 1 \text{ eV/photon} \right) = 1.6 \times 10^{-19} \text{J}​$ ou 0.2 zeptoJoule. En une seconde, un obtient simplement 0.2 zeptoWatt.
+Un photon à 1 µm a une énergie de 1 eV, donc 1 photon $\left( 1 \text{ eV/photon} \right) = 1.6 \times 10^{-19} \text{J}$ ou 0.2 zeptoJoule. En une seconde, un obtient simplement 0.2 zeptoWatt.
 
 ## Puissance et photons
 
@@ -267,11 +269,11 @@ Un photon à 1 µm a une énergie de 1 eV, donc 1 photon $\left( 1 \text{ eV/pho
 
 ### Question
 
- 1 pW donne combien de photon par seconde à $\lambda = 500 \text{ nm} $?
+ 1 pW donne combien de photon par seconde à $\lambda = 500 \text{ nm}$?
 
 ### Réponse
 
-Un photon à 500 nm a une énergie de 2 eV (ou $1.6 \times 10^{-19}J$), donc $ 1 \text{ pW} / \left( 2 \text{ eV/photon} \right)  = 3 \times 10^{6} \text{photon/s}$ ou 3 photons par 1 µs.
+Un photon à 500 nm a une énergie de 2 eV (ou $1.6 \times 10^{-19}J$), donc $1 \text{ pW} / \left( 2 \text{ eV/photon} \right)  = 3 \times 10^{6} \text{photon/s}$ ou 3 photons par 1 µs.
 ## Indice de réfraction
 
 *Durée: 2m*
@@ -282,7 +284,8 @@ Quel est l’origine de l’indice de réfraction dans le contexte des équation
 
 ### Réponse
 
-L'indice de réfraction vient de la réponse de la densité de polarisation (i.e. les dipôles par volume) dans le matériel.  On suppose une réponse des dipôles proportionnelle $P=\chi \epsilon_\circ E$, mais $\chi$ est dépendant de la fréquence, et est un nombre complexe (donc une amplitude et une phase). On obtient ensuite que $n^2 = \left( 1 + \chi\right)^2 = \epsilon_r​$.
+L'indice de réfraction vient de la réponse de la densité de polarisation (i.e. les dipôles par volume) dans le matériel.  On suppose une réponse des dipôles proportionnelle $P=\chi \epsilon_\circ E$, mais $\chi$ est dépendant de la fréquence, et est un nombre complexe (donc une amplitude et une phase). On obtient ensuite que $n^2 = \left( 1 + \chi\right)^2 = \epsilon_r$
+
 
 ## Longueur d'onde
 
@@ -296,13 +299,13 @@ Un laser rouge de longeur d'onde 632.8 nm illumine une piscine.  Sachant que la 
 
 Le laser est toujours rouge car la couleur est donnée par la fréquence d'oscillation de l'onde (qui est une propriété de l'onde indépendante de la propagation et qui détermine son énergie) alors que la longueur d'onde est une propriété découlant de la propagation.
 
-## Examples d'indice
+## Examples d'indices
 
 *Durée: 2m*
 
 ### Question
 
-Donnez des valeurs d’indice de réfraction pour l’eau, le verre, l’huile, les semiconducteurs.  Est-ce que cette valeur dépend de la longueur d’onde ? Pourquoi ?
+Donnez des valeurs d’indice de réfraction pour l’eau, le verre, l’huile, les semiconducteurs.  Est-ce que cette valeur dépend de la longueur d’onde? Pourquoi?
 
 ### Réponse
 
@@ -355,8 +358,9 @@ $$
 \mathbf{P}_\circ = \frac{Ne^2/m}{\omega_\circ^2 - \omega^2 - i \omega \gamma} \mathbf{E}_\circ
 $$
 
+avec $\omega_\circ \equiv \sqrt{K/m}$ et $\mathbf{P} = \mathbf{P}_\circ e^{-i \omega t}$. D’autres modèles, plus ou moins complexes, permettent d’obtenir des relations plus complètes.
 
-avec $\omega_\circ \equiv \sqrt{K/m}$ et $\mathbf{P} = \mathbf{P}_\circ e^{-i \omega t}$. D’autres modèles, plus ou moins complexes, permettent d’obtenir des relations plus complètes. ## Paramètres d'illumination
+ ## Paramètres d'illumination
 
 *Durée: 5m*
 
@@ -371,51 +375,42 @@ Calculer pour un faisceau à 800 nm de 0.1 nm de largeur spectrale ayant une sur
 
 ### Réponse
 
-1. La fréquence est défini $ f = \frac{c}{\lambda} ​$  où $\lambda​$ est la longueur d'onde et $c​$ la vitesse de la lumière. On a donc: 
+1. La fréquence est défini $f = \frac{c}{\lambda}$  où $\lambda$ est la longueur d'onde et $c$ la vitesse de la lumière. On a donc: $f = \frac{800 \times 10^{-9} \text{m}}{3 \times 10^8 \text{m/s}} =  375\times 10^{12} \text{Hz} = 375 \text{THz}$
 
-   $$   f = \frac{800 \times 10^{-9} \text{m}}{3 \times 10^8 \text{m/s}} =  375\times 10^{12} \text{Hz} = 375 \text{THz}$$
+2. La puissance $1 \text{W} = 1 \text{J/s}$, donc $1 \text{mW} = 1 \text{mJ/s}$
 
+3. L'irradiance:$I=\frac{P}{A} = \frac{10 \text{mW}}{ \text{cm}^2}$
 
-2. $ 1 \text{W} = 1 \text{J/s}​$   donc   $1 \text{mW} = 1 \text{mJ/s} ​$
-
-   
-
-3. $ I=\frac{P}{A} = \frac{10 \text{mW}}{ \text{cm}^2}$ 
-
-   
-
-4. $\text{I}$ ~spectrale~ $= \frac{I}{\Delta f} = 100 \frac{\text{mW}}{\text{cm}^2 \cdot \text{nm}}​$
+4. Irradiance spectrale: $\text{I}_\text{spectrale} = \frac{I}{\Delta f} = 100 \frac{\text{mW}}{\text{cm}^2 \cdot \text{nm}}$
 
 
-   ```python
+```python
 # Available at 
-   c = 3e8 # SI units
-   wavelength = 800e-9 
-   surface = 10*(1e-3)*(1e-3) # in m^2
-   power = 1e-3 # in Watts
-   duration = 1 # in seconds
-   spectralWidth = 0.1e-9
-   spectralWidthInNm = spectralWidth*1e9
-   
-   frequency = c/wavelength #in Hertz
-   flux = power * duration
-   irradiance = power/surface #in W/m^2
-   irradianceInMwPerCm2 = irradiance * 1000/(1e2)/(1e2)
-   irradianceInMwPerCm2PerNanoMeter = irradianceInMwPerCm2/(spectralWidthInNm)
-   
-   print("1. Frequency: {0} THz".format(frequency/1e12))
-   print("2. Energy flux in 1 second: {0} mJ".format(flux*1000))
-   print("3. Irradiance: {0} mW/cm^2".format(irradianceInMwPerCm2))
-   print("4. Irradiance spectrale: {0} mW/cm^2/nm".format(irradianceInMwPerCm2PerNanoMeter))
+c = 3e8 # SI units
+wavelength = 800e-9 
+surface = 10*(1e-3)*(1e-3) # in m^2
+power = 1e-3 # in Watts
+duration = 1 # in seconds
+spectralWidth = 0.1e-9
+spectralWidthInNm = spectralWidth*1e9
+
+frequency = c/wavelength #in Hertz
+flux = power * duration
+irradiance = power/surface #in W/m^2
+irradianceInMwPerCm2 = irradiance * 1000/(1e2)/(1e2)
+irradianceInMwPerCm2PerNanoMeter = irradianceInMwPerCm2/(spectralWidthInNm)
+
+print("1. Frequency: {0} THz".format(frequency/1e12))
+print("2. Energy flux in 1 second: {0} mJ".format(flux*1000))
+print("3. Irradiance: {0} mW/cm^2".format(irradianceInMwPerCm2))
+print("4. Irradiance spectrale: {0} mW/cm^2/nm".format(irradianceInMwPerCm2PerNanoMeter))
 
 # Output:
 #1. Frequency: 375.0 THz
 #2. Energy flux in 1 second: 1.0 mJ
 #3. Irradiance: 10.0 mW/cm^2
 #4. Irradiance spectrale: 100.0 mW/cm^2/nm
-
-   ```
-
+```
 
 ## Photons et énergie
 
@@ -434,28 +429,25 @@ $$
 E_v = \frac{h c}{ \lambda} =
 $$
 
+  La fréquence est défini $f = \frac{c}{\lambda}$  où $\lambda$ est la longueur d'onde et $c$ la vitesse de la lumière. On a donc: 
+
+$$
+f = \frac{800 \times 10^{-9} \text{m}}{3 \times 10^8 \text{m/s}} =  375\times 10^{12} \text{Hz} = 375 \text{THz}
+$$
 
 
-
-
-
-  La fréquence est défini $ f = \frac{c}{\lambda} $  où $\lambda$ est la longueur d'onde et $c$ la vitesse de la lumière. On a donc: 
-
-$$   f = \frac{800 \times 10^{-9} \text{m}}{3 \times 10^8 \text{m/s}} =  375\times 10^{12} \text{Hz} = 375 \text{THz}$$
-
-
-2. $ 1 \text{W} = 1 \text{J/s}$   donc   $1 \text{mW} = 1 \text{mJ/s} $
+2. La puissance: $1 \text{W} = 1 \text{J/s}$   donc   $1 \text{mW} = 1 \text{mJ/s}$
 
    
 
-3. $ I=\frac{P}{A} = \frac{10 \text{mW}}{ \text{cm}^2}$ 
+3. L'irradiance: $I=\frac{P}{A} = \frac{10 \text{mW}}{ \text{cm}^2}$ 
 
    
 
-4. $\text{I}$ ~spectrale~ $= \frac{I}{\Delta f} = 100 \frac{\text{mW}}{\text{cm}^2 \cdot \text{nm}}$
+4. L'irradiance spectrale : $\text{I}$ ~spectrale~ $= \frac{I}{\Delta f} = 100 \frac{\text{mW}}{\text{cm}^2 \cdot \text{nm}}$
 
 
-   ```python
+```python
 c = 3e8 # SI units
 wavelength = 532e-9 
 pulseToPulseDelay = 1e-9 # in seconds
@@ -474,8 +466,7 @@ print("4. Irradiance spectrale: {0} mW/cm^2/nm".format(irradianceInMwPerCm2PerNa
 #2. Energy flux in 1 second: 1.0 mJ
 #3. Irradiance: 10.0 mW/cm^2
 #4. Irradiance spectrale: 100.0 mW/cm^2/nm
-
-   ```
+```
 
 
 # Optique Géométrique
@@ -723,7 +714,7 @@ Montrez que le déterminant des matrices ABCD est en général $n_i/n_f$, avec $
 
 ### Réponse
 
-La matrice la plus générale est l'interface diélectrique courbe qui représente n'importe quels deux milieux d'indices $n_1$ et $n_2$ séparés par une quelconque interface de rayon $R​$:
+La matrice la plus générale est l'interface diélectrique courbe qui représente n'importe quels deux milieux d'indices $n_1$ et $n_2$ séparés par une quelconque interface de rayon $R$:
 $$
 M_{1\rightarrow 2} = 
 \Biggr[
@@ -734,6 +725,7 @@ M_{1\rightarrow 2} =
 \Biggl]
 $$
 Cette matrice a un déterminant de $n_1/n_2$.  De plus, n'importe quelle série d'interfaces arbitraires entre deux milieux peut s'exprimer sous la forme d'un produit de matrices d'interfaces diélectriques de courbure arbitraires:
+
 $$
 M_{1\rightarrow f} = 
 \Biggr[
@@ -742,7 +734,6 @@ M_{1\rightarrow f} =
 -\frac{n_f-n_{f-1}}{n_f R_{f-1}} & \frac{n_{f-1}}{n_f}
 \end{matrix}
 \Biggl]
-
 ...
 \Biggr[
 \begin{matrix}
@@ -750,14 +741,12 @@ M_{1\rightarrow f} =
 -\frac{n_3-n_2}{n_3 R_2} & \frac{n_2}{n_3}
 \end{matrix}
 \Biggl]
-
 \Biggr[
 \begin{matrix}
 1 & 0 \\
 -\frac{n_2-n_1}{n_2 R_1} & \frac{n_1}{n_2}
 \end{matrix}
 \Biggl]
-
 \Biggr[
 \begin{matrix}
 1 & 0 \\
@@ -765,6 +754,7 @@ M_{1\rightarrow f} =
 \end{matrix}
 \Biggl]
 $$
+
 Sachant que le déterminant d'un produit est le produit de leur déterminant, on obtient:
 $$
 \det{M_{i\rightarrow f}} = \det{M_{f-1\rightarrow f}} ... \det{M_{2\rightarrow 3}}  \det{M_{1\rightarrow 2}}  \det{M_{i\rightarrow 1}}
@@ -798,13 +788,14 @@ Pour un système optique quelconque ayant une distance focale équivalente $f$, 
 
 Par définition, l'effet totale d'une lentille est appliquée entre ses plans principaux:
 
-$ \Biggl[ 
-   \begin{matrix}
-​      1 & 0 \\
-​      -\frac{1}{f} & 1 \\
-   \end{matrix}
-\Biggl]​$
-
+$$
+\Biggl[ 
+\begin{matrix}
+1 & 0 \\
+-\frac{1}{f} & 1 \\
+\end{matrix}
+\Biggl]
+$$
 ## Goutte d'eau
 
 *Durée: 15m*
@@ -959,20 +950,20 @@ Pour que le rayon ressorte parallèle,  on veut que $-\frac{n_2-n_1}{n_2 R_2}f_1
          A & B \\
          C & D \\
       \end{matrix}
-   \Biggl]
+   \Biggr]
    \Biggl[ 
       \begin{matrix}
          r \\
          \theta \\
       \end{matrix}
-   \Biggl]
+   \Biggr]
    =
    \Biggl[ 
       \begin{matrix}
          Ar + B \theta \\
          Cr + D \theta \\
       \end{matrix}
-   \Biggl]
+   \Biggr]
    $$
 
    on obtient simplement en divisant $r^\prime$ par $\theta^\prime$, et ensuite en mettant $\theta$ en évidence:
@@ -1819,8 +1810,6 @@ $$
   Ceci est essentiellement la même courbe de diffraction que $S_\sigma$, mais déplacée de $\phi_\circ$.
 
 3. L'angle est $\phi_o \equiv (n-1)d/b$.  Sachant que l'angle d'incidence sur la partie oblique du prisme est de $\theta_1 = d/b$, et que l'angle de refraction (par rapport a la normale) est de $\theta_2 = n \theta_1$, on voit que l'angle de deviation est $\theta_2-\theta_1 = (n-1) d/b$, ce qui correspond simplement à la réfraction sur le prisme.
-
-  ![img](../../../Dropbox%20(Personal)/Documents/Universite/Enseignement/PHY-2004/dev/assets/image.png)
 
 4. D'après les notes, on a des ordres de diffraction a chaque fois que $a\sin \theta = {m \lambda}$  On veut donc que $\sin \theta = \lambda /a = (n-1) d/b$. On obtient $a = \frac{b \lambda}{d (n-1)}$.# Aberrations
 
