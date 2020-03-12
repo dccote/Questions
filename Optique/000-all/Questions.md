@@ -48,7 +48,7 @@ Faux. Pour une onde plane (i.e. un front d'onde plan), tous les rayons sont perp
 
 ## Origine de l'indice de réfraction
 
-*Durée: 1m*
+*Durée: 10m*
 
 ### Questioné
 
@@ -56,7 +56,25 @@ Quel(s) terme(s) des équations de Maxwell est ou sont impliqué(s) dans la déf
 
 ### Réponse
 
-La constante diélectrique $\epsilon = \epsilon_r \epsilon_\circ$ est relié à l'indice de réfraction par $n \equiv \sqrt{\epsilon_r}$. Cette constante diélectrique dépend de la fréquence de l'onde.
+La constante diélectrique $\epsilon = \epsilon_r \epsilon_\circ$ est relié à l'indice de réfraction par $n \equiv \sqrt{\epsilon_r}$. Cette constante diélectrique dépend de la fréquence de l'onde et de la réponse du matériel, i.e. la densité de polarisation $\mathbf{P}(\mathbf{r},t)$. 
+
+En effet, une réponse plus longue nous montre que l'indice de réfraction apparaît lorsqu'on doit considérer la réponse du matériau. Lors de la manipulation des équations de Maxwell, on doit obtenir une expression pour la densité de flux électrique:
+$$
+\mathbf{D} \equiv  \epsilon_\circ \mathbf{E}+\mathbf{P}.
+$$
+La densité de polarisation $\mathbf{P}$ (ou densité de dipôles), c’est-à-dire la réponse du milieu lors de l’action d’un champ électrique, dépend de l’orientation du champ électrique, de sa fréquence d’oscillation, et des propriétés du matériau. Que se passe-t-il sur les dipôles lorsque nous appliquons un champ électrique? On sait que le dipôle se déplacera mais une force de rappel agira pour le ramener à son point d'équilibre.  Le lien entre  $\mathbf{P}$ et le champ électrique appliqué $\mathbf{E}$ est donné *en général* par la relation suivante:
+$$
+\mathbf{P} = {\epsilon_o}\chi \cdot \mathbf{E} + {\epsilon_o}\chi^2 : \mathbf{E} \mathbf{E}+... \label{eq:lingen}
+$$
+où  $\chi$ et  $\chi^2$ sont les susceptibilités linéaire et non-linéaire de deuxième ordre respectivement et dépendent de la ou des fréquences du champ électrique. Dans cette formulation de l’équation $(\ref{eq:lingen})$, la susceptibilité est un tenseur et les opérateurs $\cdot$ et  $:$ sont les produits scalaires des tenseurs avec les vecteurs de champs électriques.  *Il s'agit de la relation la plus générale qu'on peut écrire entre deux fonctions*: aussi bien dire qu'on ne sait pas grand chose et c'est pourquoi on fera des hypothèse pour simplifier à quelque chose que l'on pourra manipuler.  Dans le cadre qui nous intéresse (l’optique linéaire) et dans le cas des milieux homogènes (identiques en tous points) et isotropes (non biréfringents, c’est-à-dire identiques dans toutes les directions), nous nous intéressons seulement aux champs électriques faibles et considérons  $\chi$  comme un scalaire, ce qui fait que nous pouvons écrire:
+$$
+\mathbf{P} = {\epsilon_o}\chi \mathbf{E}
+$$
+L’induction électrique $\mathbf{D}$ dans ce cas particulier est donc donnée par:
+$$
+\mathbf{D} = {\epsilon_o}\left({1+\chi}\right)\cdot \mathbf{E} = {\epsilon_o}\epsilon_r\mathbf{E} \equiv \epsilon \mathbf{E},
+$$
+ce qui revient à définir ce fameux indice de réfraction, à travers $\epsilon_r$.
 
 ## Solution équation de Maxwell indépendante du temps
 
@@ -161,9 +179,33 @@ Vrai. Il s'agit de la définition exacte du vecteur de Poynting, qui est donné 
 
 ### Question
 
-Montrez qu’une onde plane $\mathbf{E}\left( \mathbf{r}, t\right) = \mathbf{E}_\circ e^{i \left(\mathbf{k} \cdot \mathbf{r} - \omega t\right) }$ est une solution de l’équation d’onde.
+Montrez qu’une onde plane $\mathbf{E}\left( \mathbf{r}, t\right) = \Re\left\{\mathbf{E}_\circ e^{i \left(\mathbf{k} \cdot \mathbf{r} - \omega t\right) }\right\}$ est une solution de l’équation d’onde
+$$
+\mathbf{\nabla}^2 \mathbf{E} - \mu_\circ\epsilon \frac{\partial^2 \mathbf{E}}{\partial t^2} = 0
+$$
+
 
 ### Réponse
+
+La question peut sembler très simple, ou très compliquée: en effet, le vecteur $\mathbf{E}$ peut avoir trois composantes, et il peut lui-même dépendre de l'espace, aussi en trois dimensions, $\mathbf{E}\left( \mathbf{r}, t\right)$. Donc, la solution générale est quand même assez complexe. Cependant, on nous demande de **vérifier** qu'une onde plane est une solution, pas de trouver toutes les solutions possibles. Notre onde plane, ici, a une direction donnée par $\hat{k}$, et une grandeur donnée par $\left| \mathbf{k} \right| = \frac{\omega}{c}$. Pour simplifier, on peut dire que la propagation est dans la direction de $\hat{k}\equiv\hat{z}$ car nous pouvons toujours définir le système de coordonnées comme bon nous semble. On ne considèrera que la dépendance en $z$ dans le laplacien $\nabla^2$. Finalement, on peut tout de suite supposer que l'onde plane a une polarisation linéaire selon $\hat{y}$, car tout polarisation sera une somme d'onde plane. Ainsi, on ré-écrira la solution à vérifier comme: $\mathbf{E}\left( \mathbf{r}, t\right) = E\left( z, t\right)\hat{z} = e^{i \left(k z - \omega t\right) }\hat{y} $, et on se retrouvera avec l'équation beaucoup plus simple:
+$$
+\frac{\partial^2 {E(z,t)}}{\partial z^2} - \mu_\circ\epsilon \frac{\partial^2 {E(z,t)}}{\partial t^2} = 0
+$$
+On peut vérifier que $E_{\circ} e^{i(kz-\omega t)}$ est une solution de cette équation d'onde:
+$$
+\frac{\partial^2 \left({E_{\circ} e^{i(kz-\omega t)}}\right)}{\partial z^2} - \mu_\circ\epsilon \frac{\partial^2 {\left({E_{\circ} e^{i(kz-\omega t)}}\right)}}{\partial t^2} = 0
+$$
+
+$$
+(ik)^2 e^{i(kz-\omega t)} - \mu_\circ\epsilon (-i\omega)^2 e^{i(kz-\omega t)} = 0
+$$
+
+$$
+-k^2 + \mu_\circ\epsilon \omega^2  = 0
+$$
+
+ce qui est vrai si $k = \omega \mu_\circ\epsilon = \omega/c$.
+
 ## Somme d'ondes sphériques
 
 *Durée: 1m*
@@ -365,6 +407,67 @@ Calculer pour un faisceau à 800 nm de 0.1 nm de largeur spectrale ayant une sur
    print("2. Energy flux in 1 second: {0} mJ".format(flux*1000))
    print("3. Irradiance: {0} mW/cm^2".format(irradianceInMwPerCm2))
    print("4. Irradiance spectrale: {0} mW/cm^2/nm".format(irradianceInMwPerCm2PerNanoMeter))
+
+# Output:
+#1. Frequency: 375.0 THz
+#2. Energy flux in 1 second: 1.0 mJ
+#3. Irradiance: 10.0 mW/cm^2
+#4. Irradiance spectrale: 100.0 mW/cm^2/nm
+
+   ```
+
+
+## Photons et énergie
+
+*Durée: 15m*
+
+### Question
+
+a. Quelle est la puissance en Watt pour un flux moyen de 1 photon verts par nanoseconde?
+
+b. Si un détecteur semiconducteur génère une charge positive et une charge négative pour 90% des photons incidents à la même longueur d'onde qu'en a), quel est le courant généré en Ampère pour 1 µW de puissance incidente ?
+
+### Réponse
+
+a. Un photon vert (environ $\lambda=532$ nm) a une énergie d'environ 2eV (car on se rappelle que 1 micron donne 1 eV). Donc on a:
+$$
+E_v = \frac{h c}{ \lambda} =
+$$
+
+
+
+
+
+
+  La fréquence est défini $ f = \frac{c}{\lambda} $  où $\lambda$ est la longueur d'onde et $c$ la vitesse de la lumière. On a donc: 
+
+$$   f = \frac{800 \times 10^{-9} \text{m}}{3 \times 10^8 \text{m/s}} =  375\times 10^{12} \text{Hz} = 375 \text{THz}$$
+
+
+2. $ 1 \text{W} = 1 \text{J/s}$   donc   $1 \text{mW} = 1 \text{mJ/s} $
+
+   
+
+3. $ I=\frac{P}{A} = \frac{10 \text{mW}}{ \text{cm}^2}$ 
+
+   
+
+4. $\text{I}$ ~spectrale~ $= \frac{I}{\Delta f} = 100 \frac{\text{mW}}{\text{cm}^2 \cdot \text{nm}}$
+
+
+   ```python
+c = 3e8 # SI units
+wavelength = 532e-9 
+pulseToPulseDelay = 1e-9 # in seconds
+h = 6.63e-34 # J.s
+frequency = c/wavelength #in Hertz
+energyPerPhoton = h * c / wavelength
+power = energyPerPhoton/pulseToPulseDelay
+
+print("1. Power: {0} W".format(power))
+print("2. Energy flux in 1 second: {0} mJ".format(flux*1000))
+print("3. Irradiance: {0} mW/cm^2".format(irradianceInMwPerCm2))
+print("4. Irradiance spectrale: {0} mW/cm^2/nm".format(irradianceInMwPerCm2PerNanoMeter))
 
 # Output:
 #1. Frequency: 375.0 THz
@@ -841,7 +944,7 @@ Pour que le rayon ressorte parallèle,  on veut que $-\frac{n_2-n_1}{n_2 R_2}f_1
 
 ![pastedGraphic.pdf](assets/pastedGraphic-4491653.pdf)
 
-2. Puisqu'on sait les règles de transformation de $r$ et $\theta​$:
+2. Puisqu'on sait les règles de transformation de $r$ et $\theta$:
 
    $$
    \Biggl[ 
@@ -866,15 +969,15 @@ Pour que le rayon ressorte parallèle,  on veut que $-\frac{n_2-n_1}{n_2 R_2}f_1
    =
    \Biggl[ 
       \begin{matrix}
-         Ar + B \\
-         C \theta + D \\
+         Ar + B \theta \\
+         Cr + D \theta \\
       \end{matrix}
    \Biggl]
    $$
 
-   on obtient simplement:
+   on obtient simplement en divisant $r^\prime$ par $\theta^\prime$, et ensuite en mettant $\theta$ en évidence:
    $$
-   \hat{R}^\prime =  \frac{r^\prime}{\theta^\prime} =   \frac{A\hat{R} + B}{C \theta + D}
+   \hat{R}^\prime =  \frac{r^\prime}{\theta^\prime} =  \frac{Ar + B \theta}{C r + D \theta} = \frac{A\hat{R} + B }{C \hat{R} + D }
    $$
    Nous verrons qu'avec un rayon généralisé, nous pourrons propager les faisceaux lasers
    gaussiens avec cette équation.
@@ -993,7 +1096,7 @@ Vous avez l’objectif Olympus suivant, identifié « Olympus UPlanFl 40x ». Vo
 1. Quelle est la distance focale de cet objectif Olympus 40X ?
 2. Écrivez la matrice ABCD qui permet de transformer un rayon entrant de la première surface de l’objectif au plan focal F2.
 3. Quelles sont les positions des plans principaux ? Donnez les distances en fonction des points focaux F1 et F2.
-4. Vous voulez maintenant utiliser l’objectif (sans aucune autre lentille) pour faire l’image d’un objet qui est à 2.5 mm du bout de l’objectif, donc 0.5 mm après le point focal  . Où placeriez-vous votre camera par rapport à la première surface de l’objectif pour obtenir une image claire de cet objet? 
+4. Vous voulez maintenant utiliser l’objectif (sans aucune autre lentille) pour faire l’image d’un objet qui est à 2.5 mm du bout de l’objectif, donc 0.5 mm après le point focal  F2. Où placeriez-vous votre camera par rapport à la première surface de l’objectif pour obtenir une image claire de cet objet? 
 
 ### Réponse
 

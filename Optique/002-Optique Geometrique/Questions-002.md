@@ -464,7 +464,7 @@ Pour que le rayon ressorte parallèle,  on veut que $-\frac{n_2-n_1}{n_2 R_2}f_1
 
 ![pastedGraphic.pdf](assets/pastedGraphic-4491653.pdf)
 
-2. Puisqu'on sait les règles de transformation de $r$ et $\theta​$:
+2. Puisqu'on sait les règles de transformation de $r$ et $\theta$:
 
    $$
    \Biggl[ 
@@ -489,15 +489,15 @@ Pour que le rayon ressorte parallèle,  on veut que $-\frac{n_2-n_1}{n_2 R_2}f_1
    =
    \Biggl[ 
       \begin{matrix}
-         Ar + B \\
-         C \theta + D \\
+         Ar + B \theta \\
+         Cr + D \theta \\
       \end{matrix}
    \Biggl]
    $$
 
-   on obtient simplement:
+   on obtient simplement en divisant $r^\prime$ par $\theta^\prime$, et ensuite en mettant $\theta$ en évidence:
    $$
-   \hat{R}^\prime =  \frac{r^\prime}{\theta^\prime} =   \frac{A\hat{R} + B}{C \theta + D}
+   \hat{R}^\prime =  \frac{r^\prime}{\theta^\prime} =  \frac{Ar + B \theta}{C r + D \theta} = \frac{A\hat{R} + B }{C \hat{R} + D }
    $$
    Nous verrons qu'avec un rayon généralisé, nous pourrons propager les faisceaux lasers
    gaussiens avec cette équation.
@@ -616,7 +616,7 @@ Vous avez l’objectif Olympus suivant, identifié « Olympus UPlanFl 40x ». Vo
 1. Quelle est la distance focale de cet objectif Olympus 40X ?
 2. Écrivez la matrice ABCD qui permet de transformer un rayon entrant de la première surface de l’objectif au plan focal F2.
 3. Quelles sont les positions des plans principaux ? Donnez les distances en fonction des points focaux F1 et F2.
-4. Vous voulez maintenant utiliser l’objectif (sans aucune autre lentille) pour faire l’image d’un objet qui est à 2.5 mm du bout de l’objectif, donc 0.5 mm après le point focal  . Où placeriez-vous votre camera par rapport à la première surface de l’objectif pour obtenir une image claire de cet objet? 
+4. Vous voulez maintenant utiliser l’objectif (sans aucune autre lentille) pour faire l’image d’un objet qui est à 2.5 mm du bout de l’objectif, donc 0.5 mm après le point focal  F2. Où placeriez-vous votre camera par rapport à la première surface de l’objectif pour obtenir une image claire de cet objet? 
 
 ### Réponse
 

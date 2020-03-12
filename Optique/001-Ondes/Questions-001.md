@@ -38,7 +38,7 @@ Faux. Pour une onde plane (i.e. un front d'onde plan), tous les rayons sont perp
 
 ## Origine de l'indice de réfraction
 
-*Durée: 1m*
+*Durée: 10m*
 
 ### Questioné
 
@@ -46,7 +46,25 @@ Quel(s) terme(s) des équations de Maxwell est ou sont impliqué(s) dans la déf
 
 ### Réponse
 
-La constante diélectrique $\epsilon = \epsilon_r \epsilon_\circ$ est relié à l'indice de réfraction par $n \equiv \sqrt{\epsilon_r}$. Cette constante diélectrique dépend de la fréquence de l'onde.
+La constante diélectrique $\epsilon = \epsilon_r \epsilon_\circ$ est relié à l'indice de réfraction par $n \equiv \sqrt{\epsilon_r}$. Cette constante diélectrique dépend de la fréquence de l'onde et de la réponse du matériel, i.e. la densité de polarisation $\mathbf{P}(\mathbf{r},t)$. 
+
+En effet, une réponse plus longue nous montre que l'indice de réfraction apparaît lorsqu'on doit considérer la réponse du matériau. Lors de la manipulation des équations de Maxwell, on doit obtenir une expression pour la densité de flux électrique:
+$$
+\mathbf{D} \equiv  \epsilon_\circ \mathbf{E}+\mathbf{P}.
+$$
+La densité de polarisation $\mathbf{P}$ (ou densité de dipôles), c’est-à-dire la réponse du milieu lors de l’action d’un champ électrique, dépend de l’orientation du champ électrique, de sa fréquence d’oscillation, et des propriétés du matériau. Que se passe-t-il sur les dipôles lorsque nous appliquons un champ électrique? On sait que le dipôle se déplacera mais une force de rappel agira pour le ramener à son point d'équilibre.  Le lien entre  $\mathbf{P}$ et le champ électrique appliqué $\mathbf{E}$ est donné *en général* par la relation suivante:
+$$
+\mathbf{P} = {\epsilon_o}\chi \cdot \mathbf{E} + {\epsilon_o}\chi^2 : \mathbf{E} \mathbf{E}+... \label{eq:lingen}
+$$
+où  $\chi$ et  $\chi^2$ sont les susceptibilités linéaire et non-linéaire de deuxième ordre respectivement et dépendent de la ou des fréquences du champ électrique. Dans cette formulation de l’équation $(\ref{eq:lingen})$, la susceptibilité est un tenseur et les opérateurs $\cdot$ et  $:$ sont les produits scalaires des tenseurs avec les vecteurs de champs électriques.  *Il s'agit de la relation la plus générale qu'on peut écrire entre deux fonctions*: aussi bien dire qu'on ne sait pas grand chose et c'est pourquoi on fera des hypothèse pour simplifier à quelque chose que l'on pourra manipuler.  Dans le cadre qui nous intéresse (l’optique linéaire) et dans le cas des milieux homogènes (identiques en tous points) et isotropes (non biréfringents, c’est-à-dire identiques dans toutes les directions), nous nous intéressons seulement aux champs électriques faibles et considérons  $\chi$  comme un scalaire, ce qui fait que nous pouvons écrire:
+$$
+\mathbf{P} = {\epsilon_o}\chi \mathbf{E}
+$$
+L’induction électrique $\mathbf{D}$ dans ce cas particulier est donc donnée par:
+$$
+\mathbf{D} = {\epsilon_o}\left({1+\chi}\right)\cdot \mathbf{E} = {\epsilon_o}\epsilon_r\mathbf{E} \equiv \epsilon \mathbf{E},
+$$
+ce qui revient à définir ce fameux indice de réfraction, à travers $\epsilon_r$.
 
 ## Solution équation de Maxwell indépendante du temps
 
@@ -151,9 +169,33 @@ Vrai. Il s'agit de la définition exacte du vecteur de Poynting, qui est donné 
 
 ### Question
 
-Montrez qu’une onde plane $\mathbf{E}\left( \mathbf{r}, t\right) = \mathbf{E}_\circ e^{i \left(\mathbf{k} \cdot \mathbf{r} - \omega t\right) }$ est une solution de l’équation d’onde.
+Montrez qu’une onde plane $\mathbf{E}\left( \mathbf{r}, t\right) = \Re\left\{\mathbf{E}_\circ e^{i \left(\mathbf{k} \cdot \mathbf{r} - \omega t\right) }\right\}$ est une solution de l’équation d’onde
+$$
+\mathbf{\nabla}^2 \mathbf{E} - \mu_\circ\epsilon \frac{\partial^2 \mathbf{E}}{\partial t^2} = 0
+$$
+
 
 ### Réponse
+
+La question peut sembler très simple, ou très compliquée: en effet, le vecteur $\mathbf{E}$ peut avoir trois composantes, et il peut lui-même dépendre de l'espace, aussi en trois dimensions, $\mathbf{E}\left( \mathbf{r}, t\right)$. Donc, la solution générale est quand même assez complexe. Cependant, on nous demande de **vérifier** qu'une onde plane est une solution, pas de trouver toutes les solutions possibles. Notre onde plane, ici, a une direction donnée par $\hat{k}$, et une grandeur donnée par $\left| \mathbf{k} \right| = \frac{\omega}{c}$. Pour simplifier, on peut dire que la propagation est dans la direction de $\hat{k}\equiv\hat{z}$ car nous pouvons toujours définir le système de coordonnées comme bon nous semble. On ne considèrera que la dépendance en $z$ dans le laplacien $\nabla^2$. Finalement, on peut tout de suite supposer que l'onde plane a une polarisation linéaire selon $\hat{y}$, car tout polarisation sera une somme d'onde plane. Ainsi, on ré-écrira la solution à vérifier comme: $\mathbf{E}\left( \mathbf{r}, t\right) = E\left( z, t\right)\hat{z} = e^{i \left(k z - \omega t\right) }\hat{y} $, et on se retrouvera avec l'équation beaucoup plus simple:
+$$
+\frac{\partial^2 {E(z,t)}}{\partial z^2} - \mu_\circ\epsilon \frac{\partial^2 {E(z,t)}}{\partial t^2} = 0
+$$
+On peut vérifier que $E_{\circ} e^{i(kz-\omega t)}$ est une solution de cette équation d'onde:
+$$
+\frac{\partial^2 \left({E_{\circ} e^{i(kz-\omega t)}}\right)}{\partial z^2} - \mu_\circ\epsilon \frac{\partial^2 {\left({E_{\circ} e^{i(kz-\omega t)}}\right)}}{\partial t^2} = 0
+$$
+
+$$
+(ik)^2 e^{i(kz-\omega t)} - \mu_\circ\epsilon (-i\omega)^2 e^{i(kz-\omega t)} = 0
+$$
+
+$$
+-k^2 + \mu_\circ\epsilon \omega^2  = 0
+$$
+
+ce qui est vrai si $k = \omega \mu_\circ\epsilon = \omega/c$.
+
 ## Somme d'ondes sphériques
 
 *Durée: 1m*
