@@ -180,7 +180,7 @@ M =
 \Biggl]
 $$
 
-2. $q^\prime = \frac{Aq+B}{Cq+D} = 9q = 9 j \pi w_o^2/\lambda ​$
+2. $q^\prime = \frac{Aq+B}{Cq+D} = 9q = 9 j \pi w_o^2/\lambda $
 3. Pour obtenir la dimension physique et le rayon de courbure, on doit utiliser la définition $\frac{1}{q^\prime} \equiv \frac{1}{R^\prime} - j \frac{\lambda}{\pi w^{\prime 2}}$, on obtient donc: 
    $$
    \frac{1}{q^\prime} = -\frac{\lambda}{9 j \pi w_o^2} \\
@@ -198,14 +198,14 @@ $$
 
 ### Question
 
-Pour un faisceau gaussien en champ électrique $E=E_\circ e^{-\frac{x^2}{w^2}}​$, obtenez les facteurs de conversion pour passer de la largeur gaussienne à:
+Pour un faisceau gaussien en champ électrique $E=E_\circ e^{-\frac{x^2}{w^2}}$, obtenez les facteurs de conversion pour passer de la largeur gaussienne à:
 
-1. $W_\text{E-FWHM}​$, la largeur complète à mi-hauteur en champ électrique
-2. $W_\text{E-HWHM}​$, la demi-largeur à mi-hauteur  en champ électrique
+1. $W_\text{E-FWHM}$, la largeur complète à mi-hauteur en champ électrique
+2. $W_\text{E-HWHM}$, la demi-largeur à mi-hauteur  en champ électrique
 3. $W_\text{E-RMS}$, la largeur root-mean-square en champ électrique
-4. $W_\text{I-FWHM}​$, la largeur complète à mi-hauteur en irradiance
+4. $W_\text{I-FWHM}$, la largeur complète à mi-hauteur en irradiance
 5. $W_\text{I-HWHM}$, la demi-largeur à mi-hauteur  en irradiance
-6. $W_\text{I-RMS}​$, la largeur root-mean-square en irradiance
+6. $W_\text{I-RMS}$, la largeur root-mean-square en irradiance
 
 ### Réponse
 
@@ -217,11 +217,7 @@ Pour un faisceau gaussien en champ électrique $E=E_\circ e^{-\frac{x^2}{w^2}}�
 
 ### Question
 
-Une cavité laser est composée d’un miroir courbe concave
-de rayon de courbure $R=40$ cm et d’un miroir plan, séparés par
-$d=42$ cm. Au centre, le milieu de gain est un cristal cylindrique de Nd :YAG d’indice de réfraction $n = 1.8$ et de longueur $L=10$ cm. Calculez les paramètres du faisceau gaussien qui
-est stable dans la cavité, c’est à dire le faisceau gaussien qui
-est identique après un aller-retour dans la cavité.
+Une cavité laser est composée d’un miroir courbe concave de rayon de courbure $R=40$ cm et d’un miroir plan, séparés par $d=42$ cm. Au centre, le milieu de gain est un cristal cylindrique de Nd :YAG d’indice de réfraction $n = 1.8$ et de longueur $L=10$ cm. Calculez les paramètres du faisceau gaussien quie st stable dans la cavité, c’est à dire le faisceau gaussien qui est identique après un aller-retour dans la cavité.
 
 ### Réponse
 

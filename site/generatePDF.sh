@@ -4,8 +4,11 @@ find 0* -name assets -exec cp -r {}/ 000-all/assets/ \;
 
 find -s . -name "Questions-*md" -exec rm {} \;
 cd 001* && find -s . -name "Q0*md" -exec cat {} >> Questions-001.md \; && cd ..
+cd 001* && iconv -f UTF-8 Questions-001.md | pandoc -s -f markdown -t latex -o Question-001.tex && cd ..
 cd 002* && find -s . -name "Q0*md" -exec cat {} >> Questions-002.md \; && cd ..
+cd 002* && iconv -f UTF-8 Questions-002.md | pandoc -s -f markdown -t latex -o Question-002.tex && cd ..
 cd 003* && find -s . -name "Q0*md" -exec cat {} >> Questions-003.md \; && cd ..
+cd 003* && iconv -f UTF-8 Questions-003.md | pandoc -s -f markdown -t latex -o Question-003.tex && cd ..
 cd 004* && find -s . -name "Q0*md" -exec cat {} >> Questions-004.md \; && cd ..
 cd 005* && find -s . -name "Q0*md" -exec cat {} >> Questions-005.md \; && cd ..
 cd 006* && find -s . -name "Q0*md" -exec cat {} >> Questions-006.md \; && cd ..
@@ -14,3 +17,4 @@ cd 008* && find -s . -name "Q0*md" -exec cat {} >> Questions-008.md \; && cd ..
 cd 009* && find -s . -name "Q0*md" -exec cat {} >> Questions-009.md \; && cd ..
 cd 010* && find -s . -name "Q0*md" -exec cat {} >> Questions-010.md \; && cd ..
  
+
