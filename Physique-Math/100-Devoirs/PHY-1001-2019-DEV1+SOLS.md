@@ -320,7 +320,7 @@ $$
 $$
 Notre vecteur ${\bf P}$ doit être perpendiculaire, donc ${\bf P} \cdot {\bf w} = 0$, ce qui donne:
 $$
-5y- 4z + 2 = 0 
+5y- 4z + 2 = 0
 $$
 
 
