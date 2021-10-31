@@ -30,6 +30,7 @@
 La matrice suivante $( {\bf M}^\top {\bf M})^{-1} {\bf M}^\top$ s'appelle la *pseudo-inverse gauche* de ${\bf M}$  et n'existe que si les vecteurs colonnes de la matrice ${\bf M}$ sont linéairement indépendants.  Au contraire, si les vecteurs-rangées de la matrice sont linéairement indépendants, la matrice $( {\bf M}^\top {\bf M})^{-1} {\bf M}^\top$ est la *pseudo-inverse droite* de la matrice ${\bf M}$.
 
 ## Manipulation formelle de matrices
+
 Montrer que toute matrice $A$ peut être décomposée en une somme d'une matrice symétrique $B=B^\top$ et une matrice anti-symétrique $C=-C^\top$ tel que $A=B+C$. *Indice* : quel type (symétrique, antisymétrique) de matrice obtient-on lorsqu'on additionne ou soustrait $A^\top$ à $A$?
 
 ### Réponse :
