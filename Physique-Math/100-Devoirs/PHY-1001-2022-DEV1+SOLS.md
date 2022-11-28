@@ -1,6 +1,10 @@
 # Devoir #1
 
+À remettre vendredi le 16 septembre 2022 à 8h29 sur le site web: en format PDF (utilisez LaTex, Markdown-typora, Word ou une photo de votre texte à la main dans un seul PDF). Si vous êtes completement mal pris, amenez une copie papier mercredi et donnez-la moi en main propre.  
 
+La durée écrite après la question est mon estimé de ce que ça ME prendrais les faire. Vous pourrez plus tard estimer le facteur de correction pour votre propre temps.
+
+Daniel Côté, 10 Septembre 2022
 
 ## Système d'équations linéaires
 
@@ -14,7 +18,7 @@ x + y + z & = & 1 \\
 -3x + \alpha y + \beta z & = & 10
 \end{eqnarray}
 $$
-Obtenez par la méthode de Gauss la matrice équivalente par échelon. Pour quelles valeurs des paramètre $\alpha$ et $\beta$ y'a-t-il:
+Obtenez par la méthode de Gauss la matrice équivalente par échelon réduite. Pour quelles valeurs des paramètre $\alpha$ et $\beta$ y'a-t-il:
 
 1. Une seule solution?
 2. Aucune solution?
@@ -66,7 +70,7 @@ $$
 $$
 On subdivise encore en deux cas:
 
-Cas 1:
+Cas 1: ($\and$ veut dire **ET**, $\or$ veut dire **OU**)
 $$
 \label{eq:sol1}
 \text{si } \beta = -3 \and \alpha = -3\text{ ,}
@@ -185,19 +189,18 @@ $$
 
 4. **La matrice a une rangée nulle mais la matrice augmentée n'a pas une rangée nulle**. Il n'y a pas de solutions en Eq($\ref{eq:sol1}$) et Eq($\ref{eq:sol4}$).
 
-  ​    
+
+
 
 ## Dépendance linéaire et orientation
 
 *Durée: 30m*
 
-### Question
-
 À partir du vecteur ${\bf u} = 2\hat{i} + 5\hat{j} -3 \hat{k}$, transformez le vecteur ${\bf v} = \hat{i} + \alpha \hat{j} + \beta \hat{k}$ pour obtenir les valeurs   $\alpha$ et $\beta$ qui donnent :
 
-1. un vecteur  ${\bf v}_\perp$ perpendiculaire à ${\bf u}$ ?
-2. un vecteur  ${\bf v}_\parallel$ parallèle à ${\bf u}$ ?
-3. un troisième vecteur unitaire perpendiculaire à ${\bf u}$ et  ${\bf v}_\perp$.
+1. n'importe quel vecteur  ${\bf v}_\perp$ perpendiculaire à ${\bf u}$ ? 
+2. n'importe quel vecteur  ${\bf v}_\parallel$ parallèle à ${\bf u}$ ?
+3. n'importe quel troisième vecteur unitaire perpendiculaire à ${\bf u}$ et  ${\bf v}_\perp$.
 
 ### Réponse
 
@@ -301,10 +304,10 @@ $$
    \hat{\bf w} = \frac{1}{\frac{\sqrt{38}}{5}\sqrt{34\beta^2-12\beta+29}} \left[ \left(\frac{34 \beta - 6}{5} \right)\hat{i} + (-3 - 2\beta)\hat{j} + \left( \frac{6 \beta - 29}{5}\right)\hat{k} \right]
    $$
    
-
+   
 ## Équation d'un plan
 
-*Durée: 30m*
+*Durée: 10m*
 
 Trouvez l'équation du plan qui passe par le point $(1,2,3)$ et qui est parallèle au vecteur ${\bf u} = (-2,4,5)$ et à l'axe des $x$.
 
